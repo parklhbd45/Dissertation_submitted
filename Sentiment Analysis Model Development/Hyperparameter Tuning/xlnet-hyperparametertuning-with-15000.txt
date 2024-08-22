@@ -1,0 +1,1520 @@
+Distribution for Balanced Train Set:
+sentiment_equal
+Positive    18750
+Negative    18750
+Neutral     18750
+Name: count, dtype: int64
+sentiment_equal
+Positive    0.333333
+Negative    0.333333
+Neutral     0.333333
+Name: proportion, dtype: float64
+
+Distribution for Balanced Test Set:
+sentiment_equal
+Positive    21378
+Neutral     21378
+Negative    21378
+Name: count, dtype: int64
+sentiment_equal
+Positive    0.333333
+Neutral     0.333333
+Negative    0.333333
+Name: proportion, dtype: float64
+[I 2024-08-18 09:18:32,478] A new study created in memory with name: no-name-6e59c3d1-a1e3-45f0-81af-338b89fdd5f1
+
+Trial 0
+Hyperparameters:
+  Learning rate: 1.879382916922379e-05
+  Batch size: 64
+  Weight decay: 1.747767305967665e-05
+  Max length: 128
+Fold 1:
+  Train size: 45000
+  Val size: 11250
+
+Distribution for Train Fold 1:
+sentiment_equal
+Negative    15016
+Neutral     15002
+Positive    14982
+Name: count, dtype: int64
+sentiment_equal
+Negative    0.333689
+Neutral     0.333378
+Positive    0.332933
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 1:
+sentiment_equal
+Positive    3768
+Neutral     3748
+Negative    3734
+Name: count, dtype: int64
+sentiment_equal
+Positive    0.334933
+Neutral     0.333156
+Negative    0.331911
+Name: proportion, dtype: float64
+Map: 100% 45000/45000 [00:21<00:00, 2072.82 examples/s]
+Map: 100% 11250/11250 [00:05<00:00, 2044.57 examples/s]
+/opt/conda/lib/python3.10/site-packages/torch/_utils.py:776: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+Some weights of XLNetForSequenceClassification were not initialized from the model checkpoint at xlnet-base-cased and are newly initialized: ['logits_proj.bias', 'logits_proj.weight', 'sequence_summary.summary.bias', 'sequence_summary.summary.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1525: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+{'loss': 0.6372, 'grad_norm': 7.032806873321533, 'learning_rate': 1.211988415174375e-05, 'epoch': 0.71}
+{'eval_loss': 0.5561221241950989, 'eval_accuracy': 0.7634666666666666, 'eval_f1': 0.7633055691440847, 'eval_precision': 0.7650724178060032, 'eval_recall': 0.7634666666666666, 'eval_runtime': 47.8166, 'eval_samples_per_second': 235.274, 'eval_steps_per_second': 3.681, 'epoch': 1.0}
+{'loss': 0.534, 'grad_norm': 7.962911128997803, 'learning_rate': 5.4459391342637115e-06, 'epoch': 1.42}              
+{'eval_loss': 0.5466585755348206, 'eval_accuracy': 0.7679111111111111, 'eval_f1': 0.7658230985116747, 'eval_precision': 0.7648913700118098, 'eval_recall': 0.7679111111111111, 'eval_runtime': 49.1528, 'eval_samples_per_second': 228.878, 'eval_steps_per_second': 3.581, 'epoch': 2.0}
+{'train_runtime': 1010.7766, 'train_samples_per_second': 89.04, 'train_steps_per_second': 1.393, 'train_loss': 0.5637627623297952, 'epoch': 2.0}
+100% 1408/1408 [16:50<00:00,  1.39it/s]
+100% 176/176 [00:48<00:00,  3.60it/s]
+  Fold 1 F1 score: 0.7658
+Fold 2:
+  Train size: 45000
+  Val size: 11250
+
+Distribution for Train Fold 2:
+sentiment_equal
+Negative    15069
+Positive    14989
+Neutral     14942
+Name: count, dtype: int64
+sentiment_equal
+Negative    0.334867
+Positive    0.333089
+Neutral     0.332044
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 2:
+sentiment_equal
+Neutral     3808
+Positive    3761
+Negative    3681
+Name: count, dtype: int64
+sentiment_equal
+Neutral     0.338489
+Positive    0.334311
+Negative    0.327200
+Name: proportion, dtype: float64
+Map: 100% 45000/45000 [00:21<00:00, 2068.31 examples/s]
+Map: 100% 11250/11250 [00:05<00:00, 2017.43 examples/s]
+Some weights of XLNetForSequenceClassification were not initialized from the model checkpoint at xlnet-base-cased and are newly initialized: ['logits_proj.bias', 'logits_proj.weight', 'sequence_summary.summary.bias', 'sequence_summary.summary.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1525: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+{'loss': 0.6268, 'grad_norm': 4.422132968902588, 'learning_rate': 1.211988415174375e-05, 'epoch': 0.71}
+{'eval_loss': 0.5528066158294678, 'eval_accuracy': 0.7631111111111111, 'eval_f1': 0.7563947421027531, 'eval_precision': 0.7580762164613376, 'eval_recall': 0.7631111111111111, 'eval_runtime': 45.6341, 'eval_samples_per_second': 246.526, 'eval_steps_per_second': 3.857, 'epoch': 1.0}
+{'loss': 0.5272, 'grad_norm': 4.069511413574219, 'learning_rate': 5.4459391342637115e-06, 'epoch': 1.42}             
+{'eval_loss': 0.5357030630111694, 'eval_accuracy': 0.772, 'eval_f1': 0.769363459476236, 'eval_precision': 0.7683038410813813, 'eval_recall': 0.772, 'eval_runtime': 43.8171, 'eval_samples_per_second': 256.749, 'eval_steps_per_second': 4.017, 'epoch': 2.0}
+{'train_runtime': 986.8253, 'train_samples_per_second': 91.202, 'train_steps_per_second': 1.427, 'train_loss': 0.5580529299649325, 'epoch': 2.0}
+100% 1408/1408 [16:26<00:00,  1.43it/s]
+100% 176/176 [00:43<00:00,  4.08it/s]
+  Fold 2 F1 score: 0.7694
+Mean F1 score across folds: 0.7676
+[I 2024-08-18 09:54:28,494] Trial 0 finished with value: 0.7675932789939554 and parameters: {'learning_rate': 1.879382916922379e-05, 'batch_size': 64, 'weight_decay': 1.747767305967665e-05, 'max_length': 128}. Best is trial 0 with value: 0.7675932789939554.
+
+Trial 1
+Hyperparameters:
+  Learning rate: 0.00040868497026686537
+  Batch size: 64
+  Weight decay: 0.0001076815125633644
+  Max length: 128
+Fold 1:
+  Train size: 45000
+  Val size: 11250
+
+Distribution for Train Fold 1:
+sentiment_equal
+Negative    15016
+Neutral     15002
+Positive    14982
+Name: count, dtype: int64
+sentiment_equal
+Negative    0.333689
+Neutral     0.333378
+Positive    0.332933
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 1:
+sentiment_equal
+Positive    3768
+Neutral     3748
+Negative    3734
+Name: count, dtype: int64
+sentiment_equal
+Positive    0.334933
+Neutral     0.333156
+Negative    0.331911
+Name: proportion, dtype: float64
+Map: 100% 45000/45000 [00:20<00:00, 2208.50 examples/s]
+Map: 100% 11250/11250 [00:05<00:00, 2217.99 examples/s]
+Some weights of XLNetForSequenceClassification were not initialized from the model checkpoint at xlnet-base-cased and are newly initialized: ['logits_proj.bias', 'logits_proj.weight', 'sequence_summary.summary.bias', 'sequence_summary.summary.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1525: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+{'loss': 1.127, 'grad_norm': 1.7517966032028198, 'learning_rate': 0.0002635553643482342, 'epoch': 0.71}
+ 50% 704/1408 [07:24<06:30,  1.80it/s/opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+{'eval_loss': 1.123533844947815, 'eval_accuracy': 0.33493333333333336, 'eval_f1': 0.16806882407777335, 'eval_precision': 0.11218033777777778, 'eval_recall': 0.33493333333333336, 'eval_runtime': 45.6321, 'eval_samples_per_second': 246.537, 'eval_steps_per_second': 3.857, 'epoch': 1.0}
+{'loss': 1.1112, 'grad_norm': 1.9970322847366333, 'learning_rate': 0.00011842575842960303, 'epoch': 1.42}            
+100% 1408/1408 [15:27<00:00,  1.90it//opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+{'eval_loss': 1.0997369289398193, 'eval_accuracy': 0.33493333333333336, 'eval_f1': 0.16806882407777335, 'eval_precision': 0.11218033777777778, 'eval_recall': 0.33493333333333336, 'eval_runtime': 44.4514, 'eval_samples_per_second': 253.085, 'eval_steps_per_second': 3.959, 'epoch': 2.0}
+{'train_runtime': 972.1421, 'train_samples_per_second': 92.579, 'train_steps_per_second': 1.448, 'train_loss': 1.1148679473183372, 'epoch': 2.0}
+100% 1408/1408 [16:12<00:00,  1.45it/s]
+100% 176/176 [00:43<00:00,  5.58it/s]/opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+100% 176/176 [00:43<00:00,  4.08it/s]
+  Fold 1 F1 score: 0.1681
+Fold 2:
+  Train size: 45000
+  Val size: 11250
+
+Distribution for Train Fold 2:
+sentiment_equal
+Negative    15069
+Positive    14989
+Neutral     14942
+Name: count, dtype: int64
+sentiment_equal
+Negative    0.334867
+Positive    0.333089
+Neutral     0.332044
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 2:
+sentiment_equal
+Neutral     3808
+Positive    3761
+Negative    3681
+Name: count, dtype: int64
+sentiment_equal
+Neutral     0.338489
+Positive    0.334311
+Negative    0.327200
+Name: proportion, dtype: float64
+Map: 100% 45000/45000 [00:21<00:00, 2107.62 examples/s]
+Map: 100% 11250/11250 [00:05<00:00, 2121.23 examples/s]
+Some weights of XLNetForSequenceClassification were not initialized from the model checkpoint at xlnet-base-cased and are newly initialized: ['logits_proj.bias', 'logits_proj.weight', 'sequence_summary.summary.bias', 'sequence_summary.summary.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1525: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+{'loss': 1.1248, 'grad_norm': 2.6636850833892822, 'learning_rate': 0.0002635553643482342, 'epoch': 0.71}
+ 50% 704/1408 [07:23<04:56,  2.37it/s/opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+{'eval_loss': 1.1108875274658203, 'eval_accuracy': 0.3343111111111111, 'eval_f1': 0.1675230282977668, 'eval_precision': 0.11176391901234567, 'eval_recall': 0.3343111111111111, 'eval_runtime': 45.223, 'eval_samples_per_second': 248.767, 'eval_steps_per_second': 3.892, 'epoch': 1.0}
+{'loss': 1.1111, 'grad_norm': 3.5121657848358154, 'learning_rate': 0.00011842575842960303, 'epoch': 1.42}            
+100% 1408/1408 [15:24<00:00,  2.43it//opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+{'eval_loss': 1.1126075983047485, 'eval_accuracy': 0.3343111111111111, 'eval_f1': 0.1675230282977668, 'eval_precision': 0.11176391901234567, 'eval_recall': 0.3343111111111111, 'eval_runtime': 44.9962, 'eval_samples_per_second': 250.021, 'eval_steps_per_second': 3.911, 'epoch': 2.0}
+{'train_runtime': 969.1981, 'train_samples_per_second': 92.86, 'train_steps_per_second': 1.453, 'train_loss': 1.1139106316999956, 'epoch': 2.0}
+100% 1408/1408 [16:09<00:00,  1.45it/s]
+100% 176/176 [00:43<00:00,  3.24it/s]/opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+100% 176/176 [00:43<00:00,  4.07it/s]
+  Fold 2 F1 score: 0.1675
+Mean F1 score across folds: 0.1678
+[I 2024-08-18 10:29:17,368] Trial 1 finished with value: 0.16779592618777006 and parameters: {'learning_rate': 0.00040868497026686537, 'batch_size': 64, 'weight_decay': 0.0001076815125633644, 'max_length': 128}. Best is trial 0 with value: 0.7675932789939554.
+
+Trial 2
+Hyperparameters:
+  Learning rate: 1.0193489877290433e-05
+  Batch size: 32
+  Weight decay: 0.0002891767503901344
+  Max length: 64
+Fold 1:
+  Train size: 45000
+  Val size: 11250
+
+Distribution for Train Fold 1:
+sentiment_equal
+Negative    15016
+Neutral     15002
+Positive    14982
+Name: count, dtype: int64
+sentiment_equal
+Negative    0.333689
+Neutral     0.333378
+Positive    0.332933
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 1:
+sentiment_equal
+Positive    3768
+Neutral     3748
+Negative    3734
+Name: count, dtype: int64
+sentiment_equal
+Positive    0.334933
+Neutral     0.333156
+Negative    0.331911
+Name: proportion, dtype: float64
+Map: 100% 45000/45000 [00:19<00:00, 2338.15 examples/s]
+Map: 100% 11250/11250 [00:04<00:00, 2341.69 examples/s]
+Some weights of XLNetForSequenceClassification were not initialized from the model checkpoint at xlnet-base-cased and are newly initialized: ['logits_proj.bias', 'logits_proj.weight', 'sequence_summary.summary.bias', 'sequence_summary.summary.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1525: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+{'loss': 0.7081, 'grad_norm': 10.500383377075195, 'learning_rate': 8.382279877771876e-06, 'epoch': 0.36}
+{'loss': 0.5872, 'grad_norm': 10.325935363769531, 'learning_rate': 6.571069878253321e-06, 'epoch': 0.71}
+{'eval_loss': 0.5843307971954346, 'eval_accuracy': 0.7509333333333333, 'eval_f1': 0.7501491867582208, 'eval_precision': 0.7537115448457493, 'eval_recall': 0.7509333333333333, 'eval_runtime': 24.2625, 'eval_samples_per_second': 463.678, 'eval_steps_per_second': 14.508, 'epoch': 1.0}
+{'loss': 0.5609, 'grad_norm': 7.763360500335693, 'learning_rate': 4.759859878734765e-06, 'epoch': 1.07}              
+{'loss': 0.5287, 'grad_norm': 6.969659805297852, 'learning_rate': 2.948649879216209e-06, 'epoch': 1.42}
+{'loss': 0.5264, 'grad_norm': 7.7133965492248535, 'learning_rate': 1.137439879697653e-06, 'epoch': 1.78}
+{'eval_loss': 0.5587705969810486, 'eval_accuracy': 0.7633777777777778, 'eval_f1': 0.7606011632723301, 'eval_precision': 0.7595385227545389, 'eval_recall': 0.7633777777777778, 'eval_runtime': 26.9549, 'eval_samples_per_second': 417.364, 'eval_steps_per_second': 13.059, 'epoch': 2.0}
+{'train_runtime': 606.5697, 'train_samples_per_second': 148.375, 'train_steps_per_second': 4.639, 'train_loss': 0.5765373322162208, 'epoch': 2.0}
+100% 2814/2814 [10:06<00:00,  4.64it/s]
+100% 352/352 [00:27<00:00, 13.04it/s]
+  Fold 1 F1 score: 0.7606
+Fold 2:
+  Train size: 45000
+  Val size: 11250
+
+Distribution for Train Fold 2:
+sentiment_equal
+Negative    15069
+Positive    14989
+Neutral     14942
+Name: count, dtype: int64
+sentiment_equal
+Negative    0.334867
+Positive    0.333089
+Neutral     0.332044
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 2:
+sentiment_equal
+Neutral     3808
+Positive    3761
+Negative    3681
+Name: count, dtype: int64
+sentiment_equal
+Neutral     0.338489
+Positive    0.334311
+Negative    0.327200
+Name: proportion, dtype: float64
+Map: 100% 45000/45000 [00:19<00:00, 2341.61 examples/s]
+Map: 100% 11250/11250 [00:04<00:00, 2380.80 examples/s]
+Some weights of XLNetForSequenceClassification were not initialized from the model checkpoint at xlnet-base-cased and are newly initialized: ['logits_proj.bias', 'logits_proj.weight', 'sequence_summary.summary.bias', 'sequence_summary.summary.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1525: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+{'loss': 0.7179, 'grad_norm': 11.816452026367188, 'learning_rate': 8.382279877771876e-06, 'epoch': 0.36}
+{'loss': 0.5894, 'grad_norm': 7.403639316558838, 'learning_rate': 6.571069878253321e-06, 'epoch': 0.71}
+{'eval_loss': 0.5700307488441467, 'eval_accuracy': 0.7577777777777778, 'eval_f1': 0.7520235847688154, 'eval_precision': 0.7521123666301289, 'eval_recall': 0.7577777777777778, 'eval_runtime': 27.0496, 'eval_samples_per_second': 415.902, 'eval_steps_per_second': 13.013, 'epoch': 1.0}
+{'loss': 0.5564, 'grad_norm': 9.793497085571289, 'learning_rate': 4.759859878734765e-06, 'epoch': 1.07}              
+{'loss': 0.5278, 'grad_norm': 8.099372863769531, 'learning_rate': 2.948649879216209e-06, 'epoch': 1.42}
+{'loss': 0.5295, 'grad_norm': 8.58031177520752, 'learning_rate': 1.137439879697653e-06, 'epoch': 1.78}
+{'eval_loss': 0.5489898324012756, 'eval_accuracy': 0.7634666666666666, 'eval_f1': 0.7608063140237672, 'eval_precision': 0.7597647011664811, 'eval_recall': 0.7634666666666666, 'eval_runtime': 28.7873, 'eval_samples_per_second': 390.798, 'eval_steps_per_second': 12.228, 'epoch': 2.0}
+{'train_runtime': 619.5701, 'train_samples_per_second': 145.262, 'train_steps_per_second': 4.542, 'train_loss': 0.577655843749653, 'epoch': 2.0}
+100% 2814/2814 [10:19<00:00,  4.54it/s]
+100% 352/352 [00:26<00:00, 13.34it/s]
+  Fold 2 F1 score: 0.7608
+Mean F1 score across folds: 0.7607
+[I 2024-08-18 10:51:33,326] Trial 2 finished with value: 0.7607037386480486 and parameters: {'learning_rate': 1.0193489877290433e-05, 'batch_size': 32, 'weight_decay': 0.0002891767503901344, 'max_length': 64}. Best is trial 0 with value: 0.7675932789939554.
+
+Trial 3
+Hyperparameters:
+  Learning rate: 0.00041502329470394163
+  Batch size: 64
+  Weight decay: 0.005480045748706735
+  Max length: 64
+Fold 1:
+  Train size: 45000
+  Val size: 11250
+
+Distribution for Train Fold 1:
+sentiment_equal
+Negative    15016
+Neutral     15002
+Positive    14982
+Name: count, dtype: int64
+sentiment_equal
+Negative    0.333689
+Neutral     0.333378
+Positive    0.332933
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 1:
+sentiment_equal
+Positive    3768
+Neutral     3748
+Negative    3734
+Name: count, dtype: int64
+sentiment_equal
+Positive    0.334933
+Neutral     0.333156
+Negative    0.331911
+Name: proportion, dtype: float64
+Map: 100% 45000/45000 [00:19<00:00, 2344.13 examples/s]
+Map: 100% 11250/11250 [00:04<00:00, 2318.03 examples/s]
+Some weights of XLNetForSequenceClassification were not initialized from the model checkpoint at xlnet-base-cased and are newly initialized: ['logits_proj.bias', 'logits_proj.weight', 'sequence_summary.summary.bias', 'sequence_summary.summary.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1525: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+{'loss': 1.1249, 'grad_norm': 1.7387068271636963, 'learning_rate': 0.0002676428633460078, 'epoch': 0.71}
+ 50% 704/1408 [03:34<03:22,  3.47it/s/opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+{'eval_loss': 1.1227878332138062, 'eval_accuracy': 0.33493333333333336, 'eval_f1': 0.16806882407777335, 'eval_precision': 0.11218033777777778, 'eval_recall': 0.33493333333333336, 'eval_runtime': 20.1003, 'eval_samples_per_second': 559.693, 'eval_steps_per_second': 8.756, 'epoch': 1.0}
+{'loss': 1.1129, 'grad_norm': 2.9750683307647705, 'learning_rate': 0.00012026243198807401, 'epoch': 1.42}            
+100% 1408/1408 [07:30<00:00,  4.39it//opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+{'eval_loss': 1.1001814603805542, 'eval_accuracy': 0.33493333333333336, 'eval_f1': 0.16806882407777335, 'eval_precision': 0.11218033777777778, 'eval_recall': 0.33493333333333336, 'eval_runtime': 21.3353, 'eval_samples_per_second': 527.296, 'eval_steps_per_second': 8.249, 'epoch': 2.0}
+{'train_runtime': 471.5711, 'train_samples_per_second': 190.851, 'train_steps_per_second': 2.986, 'train_loss': 1.1148091012781316, 'epoch': 2.0}
+100% 1408/1408 [07:51<00:00,  2.99it/s]
+ 99% 175/176 [00:20<00:00, 11.22it/s]/opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+100% 176/176 [00:20<00:00,  8.58it/s]
+  Fold 1 F1 score: 0.1681
+Fold 2:
+  Train size: 45000
+  Val size: 11250
+
+Distribution for Train Fold 2:
+sentiment_equal
+Negative    15069
+Positive    14989
+Neutral     14942
+Name: count, dtype: int64
+sentiment_equal
+Negative    0.334867
+Positive    0.333089
+Neutral     0.332044
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 2:
+sentiment_equal
+Neutral     3808
+Positive    3761
+Negative    3681
+Name: count, dtype: int64
+sentiment_equal
+Neutral     0.338489
+Positive    0.334311
+Negative    0.327200
+Name: proportion, dtype: float64
+Map: 100% 45000/45000 [00:19<00:00, 2331.61 examples/s]
+Map: 100% 11250/11250 [00:04<00:00, 2323.46 examples/s]
+Some weights of XLNetForSequenceClassification were not initialized from the model checkpoint at xlnet-base-cased and are newly initialized: ['logits_proj.bias', 'logits_proj.weight', 'sequence_summary.summary.bias', 'sequence_summary.summary.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1525: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+{'loss': 1.1237, 'grad_norm': 2.4300613403320312, 'learning_rate': 0.0002676428633460078, 'epoch': 0.71}
+ 50% 704/1408 [03:37<03:44,  3.14it/s/opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+{'eval_loss': 1.115228533744812, 'eval_accuracy': 0.3343111111111111, 'eval_f1': 0.1675230282977668, 'eval_precision': 0.11176391901234567, 'eval_recall': 0.3343111111111111, 'eval_runtime': 20.8242, 'eval_samples_per_second': 540.236, 'eval_steps_per_second': 8.452, 'epoch': 1.0}
+{'loss': 1.1112, 'grad_norm': 4.3654632568359375, 'learning_rate': 0.00012026243198807401, 'epoch': 1.42}            
+100% 1408/1408 [07:36<00:00,  4.18it//opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+{'eval_loss': 1.1096903085708618, 'eval_accuracy': 0.3343111111111111, 'eval_f1': 0.1675230282977668, 'eval_precision': 0.11176391901234567, 'eval_recall': 0.3343111111111111, 'eval_runtime': 21.4885, 'eval_samples_per_second': 523.535, 'eval_steps_per_second': 8.19, 'epoch': 2.0}
+{'train_runtime': 477.7957, 'train_samples_per_second': 188.365, 'train_steps_per_second': 2.947, 'train_loss': 1.1135540225289084, 'epoch': 2.0}
+100% 1408/1408 [07:57<00:00,  2.95it/s]
+100% 176/176 [00:20<00:00,  8.87it/s]/opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+100% 176/176 [00:20<00:00,  8.49it/s]
+  Fold 2 F1 score: 0.1675
+Mean F1 score across folds: 0.1678
+[I 2024-08-18 11:09:00,591] Trial 3 finished with value: 0.16779592618777006 and parameters: {'learning_rate': 0.00041502329470394163, 'batch_size': 64, 'weight_decay': 0.005480045748706735, 'max_length': 64}. Best is trial 0 with value: 0.7675932789939554.
+
+Trial 4
+Hyperparameters:
+  Learning rate: 1.0787986566438216e-05
+  Batch size: 32
+  Weight decay: 0.08262964249232657
+  Max length: 64
+Fold 1:
+  Train size: 45000
+  Val size: 11250
+
+Distribution for Train Fold 1:
+sentiment_equal
+Negative    15016
+Neutral     15002
+Positive    14982
+Name: count, dtype: int64
+sentiment_equal
+Negative    0.333689
+Neutral     0.333378
+Positive    0.332933
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 1:
+sentiment_equal
+Positive    3768
+Neutral     3748
+Negative    3734
+Name: count, dtype: int64
+sentiment_equal
+Positive    0.334933
+Neutral     0.333156
+Negative    0.331911
+Name: proportion, dtype: float64
+Map: 100% 45000/45000 [00:18<00:00, 2404.91 examples/s]
+Map: 100% 11250/11250 [00:04<00:00, 2397.50 examples/s]
+Some weights of XLNetForSequenceClassification were not initialized from the model checkpoint at xlnet-base-cased and are newly initialized: ['logits_proj.bias', 'logits_proj.weight', 'sequence_summary.summary.bias', 'sequence_summary.summary.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1525: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+{'loss': 0.7118, 'grad_norm': 11.533745765686035, 'learning_rate': 8.871144603673786e-06, 'epoch': 0.36}
+{'loss': 0.5865, 'grad_norm': 10.092388153076172, 'learning_rate': 6.954302640909354e-06, 'epoch': 0.71}
+{'eval_loss': 0.5806215405464172, 'eval_accuracy': 0.7488, 'eval_f1': 0.7492409041184515, 'eval_precision': 0.7561069996259919, 'eval_recall': 0.7488, 'eval_runtime': 26.8413, 'eval_samples_per_second': 419.13, 'eval_steps_per_second': 13.114, 'epoch': 1.0}
+{'loss': 0.5594, 'grad_norm': 7.4467315673828125, 'learning_rate': 5.0374606781449234e-06, 'epoch': 1.07}            
+{'loss': 0.5296, 'grad_norm': 6.557980060577393, 'learning_rate': 3.120618715380493e-06, 'epoch': 1.42}
+{'loss': 0.5229, 'grad_norm': 7.304266929626465, 'learning_rate': 1.2037767526160625e-06, 'epoch': 1.78}
+{'eval_loss': 0.5590307712554932, 'eval_accuracy': 0.7624888888888889, 'eval_f1': 0.7602348529529588, 'eval_precision': 0.7592171875021595, 'eval_recall': 0.7624888888888889, 'eval_runtime': 24.9331, 'eval_samples_per_second': 451.207, 'eval_steps_per_second': 14.118, 'epoch': 2.0}
+{'train_runtime': 617.9423, 'train_samples_per_second': 145.645, 'train_steps_per_second': 4.554, 'train_loss': 0.5762991562919915, 'epoch': 2.0}
+100% 2814/2814 [10:17<00:00,  4.55it/s]
+100% 352/352 [00:23<00:00, 14.97it/s]
+  Fold 1 F1 score: 0.7602
+Fold 2:
+  Train size: 45000
+  Val size: 11250
+
+Distribution for Train Fold 2:
+sentiment_equal
+Negative    15069
+Positive    14989
+Neutral     14942
+Name: count, dtype: int64
+sentiment_equal
+Negative    0.334867
+Positive    0.333089
+Neutral     0.332044
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 2:
+sentiment_equal
+Neutral     3808
+Positive    3761
+Negative    3681
+Name: count, dtype: int64
+sentiment_equal
+Neutral     0.338489
+Positive    0.334311
+Negative    0.327200
+Name: proportion, dtype: float64
+Map: 100% 45000/45000 [00:19<00:00, 2314.88 examples/s]
+Map: 100% 11250/11250 [00:04<00:00, 2347.79 examples/s]
+Some weights of XLNetForSequenceClassification were not initialized from the model checkpoint at xlnet-base-cased and are newly initialized: ['logits_proj.bias', 'logits_proj.weight', 'sequence_summary.summary.bias', 'sequence_summary.summary.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1525: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+{'loss': 0.6972, 'grad_norm': 10.680386543273926, 'learning_rate': 8.871144603673786e-06, 'epoch': 0.36}
+{'loss': 0.5871, 'grad_norm': 7.815043926239014, 'learning_rate': 6.954302640909354e-06, 'epoch': 0.71}
+{'eval_loss': 0.5663478970527649, 'eval_accuracy': 0.7618666666666667, 'eval_f1': 0.7572889984487193, 'eval_precision': 0.7567742319352649, 'eval_recall': 0.7618666666666667, 'eval_runtime': 26.495, 'eval_samples_per_second': 424.608, 'eval_steps_per_second': 13.286, 'epoch': 1.0}
+{'loss': 0.5549, 'grad_norm': 9.591835975646973, 'learning_rate': 5.0374606781449234e-06, 'epoch': 1.07}             
+{'loss': 0.5244, 'grad_norm': 8.339299201965332, 'learning_rate': 3.120618715380493e-06, 'epoch': 1.42}
+{'loss': 0.5271, 'grad_norm': 8.402769088745117, 'learning_rate': 1.2037767526160625e-06, 'epoch': 1.78}
+{'eval_loss': 0.5493416786193848, 'eval_accuracy': 0.7652444444444444, 'eval_f1': 0.7623916493278093, 'eval_precision': 0.7612938579788535, 'eval_recall': 0.7652444444444444, 'eval_runtime': 27.1442, 'eval_samples_per_second': 414.453, 'eval_steps_per_second': 12.968, 'epoch': 2.0}
+{'train_runtime': 627.339, 'train_samples_per_second': 143.463, 'train_steps_per_second': 4.486, 'train_loss': 0.5718753437836626, 'epoch': 2.0}
+100% 2814/2814 [10:27<00:00,  4.49it/s]
+100% 352/352 [00:24<00:00, 14.33it/s]
+  Fold 2 F1 score: 0.7624
+Mean F1 score across folds: 0.7613
+[I 2024-08-18 11:31:30,107] Trial 4 finished with value: 0.7613132511403841 and parameters: {'learning_rate': 1.0787986566438216e-05, 'batch_size': 32, 'weight_decay': 0.08262964249232657, 'max_length': 64}. Best is trial 0 with value: 0.7675932789939554.
+
+Trial 5
+Hyperparameters:
+  Learning rate: 3.782962021662207e-05
+  Batch size: 64
+  Weight decay: 0.07717230209173322
+  Max length: 128
+Fold 1:
+  Train size: 45000
+  Val size: 11250
+
+Distribution for Train Fold 1:
+sentiment_equal
+Negative    15016
+Neutral     15002
+Positive    14982
+Name: count, dtype: int64
+sentiment_equal
+Negative    0.333689
+Neutral     0.333378
+Positive    0.332933
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 1:
+sentiment_equal
+Positive    3768
+Neutral     3748
+Negative    3734
+Name: count, dtype: int64
+sentiment_equal
+Positive    0.334933
+Neutral     0.333156
+Negative    0.331911
+Name: proportion, dtype: float64
+Map: 100% 45000/45000 [00:20<00:00, 2187.71 examples/s]
+Map: 100% 11250/11250 [00:05<00:00, 2162.45 examples/s]
+Some weights of XLNetForSequenceClassification were not initialized from the model checkpoint at xlnet-base-cased and are newly initialized: ['logits_proj.bias', 'logits_proj.weight', 'sequence_summary.summary.bias', 'sequence_summary.summary.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1525: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+{'loss': 0.6255, 'grad_norm': 4.85942268371582, 'learning_rate': 2.4395806219242075e-05, 'epoch': 0.71}
+{'eval_loss': 0.5613037347793579, 'eval_accuracy': 0.7637333333333334, 'eval_f1': 0.7618014058836295, 'eval_precision': 0.7614871516731039, 'eval_recall': 0.7637333333333334, 'eval_runtime': 45.1134, 'eval_samples_per_second': 249.372, 'eval_steps_per_second': 3.901, 'epoch': 1.0}
+{'loss': 0.5242, 'grad_norm': 5.0373215675354, 'learning_rate': 1.0961992221862079e-05, 'epoch': 1.42}               
+{'eval_loss': 0.5505185127258301, 'eval_accuracy': 0.7689777777777778, 'eval_f1': 0.7671872733694187, 'eval_precision': 0.7663392103245013, 'eval_recall': 0.7689777777777778, 'eval_runtime': 45.2151, 'eval_samples_per_second': 248.811, 'eval_steps_per_second': 3.893, 'epoch': 2.0}
+{'train_runtime': 966.4598, 'train_samples_per_second': 93.123, 'train_steps_per_second': 1.457, 'train_loss': 0.5502353581515226, 'epoch': 2.0}
+100% 1408/1408 [16:06<00:00,  1.46it/s]
+100% 176/176 [00:44<00:00,  3.96it/s]
+  Fold 1 F1 score: 0.7672
+Fold 2:
+  Train size: 45000
+  Val size: 11250
+
+Distribution for Train Fold 2:
+sentiment_equal
+Negative    15069
+Positive    14989
+Neutral     14942
+Name: count, dtype: int64
+sentiment_equal
+Negative    0.334867
+Positive    0.333089
+Neutral     0.332044
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 2:
+sentiment_equal
+Neutral     3808
+Positive    3761
+Negative    3681
+Name: count, dtype: int64
+sentiment_equal
+Neutral     0.338489
+Positive    0.334311
+Negative    0.327200
+Name: proportion, dtype: float64
+Map: 100% 45000/45000 [00:20<00:00, 2151.65 examples/s]
+Map: 100% 11250/11250 [00:05<00:00, 2188.78 examples/s]
+Some weights of XLNetForSequenceClassification were not initialized from the model checkpoint at xlnet-base-cased and are newly initialized: ['logits_proj.bias', 'logits_proj.weight', 'sequence_summary.summary.bias', 'sequence_summary.summary.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1525: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+{'loss': 0.6136, 'grad_norm': 4.082147598266602, 'learning_rate': 2.4395806219242075e-05, 'epoch': 0.71}
+{'eval_loss': 0.5498093962669373, 'eval_accuracy': 0.7658666666666667, 'eval_f1': 0.7619709504192459, 'eval_precision': 0.7611359723390442, 'eval_recall': 0.7658666666666667, 'eval_runtime': 43.1454, 'eval_samples_per_second': 260.746, 'eval_steps_per_second': 4.079, 'epoch': 1.0}
+{'loss': 0.5132, 'grad_norm': 3.8064124584198, 'learning_rate': 1.0961992221862079e-05, 'epoch': 1.42}               
+{'eval_loss': 0.5361413359642029, 'eval_accuracy': 0.7716444444444445, 'eval_f1': 0.7689720603380066, 'eval_precision': 0.7678916859452786, 'eval_recall': 0.7716444444444445, 'eval_runtime': 44.8361, 'eval_samples_per_second': 250.914, 'eval_steps_per_second': 3.925, 'epoch': 2.0}
+{'train_runtime': 957.0093, 'train_samples_per_second': 94.043, 'train_steps_per_second': 1.471, 'train_loss': 0.5416390137238936, 'epoch': 2.0}
+100% 1408/1408 [15:57<00:00,  1.47it/s]
+100% 176/176 [00:43<00:00,  4.07it/s]
+  Fold 2 F1 score: 0.7690
+Mean F1 score across folds: 0.7681
+[I 2024-08-18 12:06:02,074] Trial 5 finished with value: 0.7680796668537127 and parameters: {'learning_rate': 3.782962021662207e-05, 'batch_size': 64, 'weight_decay': 0.07717230209173322, 'max_length': 128}. Best is trial 5 with value: 0.7680796668537127.
+
+Trial 6
+Hyperparameters:
+  Learning rate: 0.0009219919179366845
+  Batch size: 64
+  Weight decay: 0.006010478220060286
+  Max length: 64
+Fold 1:
+  Train size: 45000
+  Val size: 11250
+
+Distribution for Train Fold 1:
+sentiment_equal
+Negative    15016
+Neutral     15002
+Positive    14982
+Name: count, dtype: int64
+sentiment_equal
+Negative    0.333689
+Neutral     0.333378
+Positive    0.332933
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 1:
+sentiment_equal
+Positive    3768
+Neutral     3748
+Negative    3734
+Name: count, dtype: int64
+sentiment_equal
+Positive    0.334933
+Neutral     0.333156
+Negative    0.331911
+Name: proportion, dtype: float64
+Map: 100% 45000/45000 [00:18<00:00, 2417.24 examples/s]
+Map: 100% 11250/11250 [00:04<00:00, 2383.89 examples/s]
+Some weights of XLNetForSequenceClassification were not initialized from the model checkpoint at xlnet-base-cased and are newly initialized: ['logits_proj.bias', 'logits_proj.weight', 'sequence_summary.summary.bias', 'sequence_summary.summary.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1525: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+{'loss': 1.1374, 'grad_norm': 2.7936155796051025, 'learning_rate': 0.0005945800152603051, 'epoch': 0.71}
+ 50% 704/1408 [03:29<03:46,  3.10it/s/opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+{'eval_loss': 1.1287602186203003, 'eval_accuracy': 0.33493333333333336, 'eval_f1': 0.16806882407777335, 'eval_precision': 0.11218033777777778, 'eval_recall': 0.33493333333333336, 'eval_runtime': 21.3253, 'eval_samples_per_second': 527.542, 'eval_steps_per_second': 8.253, 'epoch': 1.0}
+{'loss': 1.1181, 'grad_norm': 2.1413910388946533, 'learning_rate': 0.00026716811258392566, 'epoch': 1.42}            
+100% 1408/1408 [07:22<00:00,  3.84it//opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+{'eval_loss': 1.0998982191085815, 'eval_accuracy': 0.33315555555555554, 'eval_f1': 0.1665111377813338, 'eval_precision': 0.11099262419753086, 'eval_recall': 0.33315555555555554, 'eval_runtime': 17.683, 'eval_samples_per_second': 636.206, 'eval_steps_per_second': 9.953, 'epoch': 2.0}
+{'train_runtime': 460.1026, 'train_samples_per_second': 195.609, 'train_steps_per_second': 3.06, 'train_loss': 1.1220010410655628, 'epoch': 2.0}
+100% 1408/1408 [07:40<00:00,  3.06it/s]
+100% 176/176 [00:17<00:00, 12.92it/s]/opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+100% 176/176 [00:17<00:00,  9.86it/s]
+  Fold 1 F1 score: 0.1665
+Fold 2:
+  Train size: 45000
+  Val size: 11250
+
+Distribution for Train Fold 2:
+sentiment_equal
+Negative    15069
+Positive    14989
+Neutral     14942
+Name: count, dtype: int64
+sentiment_equal
+Negative    0.334867
+Positive    0.333089
+Neutral     0.332044
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 2:
+sentiment_equal
+Neutral     3808
+Positive    3761
+Negative    3681
+Name: count, dtype: int64
+sentiment_equal
+Neutral     0.338489
+Positive    0.334311
+Negative    0.327200
+Name: proportion, dtype: float64
+Map: 100% 45000/45000 [00:18<00:00, 2420.12 examples/s]
+Map: 100% 11250/11250 [00:04<00:00, 2436.02 examples/s]
+Some weights of XLNetForSequenceClassification were not initialized from the model checkpoint at xlnet-base-cased and are newly initialized: ['logits_proj.bias', 'logits_proj.weight', 'sequence_summary.summary.bias', 'sequence_summary.summary.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1525: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+{'loss': 1.134, 'grad_norm': 1.970592975616455, 'learning_rate': 0.0005945800152603051, 'epoch': 0.71}
+ 50% 704/1408 [03:34<02:34,  4.55it/s/opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+{'eval_loss': 1.1050035953521729, 'eval_accuracy': 0.3343111111111111, 'eval_f1': 0.1675230282977668, 'eval_precision': 0.11176391901234567, 'eval_recall': 0.3343111111111111, 'eval_runtime': 19.4692, 'eval_samples_per_second': 577.836, 'eval_steps_per_second': 9.04, 'epoch': 1.0}
+{'loss': 1.1149, 'grad_norm': 3.690194845199585, 'learning_rate': 0.00026716811258392566, 'epoch': 1.42}             
+100% 1408/1408 [07:25<00:00,  3.74it//opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+{'eval_loss': 1.10154128074646, 'eval_accuracy': 0.3343111111111111, 'eval_f1': 0.1675230282977668, 'eval_precision': 0.11176391901234567, 'eval_recall': 0.3343111111111111, 'eval_runtime': 18.3332, 'eval_samples_per_second': 613.64, 'eval_steps_per_second': 9.6, 'epoch': 2.0}
+{'train_runtime': 464.1854, 'train_samples_per_second': 193.888, 'train_steps_per_second': 3.033, 'train_loss': 1.1189143874428489, 'epoch': 2.0}
+100% 1408/1408 [07:44<00:00,  3.03it/s]
+100% 176/176 [00:18<00:00,  9.66it/s]/opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+100% 176/176 [00:18<00:00,  9.54it/s]
+  Fold 2 F1 score: 0.1675
+Mean F1 score across folds: 0.1670
+[I 2024-08-18 12:22:57,423] Trial 6 finished with value: 0.16701708303955032 and parameters: {'learning_rate': 0.0009219919179366845, 'batch_size': 64, 'weight_decay': 0.006010478220060286, 'max_length': 64}. Best is trial 5 with value: 0.7680796668537127.
+
+Trial 7
+Hyperparameters:
+  Learning rate: 3.253818219226097e-05
+  Batch size: 64
+  Weight decay: 0.006784862244291522
+  Max length: 64
+Fold 1:
+  Train size: 45000
+  Val size: 11250
+
+Distribution for Train Fold 1:
+sentiment_equal
+Negative    15016
+Neutral     15002
+Positive    14982
+Name: count, dtype: int64
+sentiment_equal
+Negative    0.333689
+Neutral     0.333378
+Positive    0.332933
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 1:
+sentiment_equal
+Positive    3768
+Neutral     3748
+Negative    3734
+Name: count, dtype: int64
+sentiment_equal
+Positive    0.334933
+Neutral     0.333156
+Negative    0.331911
+Name: proportion, dtype: float64
+Map: 100% 45000/45000 [00:18<00:00, 2489.00 examples/s]
+Map: 100% 11250/11250 [00:04<00:00, 2463.97 examples/s]
+Some weights of XLNetForSequenceClassification were not initialized from the model checkpoint at xlnet-base-cased and are newly initialized: ['logits_proj.bias', 'logits_proj.weight', 'sequence_summary.summary.bias', 'sequence_summary.summary.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1525: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+{'loss': 0.636, 'grad_norm': 4.3270721435546875, 'learning_rate': 2.098342999330466e-05, 'epoch': 0.71}
+{'eval_loss': 0.5942913889884949, 'eval_accuracy': 0.7456888888888888, 'eval_f1': 0.745116226234902, 'eval_precision': 0.7530965109118155, 'eval_recall': 0.7456888888888888, 'eval_runtime': 17.852, 'eval_samples_per_second': 630.181, 'eval_steps_per_second': 9.859, 'epoch': 1.0}
+{'loss': 0.5259, 'grad_norm': 4.375162124633789, 'learning_rate': 9.42867779434835e-06, 'epoch': 1.42}               
+{'eval_loss': 0.5585128664970398, 'eval_accuracy': 0.7657777777777778, 'eval_f1': 0.7628072658813749, 'eval_precision': 0.7617546281960447, 'eval_recall': 0.7657777777777778, 'eval_runtime': 18.7855, 'eval_samples_per_second': 598.867, 'eval_steps_per_second': 9.369, 'epoch': 2.0}
+{'train_runtime': 458.2651, 'train_samples_per_second': 196.393, 'train_steps_per_second': 3.072, 'train_loss': 0.5561734221198342, 'epoch': 2.0}
+100% 1408/1408 [07:38<00:00,  3.07it/s]
+100% 176/176 [00:16<00:00, 10.36it/s]
+  Fold 1 F1 score: 0.7628
+Fold 2:
+  Train size: 45000
+  Val size: 11250
+
+Distribution for Train Fold 2:
+sentiment_equal
+Negative    15069
+Positive    14989
+Neutral     14942
+Name: count, dtype: int64
+sentiment_equal
+Negative    0.334867
+Positive    0.333089
+Neutral     0.332044
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 2:
+sentiment_equal
+Neutral     3808
+Positive    3761
+Negative    3681
+Name: count, dtype: int64
+sentiment_equal
+Neutral     0.338489
+Positive    0.334311
+Negative    0.327200
+Name: proportion, dtype: float64
+Map: 100% 45000/45000 [00:18<00:00, 2416.69 examples/s]
+Map: 100% 11250/11250 [00:04<00:00, 2464.91 examples/s]
+Some weights of XLNetForSequenceClassification were not initialized from the model checkpoint at xlnet-base-cased and are newly initialized: ['logits_proj.bias', 'logits_proj.weight', 'sequence_summary.summary.bias', 'sequence_summary.summary.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1525: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+{'loss': 0.632, 'grad_norm': 3.684311628341675, 'learning_rate': 2.098342999330466e-05, 'epoch': 0.71}
+{'eval_loss': 0.5630752444267273, 'eval_accuracy': 0.7589333333333333, 'eval_f1': 0.7538474417949635, 'eval_precision': 0.7536364428583678, 'eval_recall': 0.7589333333333333, 'eval_runtime': 18.5537, 'eval_samples_per_second': 606.348, 'eval_steps_per_second': 9.486, 'epoch': 1.0}
+{'loss': 0.5291, 'grad_norm': 4.134912490844727, 'learning_rate': 9.42867779434835e-06, 'epoch': 1.42}               
+{'eval_loss': 0.5540392398834229, 'eval_accuracy': 0.7656, 'eval_f1': 0.7622104951958072, 'eval_precision': 0.7611872919945163, 'eval_recall': 0.7656, 'eval_runtime': 17.5147, 'eval_samples_per_second': 642.317, 'eval_steps_per_second': 10.049, 'epoch': 2.0}
+{'train_runtime': 464.2241, 'train_samples_per_second': 193.872, 'train_steps_per_second': 3.033, 'train_loss': 0.5581118410283868, 'epoch': 2.0}
+100% 1408/1408 [07:44<00:00,  3.03it/s]
+100% 176/176 [00:17<00:00, 10.31it/s]
+  Fold 2 F1 score: 0.7622
+Mean F1 score across folds: 0.7625
+[I 2024-08-18 12:39:47,449] Trial 7 finished with value: 0.7625088805385911 and parameters: {'learning_rate': 3.253818219226097e-05, 'batch_size': 64, 'weight_decay': 0.006784862244291522, 'max_length': 64}. Best is trial 5 with value: 0.7680796668537127.
+
+Trial 8
+Hyperparameters:
+  Learning rate: 8.893756043287738e-05
+  Batch size: 64
+  Weight decay: 0.02473611752557728
+  Max length: 64
+Fold 1:
+  Train size: 45000
+  Val size: 11250
+
+Distribution for Train Fold 1:
+sentiment_equal
+Negative    15016
+Neutral     15002
+Positive    14982
+Name: count, dtype: int64
+sentiment_equal
+Negative    0.333689
+Neutral     0.333378
+Positive    0.332933
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 1:
+sentiment_equal
+Positive    3768
+Neutral     3748
+Negative    3734
+Name: count, dtype: int64
+sentiment_equal
+Positive    0.334933
+Neutral     0.333156
+Negative    0.331911
+Name: proportion, dtype: float64
+Map: 100% 45000/45000 [00:18<00:00, 2471.73 examples/s]
+Map: 100% 11250/11250 [00:04<00:00, 2458.69 examples/s]
+Some weights of XLNetForSequenceClassification were not initialized from the model checkpoint at xlnet-base-cased and are newly initialized: ['logits_proj.bias', 'logits_proj.weight', 'sequence_summary.summary.bias', 'sequence_summary.summary.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1525: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+{'loss': 0.6575, 'grad_norm': 3.061691999435425, 'learning_rate': 5.7354619938247635e-05, 'epoch': 0.71}
+{'eval_loss': 0.6032898426055908, 'eval_accuracy': 0.7330666666666666, 'eval_f1': 0.73045812231719, 'eval_precision': 0.7427727236548636, 'eval_recall': 0.7330666666666666, 'eval_runtime': 17.4744, 'eval_samples_per_second': 643.8, 'eval_steps_per_second': 10.072, 'epoch': 1.0}
+{'loss': 0.5316, 'grad_norm': 7.942453384399414, 'learning_rate': 2.5771679443617882e-05, 'epoch': 1.42}             
+{'eval_loss': 0.5628536343574524, 'eval_accuracy': 0.7621333333333333, 'eval_f1': 0.7595624888580261, 'eval_precision': 0.7583346437437702, 'eval_recall': 0.7621333333333333, 'eval_runtime': 19.2783, 'eval_samples_per_second': 583.558, 'eval_steps_per_second': 9.129, 'epoch': 2.0}
+{'train_runtime': 456.1273, 'train_samples_per_second': 197.313, 'train_steps_per_second': 3.087, 'train_loss': 0.5626916451887651, 'epoch': 2.0}
+100% 1408/1408 [07:36<00:00,  3.09it/s]
+100% 176/176 [00:19<00:00,  9.17it/s]
+  Fold 1 F1 score: 0.7596
+Fold 2:
+  Train size: 45000
+  Val size: 11250
+
+Distribution for Train Fold 2:
+sentiment_equal
+Negative    15069
+Positive    14989
+Neutral     14942
+Name: count, dtype: int64
+sentiment_equal
+Negative    0.334867
+Positive    0.333089
+Neutral     0.332044
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 2:
+sentiment_equal
+Neutral     3808
+Positive    3761
+Negative    3681
+Name: count, dtype: int64
+sentiment_equal
+Neutral     0.338489
+Positive    0.334311
+Negative    0.327200
+Name: proportion, dtype: float64
+Map: 100% 45000/45000 [00:18<00:00, 2387.06 examples/s]
+Map: 100% 11250/11250 [00:04<00:00, 2390.76 examples/s]
+Some weights of XLNetForSequenceClassification were not initialized from the model checkpoint at xlnet-base-cased and are newly initialized: ['logits_proj.bias', 'logits_proj.weight', 'sequence_summary.summary.bias', 'sequence_summary.summary.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1525: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+{'loss': 1.1133, 'grad_norm': 1.2760268449783325, 'learning_rate': 5.7354619938247635e-05, 'epoch': 0.71}
+ 50% 704/1408 [03:30<02:27,  4.79it/s/opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+{'eval_loss': 1.0154283046722412, 'eval_accuracy': 0.4798222222222222, 'eval_f1': 0.3745059822260223, 'eval_precision': 0.3366986063313946, 'eval_recall': 0.4798222222222222, 'eval_runtime': 17.4472, 'eval_samples_per_second': 644.801, 'eval_steps_per_second': 10.088, 'epoch': 1.0}
+{'loss': 0.992, 'grad_norm': 2.316410779953003, 'learning_rate': 2.5771679443617882e-05, 'epoch': 1.42}              
+{'eval_loss': 0.8441559076309204, 'eval_accuracy': 0.5649777777777778, 'eval_f1': 0.46279002543720904, 'eval_precision': 0.5371035365542451, 'eval_recall': 0.5649777777777778, 'eval_runtime': 14.5578, 'eval_samples_per_second': 772.783, 'eval_steps_per_second': 12.09, 'epoch': 2.0}
+{'train_runtime': 412.5341, 'train_samples_per_second': 218.164, 'train_steps_per_second': 3.413, 'train_loss': 0.9956724426963113, 'epoch': 2.0}
+100% 1408/1408 [06:52<00:00,  3.41it/s]
+100% 176/176 [00:14<00:00, 12.18it/s]
+  Fold 2 F1 score: 0.4628
+Mean F1 score across folds: 0.6112
+[I 2024-08-18 12:55:43,647] Trial 8 finished with value: 0.6111762571476176 and parameters: {'learning_rate': 8.893756043287738e-05, 'batch_size': 64, 'weight_decay': 0.02473611752557728, 'max_length': 64}. Best is trial 5 with value: 0.7680796668537127.
+
+Trial 9
+Hyperparameters:
+  Learning rate: 3.0005993032239542e-05
+  Batch size: 64
+  Weight decay: 0.00012896728181589922
+  Max length: 128
+Fold 1:
+  Train size: 45000
+  Val size: 11250
+
+Distribution for Train Fold 1:
+sentiment_equal
+Negative    15016
+Neutral     15002
+Positive    14982
+Name: count, dtype: int64
+sentiment_equal
+Negative    0.333689
+Neutral     0.333378
+Positive    0.332933
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 1:
+sentiment_equal
+Positive    3768
+Neutral     3748
+Negative    3734
+Name: count, dtype: int64
+sentiment_equal
+Positive    0.334933
+Neutral     0.333156
+Negative    0.331911
+Name: proportion, dtype: float64
+Map: 100% 45000/45000 [00:19<00:00, 2286.27 examples/s]
+Map: 100% 11250/11250 [00:04<00:00, 2269.25 examples/s]
+Some weights of XLNetForSequenceClassification were not initialized from the model checkpoint at xlnet-base-cased and are newly initialized: ['logits_proj.bias', 'logits_proj.weight', 'sequence_summary.summary.bias', 'sequence_summary.summary.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1525: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+{'loss': 0.6265, 'grad_norm': 5.035167217254639, 'learning_rate': 1.9350455733859023e-05, 'epoch': 0.71}
+{'eval_loss': 0.5585254430770874, 'eval_accuracy': 0.7643555555555556, 'eval_f1': 0.7619658032306074, 'eval_precision': 0.7614701654746316, 'eval_recall': 0.7643555555555556, 'eval_runtime': 33.6739, 'eval_samples_per_second': 334.087, 'eval_steps_per_second': 5.227, 'epoch': 1.0}
+{'loss': 0.5249, 'grad_norm': 6.373640537261963, 'learning_rate': 8.694918435478505e-06, 'epoch': 1.42}              
+{'eval_loss': 0.5489880442619324, 'eval_accuracy': 0.7692444444444444, 'eval_f1': 0.7673181289131831, 'eval_precision': 0.766587129425257, 'eval_recall': 0.7692444444444444, 'eval_runtime': 33.3263, 'eval_samples_per_second': 337.571, 'eval_steps_per_second': 5.281, 'epoch': 2.0}
+{'train_runtime': 718.3819, 'train_samples_per_second': 125.282, 'train_steps_per_second': 1.96, 'train_loss': 0.5524501800537109, 'epoch': 2.0}
+100% 1408/1408 [11:58<00:00,  1.96it/s]
+100% 176/176 [00:33<00:00,  5.30it/s]
+  Fold 1 F1 score: 0.7673
+Fold 2:
+  Train size: 45000
+  Val size: 11250
+
+Distribution for Train Fold 2:
+sentiment_equal
+Negative    15069
+Positive    14989
+Neutral     14942
+Name: count, dtype: int64
+sentiment_equal
+Negative    0.334867
+Positive    0.333089
+Neutral     0.332044
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 2:
+sentiment_equal
+Neutral     3808
+Positive    3761
+Negative    3681
+Name: count, dtype: int64
+sentiment_equal
+Neutral     0.338489
+Positive    0.334311
+Negative    0.327200
+Name: proportion, dtype: float64
+Map: 100% 45000/45000 [00:20<00:00, 2229.03 examples/s]
+Map: 100% 11250/11250 [00:04<00:00, 2284.05 examples/s]
+Some weights of XLNetForSequenceClassification were not initialized from the model checkpoint at xlnet-base-cased and are newly initialized: ['logits_proj.bias', 'logits_proj.weight', 'sequence_summary.summary.bias', 'sequence_summary.summary.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1525: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+{'loss': 0.614, 'grad_norm': 4.7680983543396, 'learning_rate': 1.9350455733859023e-05, 'epoch': 0.71}
+{'eval_loss': 0.5496872067451477, 'eval_accuracy': 0.7656888888888889, 'eval_f1': 0.7612724844557787, 'eval_precision': 0.7611776926702544, 'eval_recall': 0.7656888888888889, 'eval_runtime': 34.6569, 'eval_samples_per_second': 324.611, 'eval_steps_per_second': 5.078, 'epoch': 1.0}
+{'loss': 0.5185, 'grad_norm': 4.0698628425598145, 'learning_rate': 8.694918435478505e-06, 'epoch': 1.42}             
+{'eval_loss': 0.5346733331680298, 'eval_accuracy': 0.7715555555555556, 'eval_f1': 0.7686211118060885, 'eval_precision': 0.7675951880838179, 'eval_recall': 0.7715555555555556, 'eval_runtime': 33.8634, 'eval_samples_per_second': 332.218, 'eval_steps_per_second': 5.197, 'epoch': 2.0}
+{'train_runtime': 724.207, 'train_samples_per_second': 124.274, 'train_steps_per_second': 1.944, 'train_loss': 0.5460767854343761, 'epoch': 2.0}
+100% 1408/1408 [12:04<00:00,  1.94it/s]
+100% 176/176 [00:33<00:00,  5.25it/s]
+  Fold 2 F1 score: 0.7686
+Mean F1 score across folds: 0.7680
+[I 2024-08-18 13:21:50,235] Trial 9 finished with value: 0.7679696203596358 and parameters: {'learning_rate': 3.0005993032239542e-05, 'batch_size': 64, 'weight_decay': 0.00012896728181589922, 'max_length': 128}. Best is trial 5 with value: 0.7680796668537127.
+
+Trial 10
+Hyperparameters:
+  Learning rate: 8.892870721330036e-05
+  Batch size: 32
+  Weight decay: 0.0010787809444778136
+  Max length: 128
+Fold 1:
+  Train size: 45000
+  Val size: 11250
+
+Distribution for Train Fold 1:
+sentiment_equal
+Negative    15016
+Neutral     15002
+Positive    14982
+Name: count, dtype: int64
+sentiment_equal
+Negative    0.333689
+Neutral     0.333378
+Positive    0.332933
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 1:
+sentiment_equal
+Positive    3768
+Neutral     3748
+Negative    3734
+Name: count, dtype: int64
+sentiment_equal
+Positive    0.334933
+Neutral     0.333156
+Negative    0.331911
+Name: proportion, dtype: float64
+Map: 100% 45000/45000 [00:20<00:00, 2190.34 examples/s]
+Map: 100% 11250/11250 [00:05<00:00, 2242.43 examples/s]
+Some weights of XLNetForSequenceClassification were not initialized from the model checkpoint at xlnet-base-cased and are newly initialized: ['logits_proj.bias', 'logits_proj.weight', 'sequence_summary.summary.bias', 'sequence_summary.summary.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1525: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+{'loss': 0.678, 'grad_norm': 4.812684535980225, 'learning_rate': 7.312758652863434e-05, 'epoch': 0.36}
+{'loss': 0.607, 'grad_norm': 3.5115761756896973, 'learning_rate': 5.732646584396832e-05, 'epoch': 0.71}
+{'eval_loss': 0.6004566550254822, 'eval_accuracy': 0.7288, 'eval_f1': 0.7284417883177442, 'eval_precision': 0.7531535790179602, 'eval_recall': 0.7288, 'eval_runtime': 32.6892, 'eval_samples_per_second': 344.15, 'eval_steps_per_second': 10.768, 'epoch': 1.0}
+{'loss': 0.5712, 'grad_norm': 4.928751468658447, 'learning_rate': 4.15253451593023e-05, 'epoch': 1.07}               
+{'loss': 0.5003, 'grad_norm': 5.308873176574707, 'learning_rate': 2.572422447463628e-05, 'epoch': 1.42}
+{'loss': 0.4837, 'grad_norm': 2.640178680419922, 'learning_rate': 9.92310378997026e-06, 'epoch': 1.78}
+{'eval_loss': 0.5584712028503418, 'eval_accuracy': 0.7637333333333334, 'eval_f1': 0.7627987493269821, 'eval_precision': 0.7620888354183644, 'eval_recall': 0.7637333333333334, 'eval_runtime': 34.4013, 'eval_samples_per_second': 327.023, 'eval_steps_per_second': 10.232, 'epoch': 2.0}
+{'train_runtime': 768.4784, 'train_samples_per_second': 117.115, 'train_steps_per_second': 3.662, 'train_loss': 0.5578450336469855, 'epoch': 2.0}
+100% 2814/2814 [12:48<00:00,  3.66it/s]
+100% 352/352 [00:32<00:00, 10.82it/s]
+  Fold 1 F1 score: 0.7628
+Fold 2:
+  Train size: 45000
+  Val size: 11250
+
+Distribution for Train Fold 2:
+sentiment_equal
+Negative    15069
+Positive    14989
+Neutral     14942
+Name: count, dtype: int64
+sentiment_equal
+Negative    0.334867
+Positive    0.333089
+Neutral     0.332044
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 2:
+sentiment_equal
+Neutral     3808
+Positive    3761
+Negative    3681
+Name: count, dtype: int64
+sentiment_equal
+Neutral     0.338489
+Positive    0.334311
+Negative    0.327200
+Name: proportion, dtype: float64
+Map: 100% 45000/45000 [00:20<00:00, 2200.19 examples/s]
+Map: 100% 11250/11250 [00:04<00:00, 2281.42 examples/s]
+Some weights of XLNetForSequenceClassification were not initialized from the model checkpoint at xlnet-base-cased and are newly initialized: ['logits_proj.bias', 'logits_proj.weight', 'sequence_summary.summary.bias', 'sequence_summary.summary.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1525: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+{'loss': 1.1149, 'grad_norm': 4.96297550201416, 'learning_rate': 7.312758652863434e-05, 'epoch': 0.36}
+{'loss': 1.118, 'grad_norm': 3.6173555850982666, 'learning_rate': 5.732646584396832e-05, 'epoch': 0.71}
+ 50% 1407/2814 [05:50<05:10,  4.53it//opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+{'eval_loss': 1.1098487377166748, 'eval_accuracy': 0.3343111111111111, 'eval_f1': 0.1675230282977668, 'eval_precision': 0.11176391901234567, 'eval_recall': 0.3343111111111111, 'eval_runtime': 32.556, 'eval_samples_per_second': 345.559, 'eval_steps_per_second': 10.812, 'epoch': 1.0}
+{'loss': 1.1113, 'grad_norm': 4.3090105056762695, 'learning_rate': 4.15253451593023e-05, 'epoch': 1.07}              
+{'loss': 1.1093, 'grad_norm': 2.3246898651123047, 'learning_rate': 2.572422447463628e-05, 'epoch': 1.42}
+{'loss': 1.1057, 'grad_norm': 7.125881671905518, 'learning_rate': 9.92310378997026e-06, 'epoch': 1.78}
+100% 2814/2814 [11:55<00:00,  5.13it//opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+{'eval_loss': 1.0987255573272705, 'eval_accuracy': 0.3384888888888889, 'eval_f1': 0.17120011806201207, 'eval_precision': 0.11457472790123457, 'eval_recall': 0.3384888888888889, 'eval_runtime': 31.6833, 'eval_samples_per_second': 355.077, 'eval_steps_per_second': 11.11, 'epoch': 2.0}
+{'train_runtime': 747.4949, 'train_samples_per_second': 120.402, 'train_steps_per_second': 3.765, 'train_loss': 1.111031299799829, 'epoch': 2.0}
+100% 2814/2814 [12:27<00:00,  3.76it/s]
+100% 351/352 [00:31<00:00, 11.29it/s]/opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+100% 352/352 [00:31<00:00, 11.21it/s]
+  Fold 2 F1 score: 0.1712
+Mean F1 score across folds: 0.4670
+[I 2024-08-18 13:49:07,878] Trial 10 finished with value: 0.4669994336944971 and parameters: {'learning_rate': 8.892870721330036e-05, 'batch_size': 32, 'weight_decay': 0.0010787809444778136, 'max_length': 128}. Best is trial 5 with value: 0.7680796668537127.
+
+Trial 11
+Hyperparameters:
+  Learning rate: 3.4323583655894506e-05
+  Batch size: 64
+  Weight decay: 1.8942435954396602e-05
+  Max length: 128
+Fold 1:
+  Train size: 45000
+  Val size: 11250
+
+Distribution for Train Fold 1:
+sentiment_equal
+Negative    15016
+Neutral     15002
+Positive    14982
+Name: count, dtype: int64
+sentiment_equal
+Negative    0.333689
+Neutral     0.333378
+Positive    0.332933
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 1:
+sentiment_equal
+Positive    3768
+Neutral     3748
+Negative    3734
+Name: count, dtype: int64
+sentiment_equal
+Positive    0.334933
+Neutral     0.333156
+Negative    0.331911
+Name: proportion, dtype: float64
+Map: 100% 45000/45000 [00:17<00:00, 2620.91 examples/s]
+Map: 100% 11250/11250 [00:04<00:00, 2618.87 examples/s]
+Some weights of XLNetForSequenceClassification were not initialized from the model checkpoint at xlnet-base-cased and are newly initialized: ['logits_proj.bias', 'logits_proj.weight', 'sequence_summary.summary.bias', 'sequence_summary.summary.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1525: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+{'loss': 0.6266, 'grad_norm': 5.229732990264893, 'learning_rate': 2.213481105081833e-05, 'epoch': 0.71}
+{'eval_loss': 0.5554048418998718, 'eval_accuracy': 0.7616, 'eval_f1': 0.7606875370388823, 'eval_precision': 0.7614126494449175, 'eval_recall': 0.7616, 'eval_runtime': 33.3327, 'eval_samples_per_second': 337.507, 'eval_steps_per_second': 5.28, 'epoch': 1.0}
+{'loss': 0.5228, 'grad_norm': 6.578655242919922, 'learning_rate': 9.946038445742159e-06, 'epoch': 1.42}              
+{'eval_loss': 0.5446760654449463, 'eval_accuracy': 0.768, 'eval_f1': 0.7661626817059399, 'eval_precision': 0.7652922797353042, 'eval_recall': 0.768, 'eval_runtime': 33.1924, 'eval_samples_per_second': 338.933, 'eval_steps_per_second': 5.302, 'epoch': 2.0}
+{'train_runtime': 708.3073, 'train_samples_per_second': 127.063, 'train_steps_per_second': 1.988, 'train_loss': 0.5506807132200762, 'epoch': 2.0}
+100% 1408/1408 [11:48<00:00,  1.99it/s]
+100% 176/176 [00:32<00:00,  5.41it/s]
+  Fold 1 F1 score: 0.7662
+Fold 2:
+  Train size: 45000
+  Val size: 11250
+
+Distribution for Train Fold 2:
+sentiment_equal
+Negative    15069
+Positive    14989
+Neutral     14942
+Name: count, dtype: int64
+sentiment_equal
+Negative    0.334867
+Positive    0.333089
+Neutral     0.332044
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 2:
+sentiment_equal
+Neutral     3808
+Positive    3761
+Negative    3681
+Name: count, dtype: int64
+sentiment_equal
+Neutral     0.338489
+Positive    0.334311
+Negative    0.327200
+Name: proportion, dtype: float64
+Map: 100% 45000/45000 [00:17<00:00, 2538.29 examples/s]
+Map: 100% 11250/11250 [00:04<00:00, 2483.87 examples/s]
+Some weights of XLNetForSequenceClassification were not initialized from the model checkpoint at xlnet-base-cased and are newly initialized: ['logits_proj.bias', 'logits_proj.weight', 'sequence_summary.summary.bias', 'sequence_summary.summary.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1525: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+{'loss': 0.6168, 'grad_norm': 5.399415493011475, 'learning_rate': 2.213481105081833e-05, 'epoch': 0.71}
+{'eval_loss': 0.5443809628486633, 'eval_accuracy': 0.7633777777777778, 'eval_f1': 0.7610465706967464, 'eval_precision': 0.7599007460400401, 'eval_recall': 0.7633777777777778, 'eval_runtime': 32.5711, 'eval_samples_per_second': 345.399, 'eval_steps_per_second': 5.404, 'epoch': 1.0}
+{'loss': 0.5165, 'grad_norm': 4.012505054473877, 'learning_rate': 9.946038445742159e-06, 'epoch': 1.42}              
+{'eval_loss': 0.536691427230835, 'eval_accuracy': 0.7696, 'eval_f1': 0.7673170257343179, 'eval_precision': 0.7661774191572379, 'eval_recall': 0.7696, 'eval_runtime': 33.0208, 'eval_samples_per_second': 340.695, 'eval_steps_per_second': 5.33, 'epoch': 2.0}
+{'train_runtime': 712.1006, 'train_samples_per_second': 126.387, 'train_steps_per_second': 1.977, 'train_loss': 0.5452145554802634, 'epoch': 2.0}
+100% 1408/1408 [11:52<00:00,  1.98it/s]
+100% 176/176 [00:32<00:00,  5.38it/s]
+  Fold 2 F1 score: 0.7673
+Mean F1 score across folds: 0.7667
+[I 2024-08-18 14:14:43,277] Trial 11 finished with value: 0.7667398537201289 and parameters: {'learning_rate': 3.4323583655894506e-05, 'batch_size': 64, 'weight_decay': 1.8942435954396602e-05, 'max_length': 128}. Best is trial 5 with value: 0.7680796668537127.
+
+Trial 12
+Hyperparameters:
+  Learning rate: 4.0288111968297004e-05
+  Batch size: 64
+  Weight decay: 0.0001573771913891785
+  Max length: 128
+Fold 1:
+  Train size: 45000
+  Val size: 11250
+
+Distribution for Train Fold 1:
+sentiment_equal
+Negative    15016
+Neutral     15002
+Positive    14982
+Name: count, dtype: int64
+sentiment_equal
+Negative    0.333689
+Neutral     0.333378
+Positive    0.332933
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 1:
+sentiment_equal
+Positive    3768
+Neutral     3748
+Negative    3734
+Name: count, dtype: int64
+sentiment_equal
+Positive    0.334933
+Neutral     0.333156
+Negative    0.331911
+Name: proportion, dtype: float64
+Map: 100% 45000/45000 [00:17<00:00, 2523.96 examples/s]
+Map: 100% 11250/11250 [00:04<00:00, 2521.79 examples/s]
+Some weights of XLNetForSequenceClassification were not initialized from the model checkpoint at xlnet-base-cased and are newly initialized: ['logits_proj.bias', 'logits_proj.weight', 'sequence_summary.summary.bias', 'sequence_summary.summary.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1525: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+{'loss': 1.1083, 'grad_norm': 1.5659103393554688, 'learning_rate': 2.5981254025009717e-05, 'epoch': 0.71}
+{'eval_loss': 0.8679879307746887, 'eval_accuracy': 0.5988444444444444, 'eval_f1': 0.5611666133867655, 'eval_precision': 0.6856550034592207, 'eval_recall': 0.5988444444444444, 'eval_runtime': 33.5786, 'eval_samples_per_second': 335.035, 'eval_steps_per_second': 5.241, 'epoch': 1.0}
+{'loss': 0.7684, 'grad_norm': 5.9717183113098145, 'learning_rate': 1.1674396081722429e-05, 'epoch': 1.42}            
+{'eval_loss': 0.5449122190475464, 'eval_accuracy': 0.7608888888888888, 'eval_f1': 0.7582336535052068, 'eval_precision': 0.7573880436078865, 'eval_recall': 0.7608888888888888, 'eval_runtime': 32.9473, 'eval_samples_per_second': 341.455, 'eval_steps_per_second': 5.342, 'epoch': 2.0}
+{'train_runtime': 712.06, 'train_samples_per_second': 126.394, 'train_steps_per_second': 1.977, 'train_loss': 0.8271410681984641, 'epoch': 2.0}
+100% 1408/1408 [11:52<00:00,  1.98it/s]
+100% 176/176 [00:32<00:00,  5.41it/s]
+  Fold 1 F1 score: 0.7582
+Fold 2:
+  Train size: 45000
+  Val size: 11250
+
+Distribution for Train Fold 2:
+sentiment_equal
+Negative    15069
+Positive    14989
+Neutral     14942
+Name: count, dtype: int64
+sentiment_equal
+Negative    0.334867
+Positive    0.333089
+Neutral     0.332044
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 2:
+sentiment_equal
+Neutral     3808
+Positive    3761
+Negative    3681
+Name: count, dtype: int64
+sentiment_equal
+Neutral     0.338489
+Positive    0.334311
+Negative    0.327200
+Name: proportion, dtype: float64
+Map: 100% 45000/45000 [00:17<00:00, 2514.46 examples/s]
+Map: 100% 11250/11250 [00:04<00:00, 2505.87 examples/s]
+Some weights of XLNetForSequenceClassification were not initialized from the model checkpoint at xlnet-base-cased and are newly initialized: ['logits_proj.bias', 'logits_proj.weight', 'sequence_summary.summary.bias', 'sequence_summary.summary.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1525: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+{'loss': 0.6162, 'grad_norm': 3.6642746925354004, 'learning_rate': 2.5981254025009717e-05, 'epoch': 0.71}
+{'eval_loss': 0.5473081469535828, 'eval_accuracy': 0.7644444444444445, 'eval_f1': 0.7603321464346899, 'eval_precision': 0.7595741248989154, 'eval_recall': 0.7644444444444445, 'eval_runtime': 33.1656, 'eval_samples_per_second': 339.207, 'eval_steps_per_second': 5.307, 'epoch': 1.0}
+{'loss': 0.5157, 'grad_norm': 3.958925724029541, 'learning_rate': 1.1674396081722429e-05, 'epoch': 1.42}             
+{'eval_loss': 0.537982702255249, 'eval_accuracy': 0.7703111111111111, 'eval_f1': 0.7675769014421504, 'eval_precision': 0.7664527744374283, 'eval_recall': 0.7703111111111111, 'eval_runtime': 32.9047, 'eval_samples_per_second': 341.896, 'eval_steps_per_second': 5.349, 'epoch': 2.0}
+{'train_runtime': 712.4289, 'train_samples_per_second': 126.328, 'train_steps_per_second': 1.976, 'train_loss': 0.5430986014279452, 'epoch': 2.0}
+100% 1408/1408 [11:52<00:00,  1.98it/s]
+100% 176/176 [00:33<00:00,  5.22it/s]
+  Fold 2 F1 score: 0.7676
+Mean F1 score across folds: 0.7629
+[I 2024-08-18 14:40:25,027] Trial 12 finished with value: 0.7629052774736786 and parameters: {'learning_rate': 4.0288111968297004e-05, 'batch_size': 64, 'weight_decay': 0.0001573771913891785, 'max_length': 128}. Best is trial 5 with value: 0.7680796668537127.
+
+Trial 13
+Hyperparameters:
+  Learning rate: 6.21487469082169e-05
+  Batch size: 64
+  Weight decay: 0.0009182290683664741
+  Max length: 128
+Fold 1:
+  Train size: 45000
+  Val size: 11250
+
+Distribution for Train Fold 1:
+sentiment_equal
+Negative    15016
+Neutral     15002
+Positive    14982
+Name: count, dtype: int64
+sentiment_equal
+Negative    0.333689
+Neutral     0.333378
+Positive    0.332933
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 1:
+sentiment_equal
+Positive    3768
+Neutral     3748
+Negative    3734
+Name: count, dtype: int64
+sentiment_equal
+Positive    0.334933
+Neutral     0.333156
+Negative    0.331911
+Name: proportion, dtype: float64
+Map: 100% 45000/45000 [00:17<00:00, 2547.67 examples/s]
+Map: 100% 11250/11250 [00:04<00:00, 2524.10 examples/s]
+Some weights of XLNetForSequenceClassification were not initialized from the model checkpoint at xlnet-base-cased and are newly initialized: ['logits_proj.bias', 'logits_proj.weight', 'sequence_summary.summary.bias', 'sequence_summary.summary.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1525: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+{'loss': 0.625, 'grad_norm': 3.5778024196624756, 'learning_rate': 4.0078879398196696e-05, 'epoch': 0.71}
+{'eval_loss': 0.6003195643424988, 'eval_accuracy': 0.7387555555555556, 'eval_f1': 0.7359776323209769, 'eval_precision': 0.7468521231577628, 'eval_recall': 0.7387555555555556, 'eval_runtime': 33.4734, 'eval_samples_per_second': 336.087, 'eval_steps_per_second': 5.258, 'epoch': 1.0}
+{'loss': 0.5174, 'grad_norm': 3.8409643173217773, 'learning_rate': 1.8009011888176492e-05, 'epoch': 1.42}            
+{'eval_loss': 0.5531553030014038, 'eval_accuracy': 0.7679111111111111, 'eval_f1': 0.7657150647621254, 'eval_precision': 0.7647359256613346, 'eval_recall': 0.7679111111111111, 'eval_runtime': 33.611, 'eval_samples_per_second': 334.712, 'eval_steps_per_second': 5.236, 'epoch': 2.0}
+{'train_runtime': 714.541, 'train_samples_per_second': 125.955, 'train_steps_per_second': 1.97, 'train_loss': 0.5430090427398682, 'epoch': 2.0}
+100% 1408/1408 [11:54<00:00,  1.97it/s]
+100% 176/176 [00:33<00:00,  5.32it/s]
+  Fold 1 F1 score: 0.7657
+Fold 2:
+  Train size: 45000
+  Val size: 11250
+
+Distribution for Train Fold 2:
+sentiment_equal
+Negative    15069
+Positive    14989
+Neutral     14942
+Name: count, dtype: int64
+sentiment_equal
+Negative    0.334867
+Positive    0.333089
+Neutral     0.332044
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 2:
+sentiment_equal
+Neutral     3808
+Positive    3761
+Negative    3681
+Name: count, dtype: int64
+sentiment_equal
+Neutral     0.338489
+Positive    0.334311
+Negative    0.327200
+Name: proportion, dtype: float64
+Map: 100% 45000/45000 [00:18<00:00, 2475.30 examples/s]
+Map: 100% 11250/11250 [00:04<00:00, 2450.89 examples/s]
+Some weights of XLNetForSequenceClassification were not initialized from the model checkpoint at xlnet-base-cased and are newly initialized: ['logits_proj.bias', 'logits_proj.weight', 'sequence_summary.summary.bias', 'sequence_summary.summary.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1525: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+{'loss': 0.6185, 'grad_norm': 3.271923542022705, 'learning_rate': 4.0078879398196696e-05, 'epoch': 0.71}
+{'eval_loss': 0.5473231077194214, 'eval_accuracy': 0.7618666666666667, 'eval_f1': 0.7601222265681158, 'eval_precision': 0.7592598510964693, 'eval_recall': 0.7618666666666667, 'eval_runtime': 33.4519, 'eval_samples_per_second': 336.304, 'eval_steps_per_second': 5.261, 'epoch': 1.0}
+{'loss': 0.5137, 'grad_norm': 3.570760488510132, 'learning_rate': 1.8009011888176492e-05, 'epoch': 1.42}             
+{'eval_loss': 0.5401661992073059, 'eval_accuracy': 0.7688888888888888, 'eval_f1': 0.7665995523358731, 'eval_precision': 0.7654573298847437, 'eval_recall': 0.7688888888888888, 'eval_runtime': 33.2785, 'eval_samples_per_second': 338.056, 'eval_steps_per_second': 5.289, 'epoch': 2.0}
+{'train_runtime': 714.2886, 'train_samples_per_second': 125.999, 'train_steps_per_second': 1.971, 'train_loss': 0.5408983880823309, 'epoch': 2.0}
+100% 1408/1408 [11:54<00:00,  1.97it/s]
+100% 176/176 [00:32<00:00,  5.34it/s]
+  Fold 2 F1 score: 0.7666
+Mean F1 score across folds: 0.7662
+[I 2024-08-18 15:06:11,230] Trial 13 finished with value: 0.7661573085489992 and parameters: {'learning_rate': 6.21487469082169e-05, 'batch_size': 64, 'weight_decay': 0.0009182290683664741, 'max_length': 128}. Best is trial 5 with value: 0.7680796668537127.
+
+Trial 14
+Hyperparameters:
+  Learning rate: 0.0001702030387730479
+  Batch size: 64
+  Weight decay: 5.3481351063831277e-05
+  Max length: 128
+Fold 1:
+  Train size: 45000
+  Val size: 11250
+
+Distribution for Train Fold 1:
+sentiment_equal
+Negative    15016
+Neutral     15002
+Positive    14982
+Name: count, dtype: int64
+sentiment_equal
+Negative    0.333689
+Neutral     0.333378
+Positive    0.332933
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 1:
+sentiment_equal
+Positive    3768
+Neutral     3748
+Negative    3734
+Name: count, dtype: int64
+sentiment_equal
+Positive    0.334933
+Neutral     0.333156
+Negative    0.331911
+Name: proportion, dtype: float64
+Map: 100% 45000/45000 [00:17<00:00, 2507.45 examples/s]
+Map: 100% 11250/11250 [00:04<00:00, 2432.42 examples/s]
+Some weights of XLNetForSequenceClassification were not initialized from the model checkpoint at xlnet-base-cased and are newly initialized: ['logits_proj.bias', 'logits_proj.weight', 'sequence_summary.summary.bias', 'sequence_summary.summary.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1525: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+{'loss': 1.1172, 'grad_norm': 1.4490203857421875, 'learning_rate': 0.00010976161875420988, 'epoch': 0.71}
+ 50% 704/1408 [05:22<04:06,  2.86it/s/opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+{'eval_loss': 1.1022454500198364, 'eval_accuracy': 0.33493333333333336, 'eval_f1': 0.16806882407777335, 'eval_precision': 0.11218033777777778, 'eval_recall': 0.33493333333333336, 'eval_runtime': 32.7829, 'eval_samples_per_second': 343.167, 'eval_steps_per_second': 5.369, 'epoch': 1.0}
+{'loss': 1.1088, 'grad_norm': 1.3981165885925293, 'learning_rate': 4.932019873537184e-05, 'epoch': 1.42}             
+100% 1408/1408 [11:17<00:00,  2.77it//opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+{'eval_loss': 1.098875641822815, 'eval_accuracy': 0.33315555555555554, 'eval_f1': 0.1665111377813338, 'eval_precision': 0.11099262419753086, 'eval_recall': 0.33315555555555554, 'eval_runtime': 33.1538, 'eval_samples_per_second': 339.328, 'eval_steps_per_second': 5.309, 'epoch': 2.0}
+{'train_runtime': 710.8205, 'train_samples_per_second': 126.614, 'train_steps_per_second': 1.981, 'train_loss': 1.110062057321722, 'epoch': 2.0}
+100% 1408/1408 [11:50<00:00,  1.98it/s]
+100% 176/176 [00:32<00:00,  6.08it/s]/opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1531: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", len(result))
+100% 176/176 [00:32<00:00,  5.36it/s]
+  Fold 1 F1 score: 0.1665
+Fold 2:
+  Train size: 45000
+  Val size: 11250
+
+Distribution for Train Fold 2:
+sentiment_equal
+Negative    15069
+Positive    14989
+Neutral     14942
+Name: count, dtype: int64
+sentiment_equal
+Negative    0.334867
+Positive    0.333089
+Neutral     0.332044
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 2:
+sentiment_equal
+Neutral     3808
+Positive    3761
+Negative    3681
+Name: count, dtype: int64
+sentiment_equal
+Neutral     0.338489
+Positive    0.334311
+Negative    0.327200
+Name: proportion, dtype: float64
+Map: 100% 45000/45000 [00:18<00:00, 2416.47 examples/s]
+Map: 100% 11250/11250 [00:04<00:00, 2403.16 examples/s]
+Some weights of XLNetForSequenceClassification were not initialized from the model checkpoint at xlnet-base-cased and are newly initialized: ['logits_proj.bias', 'logits_proj.weight', 'sequence_summary.summary.bias', 'sequence_summary.summary.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1525: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+{'loss': 0.7116, 'grad_norm': 2.3240091800689697, 'learning_rate': 0.00010976161875420988, 'epoch': 0.71}
+{'eval_loss': 0.6063973307609558, 'eval_accuracy': 0.7405333333333334, 'eval_f1': 0.7302318605345314, 'eval_precision': 0.7341134014332609, 'eval_recall': 0.7405333333333334, 'eval_runtime': 33.0784, 'eval_samples_per_second': 340.101, 'eval_steps_per_second': 5.321, 'epoch': 1.0}
+{'loss': 0.572, 'grad_norm': 2.3750054836273193, 'learning_rate': 4.932019873537184e-05, 'epoch': 1.42}              
+{'eval_loss': 0.5618367791175842, 'eval_accuracy': 0.7587555555555555, 'eval_f1': 0.7558670135103084, 'eval_precision': 0.7547610529003879, 'eval_recall': 0.7587555555555555, 'eval_runtime': 33.3912, 'eval_samples_per_second': 336.915, 'eval_steps_per_second': 5.271, 'epoch': 2.0}
+{'train_runtime': 715.4177, 'train_samples_per_second': 125.801, 'train_steps_per_second': 1.968, 'train_loss': 0.6069723801179365, 'epoch': 2.0}
+100% 1408/1408 [11:55<00:00,  1.97it/s]
+100% 176/176 [00:33<00:00,  5.27it/s]
+  Fold 2 F1 score: 0.7559
+Mean F1 score across folds: 0.4612
+[I 2024-08-18 15:31:55,695] Trial 14 finished with value: 0.4611890756458211 and parameters: {'learning_rate': 0.0001702030387730479, 'batch_size': 64, 'weight_decay': 5.3481351063831277e-05, 'max_length': 128}. Best is trial 5 with value: 0.7680796668537127.
+
+Best hyperparameters: {'learning_rate': 3.782962021662207e-05, 'batch_size': 64, 'weight_decay': 0.07717230209173322, 'max_length': 128}
+Map: 100% 56250/56250 [00:17<00:00, 3125.58 examples/s]
+Map: 100% 64134/64134 [00:19<00:00, 3231.42 examples/s]
+Some weights of XLNetForSequenceClassification were not initialized from the model checkpoint at xlnet-base-cased and are newly initialized: ['logits_proj.bias', 'logits_proj.weight', 'sequence_summary.summary.bias', 'sequence_summary.summary.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1525: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+Detected kernel version 5.4.0, which is below the recommended minimum of 5.5.0; this can cause the process to hang. It is recommended to upgrade the kernel to the minimum version or higher.
+{'loss': 0.6176, 'grad_norm': 3.2910265922546387, 'learning_rate': 2.7070342566843324e-05, 'epoch': 0.57}
+{'eval_loss': 0.5459113121032715, 'eval_accuracy': 0.7649452708391805, 'eval_f1': 0.7578190755995421, 'eval_precision': 0.7607420606857643, 'eval_recall': 0.7649452708391805, 'eval_runtime': 187.257, 'eval_samples_per_second': 342.492, 'eval_steps_per_second': 5.356, 'epoch': 1.0}
+{'loss': 0.5405, 'grad_norm': 5.665211200714111, 'learning_rate': 1.631106491706458e-05, 'epoch': 1.14}                
+{'loss': 0.4888, 'grad_norm': 5.697070598602295, 'learning_rate': 5.5517872672858326e-06, 'epoch': 1.71}
+{'eval_loss': 0.5402979254722595, 'eval_accuracy': 0.7723048616958244, 'eval_f1': 0.7685073265263672, 'eval_precision': 0.7676875782166703, 'eval_recall': 0.7723048616958244, 'eval_runtime': 189.2313, 'eval_samples_per_second': 338.919, 'eval_steps_per_second': 5.3, 'epoch': 2.0}
+{'train_runtime': 1189.5527, 'train_samples_per_second': 94.573, 'train_steps_per_second': 1.478, 'train_loss': 0.5384681840534232, 'epoch': 2.0}
+100% 1758/1758 [19:49<00:00,  1.48it/s]
+100% 1003/1003 [03:08<00:00,  5.32it/s]
+
+Final Metrics:
+eval_loss: 0.5403
+eval_accuracy: 0.7723
+eval_f1: 0.7685
+eval_precision: 0.7677
+eval_recall: 0.7723
+eval_runtime: 188.7398
+eval_samples_per_second: 339.8010
+eval_steps_per_second: 5.3140
+epoch: 2.0000
+100% 1003/1003 [03:07<00:00,  5.34it/s]
+Confusion matrix saved as 'confusion_matrix.png'
+Best model saved in './best_xlnet_model' directory
