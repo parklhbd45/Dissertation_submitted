@@ -24,7 +24,6 @@ best_model_dir = './Best_Roberta_Model'
 os.makedirs(best_model_dir, exist_ok=True)
 
 
-print("Loading data...")
 df = pd.read_csv('Gold_label_dataset_aspect_and_unlabel_recheck.csv')
 df = df.rename(columns={'Sentence': 'sentence', 'Label': 'label'})
 labeled_data = df[df['label'].notna()]
@@ -40,7 +39,6 @@ labeled_data['label'] = label_encoder.fit_transform(labeled_data['label'])
 label_mapping = dict(zip(label_encoder.classes_, label_encoder.transform(label_encoder.classes_)))
 print("\nLabel mapping:", label_mapping)
 
-# Split into train and test sets
 train_data, test_data = train_test_split(labeled_data, test_size=0.2, random_state=42, stratify=labeled_data['label'])
 
 print("\nTrain set size:", len(train_data))
