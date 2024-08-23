@@ -43,7 +43,7 @@ def compute_metrics(pred):
     }
 
 def train_model(train_dataset, test_dataset, output_dir, num_epochs):
-    model = RobertaForSequenceClassification.from_pretrained("/kaggle/input/best-roberta-model")
+    model = RobertaForSequenceClassification.from_pretrained("best-roberta-model")
     
     training_args = TrainingArguments(
         output_dir=output_dir,
@@ -73,7 +73,7 @@ def train_model(train_dataset, test_dataset, output_dir, num_epochs):
     
     return trainer, trainer.state.best_metric
 
-data = pd.read_csv('/kaggle/input/gold-standard-recheck/Gold_label_dataset_aspect_and_unlabel_recheck.csv')
+data = pd.read_csv('Gold_label_dataset_aspect_and_unlabel_recheck.csv')
 labeled_data = data[data['Label'].notna()]
 
 label_encoder = LabelEncoder()
