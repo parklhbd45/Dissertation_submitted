@@ -1,0 +1,245 @@
+Total samples: 204622
+Labeled samples: 1175
+Unlabeled samples: 203447
+
+Label mapping:
+Ambiguous: 0
+Assignment & Tutorial: 1
+Design & Material: 2
+Financial: 3
+Instructor: 4
+Platform & Technical: 5
+Skill & Career: 6
+
+Label distribution in labeled data:
+Label
+Design & Material        194
+Instructor               187
+Assignment & Tutorial    178
+Ambiguous                159
+Platform & Technical     156
+Skill & Career           151
+Financial                150
+Name: count, dtype: int64
+
+Train set size: 940
+Test set size: 235
+
+Label distribution in train set:
+Label
+Design & Material        155
+Instructor               150
+Assignment & Tutorial    142
+Ambiguous                127
+Platform & Technical     125
+Skill & Career           121
+Financial                120
+Name: count, dtype: int64
+
+Loading model and tokenizer...
+
+
+Checking for None values in unlabeled data:
+Number of None values: 0
+
+Performing pseudo-labeling with confidence 0.98
+Pseudo-labeling (conf=0.98):   0%|          | 0/200000 [00:00<?, ?it/s]
+
+Pseudo-labeled data distribution:
+Label
+Ambiguous                130414
+Instructor                21789
+Design & Material         13952
+Assignment & Tutorial      8841
+Skill & Career             5271
+Financial                  3013
+Platform & Technical       1614
+Name: count, dtype: int64
+
+Performing pseudo-labeling with confidence 0.99
+Pseudo-labeling (conf=0.99):   0%|          | 0/200000 [00:00<?, ?it/s]
+
+Pseudo-labeled data distribution:
+Label
+Ambiguous                127204
+Instructor                21158
+Design & Material         12279
+Assignment & Tutorial      8157
+Skill & Career             5050
+Financial                  2932
+Platform & Technical       1081
+Name: count, dtype: int64
+
+Creating dataset with confidence 0.98 and max_per_class 300
+
+Selected pseudo-labeled data distribution:
+Label
+Assignment & Tutorial    300
+Ambiguous                300
+Financial                300
+Skill & Career           300
+Instructor               300
+Design & Material        300
+Platform & Technical     300
+Name: count, dtype: int64
+
+Combined data distribution:
+Label
+Design & Material        455
+Instructor               450
+Assignment & Tutorial    442
+Ambiguous                427
+Platform & Technical     425
+Skill & Career           421
+Financial                420
+Name: count, dtype: int64
+
+Dataset saved to ./combined_datasets/combined_data_conf0.98_max300.csv
+Total samples: 3040
+Original samples: 940
+Pseudo-labeled samples: 2100
+
+Creating dataset with confidence 0.98 and max_per_class 400
+
+Selected pseudo-labeled data distribution:
+Label
+Assignment & Tutorial    400
+Ambiguous                400
+Financial                400
+Skill & Career           400
+Instructor               400
+Design & Material        400
+Platform & Technical     400
+Name: count, dtype: int64
+
+Combined data distribution:
+Label
+Design & Material        555
+Instructor               550
+Assignment & Tutorial    542
+Ambiguous                527
+Platform & Technical     525
+Skill & Career           521
+Financial                520
+Name: count, dtype: int64
+
+Dataset saved to ./combined_datasets/combined_data_conf0.98_max400.csv
+Total samples: 3740
+Original samples: 940
+Pseudo-labeled samples: 2800
+
+Creating dataset with confidence 0.98 and max_per_class 500
+
+Selected pseudo-labeled data distribution:
+Label
+Assignment & Tutorial    500
+Ambiguous                500
+Financial                500
+Skill & Career           500
+Instructor               500
+Design & Material        500
+Platform & Technical     500
+Name: count, dtype: int64
+
+Combined data distribution:
+Label
+Design & Material        655
+Instructor               650
+Assignment & Tutorial    642
+Ambiguous                627
+Platform & Technical     625
+Skill & Career           621
+Financial                620
+Name: count, dtype: int64
+
+Dataset saved to ./combined_datasets/combined_data_conf0.98_max500.csv
+Total samples: 4440
+Original samples: 940
+Pseudo-labeled samples: 3500
+
+Creating dataset with confidence 0.99 and max_per_class 300
+
+Selected pseudo-labeled data distribution:
+Label
+Assignment & Tutorial    300
+Ambiguous                300
+Financial                300
+Skill & Career           300
+Instructor               300
+Design & Material        300
+Platform & Technical     300
+Name: count, dtype: int64
+
+Combined data distribution:
+Label
+Design & Material        455
+Instructor               450
+Assignment & Tutorial    442
+Ambiguous                427
+Platform & Technical     425
+Skill & Career           421
+Financial                420
+Name: count, dtype: int64
+
+Dataset saved to ./combined_datasets/combined_data_conf0.99_max300.csv
+Total samples: 3040
+Original samples: 940
+Pseudo-labeled samples: 2100
+
+Creating dataset with confidence 0.99 and max_per_class 400
+
+Selected pseudo-labeled data distribution:
+Label
+Assignment & Tutorial    400
+Ambiguous                400
+Financial                400
+Skill & Career           400
+Instructor               400
+Design & Material        400
+Platform & Technical     400
+Name: count, dtype: int64
+
+Combined data distribution:
+Label
+Design & Material        555
+Instructor               550
+Assignment & Tutorial    542
+Ambiguous                527
+Platform & Technical     525
+Skill & Career           521
+Financial                520
+Name: count, dtype: int64
+
+Dataset saved to ./combined_datasets/combined_data_conf0.99_max400.csv
+Total samples: 3740
+Original samples: 940
+Pseudo-labeled samples: 2800
+
+Creating dataset with confidence 0.99 and max_per_class 500
+
+Selected pseudo-labeled data distribution:
+Label
+Assignment & Tutorial    500
+Ambiguous                500
+Financial                500
+Skill & Career           500
+Instructor               500
+Design & Material        500
+Platform & Technical     500
+Name: count, dtype: int64
+
+Combined data distribution:
+Label
+Design & Material        655
+Instructor               650
+Assignment & Tutorial    642
+Ambiguous                627
+Platform & Technical     625
+Skill & Career           621
+Financial                620
+Name: count, dtype: int64
+
+Dataset saved to ./combined_datasets/combined_data_conf0.99_max500.csv
+Total samples: 4440
+Original samples: 940
+Pseudo-labeled samples: 3500
