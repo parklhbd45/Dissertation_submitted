@@ -1,3 +1,13 @@
+# Reference 1: Method for using the Trainer API in Hugging Face Transformers
+# Source: https://www.analyticsvidhya.com/blog/2023/04/training-an-adapter-for-roberta-model-for-sequence-classification-task/
+
+# Reference 2: Example of using the Trainer API with Roberta on Kaggle
+# Source: https://www.kaggle.com/code/justinsiow/goodreads-roberta-with-trainer-api-torch
+
+# Reference 3: Hyperparameter optimization using Optuna
+# Source: https://medium.com/carbon-consulting/transformer-models-hyperparameter-optimization-with-the-optuna-299e185044a8
+
+
 import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split, ShuffleSplit
