@@ -39,7 +39,6 @@ print(f"Test set size: {len(test_data)}")
 print("\nLabel distribution in train set:")
 print(train_data['Label'].value_counts())
 
-print("\nLoading model and tokenizer...")
 tokenizer = RobertaTokenizer.from_pretrained("roberta-base")
 model = RobertaForSequenceClassification.from_pretrained("./Best_Roberta_Model")
 model.eval()
