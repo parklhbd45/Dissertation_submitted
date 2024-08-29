@@ -21,7 +21,7 @@
  train_equal.csv,
  test_equal.csv,
   - `distillon4neutralsets.ipynb`: Evaluates DistilBERT and DistilRoBERTa on each neutral definition.
-   - Input File: train_strict.csv,
+    - Input File: train_strict.csv,
  test_strict.csv,
  train_moderate.csv,
  test_moderate.csv,
@@ -29,7 +29,7 @@
  test_bit_negative.csv,
  train_equal.csv,
  test_equal.csv,
-  - Output File: None
+    - Output File: None
 - Purpose: Determine the optimal definition of neutral sentiment for the Udemy rating system.
 
 ### 1.3 Dataset Size Optimization
