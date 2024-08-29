@@ -8,7 +8,7 @@ Our sentiment analysis model, an ensemble of RoBERTa, ELECTRA, and XLNet, achiev
 
 ## Setup and Dependencies
 
-To run this project, you need to install the following Python libraries: pip install pandas numpy torch transformers scikit-learn datasets matplotlib seaborn tqdm optuna scipy econml pygam
+To run this project, you need to install the following Python libraries: `pip install pandas numpy torch transformers scikit-learn datasets matplotlib seaborn tqdm optuna scipy econml pygam`
 
 ### File Compatibility
 All `.ipynb` and `.py` files are interchangeable and can be run in both Python environments and Jupyter notebooks. Ensure that input and output file paths are correctly set in the code before execution.
