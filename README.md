@@ -13,6 +13,17 @@ To run this project, you need to install the following Python libraries: pip ins
 ### File Compatibility
 All `.ipynb` and `.py` files are interchangeable and can be run in both Python environments and Jupyter notebooks. Ensure that input and output file paths are correctly set in the code before execution.
 
+# Dataset Source and Preparation
+
+The dataset used in this project is sourced from Kaggle: [Udemy Courses Dataset](https://www.kaggle.com/datasets/hossaingh/udemy-courses)
+
+Before running the scripts, please ensure you rename the following file:
+- Rename `Comments.csv` to `UdemyComments.csv`
+
+This renaming is necessary as the initial scripts expect the file to be named `UdemyComments.csv`.
+
+---
+
 ## 1. Sentiment Analysis Model Development
 
 ### 1.1 Dataset Preparation
@@ -196,14 +207,5 @@ All `.ipynb` and `.py` files are interchangeable and can be run in both Python e
 
 This project demonstrates the power of combining advanced NLP techniques with causal inference methods to gain actionable insights from student feedback in online education. The high-performance sentiment analysis (F1 score: 78.45%) and aspect classification (accuracy: 92.73%) models provide a solid foundation for the subsequent causal analysis. The multi-method approach to causal inference ensures robust and reliable conclusions about the factors influencing student satisfaction across different course categories.
 
-## Future Work
 
-Potential areas for future research include:
-1. Extending the analysis to other online learning platforms for comparative studies
-2. Incorporating temporal aspects to study how student satisfaction evolves over time
-3. Exploring more advanced causal inference techniques to handle complex educational scenarios
-4. Developing an interactive dashboard for course creators to visualize and act on the insights generated
 
-## Acknowledgements
-
-We thank Udemy for providing the dataset used in this study and acknowledge the contributions of the open-source community in developing the libraries and tools that made this research possible.
