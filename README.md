@@ -29,13 +29,15 @@
  test_bit_negative.csv,
  train_equal.csv,
  test_equal.csv,
-    - Output File: None
+    - Output File: 'None'
 - Purpose: Determine the optimal definition of neutral sentiment for the Udemy rating system.
 
 ### 1.3 Dataset Size Optimization
 - Files: 
   - `distillbert-dataset-size-explora...`
   - `distillroberta-dataset-size-expl...`
+    - Input File: `train_equal.csv` and `test_equal.csv`
+    - Output File: 'None'
 - Purpose: Evaluate and determine the optimal dataset size for model training, balancing performance and computational efficiency.
 
 ### 1.4 Hyperparameter Tuning
