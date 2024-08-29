@@ -1,7 +1,5 @@
 # Sentiment Analysis and Aspect Extraction in Online Education
 
-# Sentiment Analysis and Aspect Extraction in Online Education
-
 ## 1. Sentiment Analysis Model Development
 
 ### 1.1 Dataset Preparation
