@@ -1,3 +1,5 @@
+# BERT Documentation refer to : https://huggingface.co/google-bert/bert-base-uncased
+# For hyperparameter optimization using Optuna with transformer models, refer to https://medium.com/carbon-consulting/transformer-models-hyperparameter-optimization-with-the-optuna-299e185044a8
 import pandas as pd
 import numpy as np
 import torch
