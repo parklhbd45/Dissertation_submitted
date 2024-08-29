@@ -1,0 +1,1653 @@
+Distribution for Balanced Train Set:
+sentiment_equal
+Positive    18750
+Neutral     18750
+Negative    18750
+Name: count, dtype: int64
+sentiment_equal
+Positive    0.333333
+Neutral     0.333333
+Negative    0.333333
+Name: proportion, dtype: float64
+
+Distribution for Balanced Test Set:
+sentiment_equal
+Positive    21784
+Neutral     21784
+Negative    21784
+Name: count, dtype: int64
+sentiment_equal
+Positive    0.333333
+Neutral     0.333333
+Negative    0.333333
+Name: proportion, dtype: float64
+
+Trial 0
+Hyperparameters:
+  Learning rate: 0.00034140166877894994
+  Batch size: 64
+  Weight decay: 0.00396435209352302
+  Max length: 128
+Fold 1:
+  Train size: 45000
+  Val size: 11250
+/tmp/ipykernel_25/381949715.py:71: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+  learning_rate = trial.suggest_loguniform('learning_rate', 1e-5, 1e-3)
+/tmp/ipykernel_25/381949715.py:73: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+  weight_decay = trial.suggest_loguniform('weight_decay', 1e-5, 1e-1)
+Distribution for Train Fold 1:
+sentiment_equal
+Neutral     15016
+Negative    15002
+Positive    14982
+Name: count, dtype: int64
+sentiment_equal
+Neutral     0.333689
+Negative    0.333378
+Positive    0.332933
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 1:
+sentiment_equal
+Positive    3768
+Negative    3748
+Neutral     3734
+Name: count, dtype: int64
+sentiment_equal
+Positive    0.334933
+Negative    0.333156
+Neutral     0.331911
+Name: proportion, dtype: float64
+tokenizer_config.json:   0%|          | 0.00/48.0 [00:00<?, ?B/s]
+vocab.txt:   0%|          | 0.00/232k [00:00<?, ?B/s]
+tokenizer.json:   0%|          | 0.00/466k [00:00<?, ?B/s]
+config.json:   0%|          | 0.00/570 [00:00<?, ?B/s]
+Map:   0%|          | 0/45000 [00:00<?, ? examples/s]
+Map:   0%|          | 0/11250 [00:00<?, ? examples/s]
+model.safetensors:   0%|          | 0.00/440M [00:00<?, ?B/s]
+Some weights of BertForSequenceClassification were not initialized from the model checkpoint at bert-base-uncased and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1494: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[704/704 18:05, Epoch 2/2]
+Epoch	Training Loss	Validation Loss	Accuracy	F1	Precision	Recall
+1	No log	0.650195	0.728889	0.706864	0.733214	0.728889
+2	0.614100	0.560998	0.759911	0.757144	0.755969	0.759911
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[88/88 00:47]
+  Fold 1 accuracy: 0.7599
+Fold 2:
+  Train size: 45000
+  Val size: 11250
+
+Distribution for Train Fold 2:
+sentiment_equal
+Neutral     15069
+Positive    14989
+Negative    14942
+Name: count, dtype: int64
+sentiment_equal
+Neutral     0.334867
+Positive    0.333089
+Negative    0.332044
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 2:
+sentiment_equal
+Negative    3808
+Positive    3761
+Neutral     3681
+Name: count, dtype: int64
+sentiment_equal
+Negative    0.338489
+Positive    0.334311
+Neutral     0.327200
+Name: proportion, dtype: float64
+Map:   0%|          | 0/45000 [00:00<?, ? examples/s]
+Map:   0%|          | 0/11250 [00:00<?, ? examples/s]
+Some weights of BertForSequenceClassification were not initialized from the model checkpoint at bert-base-uncased and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1494: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[704/704 17:59, Epoch 2/2]
+Epoch	Training Loss	Validation Loss	Accuracy	F1	Precision	Recall
+1	No log	1.113686	0.334311	0.167523	0.111764	0.334311
+2	1.030200	1.101467	0.334311	0.167523	0.111764	0.334311
+/opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+/opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[88/88 00:45]
+/opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[I 2024-07-24 01:02:32,817] Trial 0 finished with value: 0.5471111111111111 and parameters: {'learning_rate': 0.00034140166877894994, 'batch_size': 64, 'weight_decay': 0.00396435209352302, 'max_length': 128}. Best is trial 0 with value: 0.5471111111111111.
+/tmp/ipykernel_25/381949715.py:71: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+  learning_rate = trial.suggest_loguniform('learning_rate', 1e-5, 1e-3)
+/tmp/ipykernel_25/381949715.py:73: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+  weight_decay = trial.suggest_loguniform('weight_decay', 1e-5, 1e-1)
+  Fold 2 accuracy: 0.3343
+Mean accuracy across folds: 0.5471
+
+Trial 1
+Hyperparameters:
+  Learning rate: 0.00041445721383260437
+  Batch size: 32
+  Weight decay: 0.08337527446291826
+  Max length: 128
+Fold 1:
+  Train size: 45000
+  Val size: 11250
+
+Distribution for Train Fold 1:
+sentiment_equal
+Neutral     15016
+Negative    15002
+Positive    14982
+Name: count, dtype: int64
+sentiment_equal
+Neutral     0.333689
+Negative    0.333378
+Positive    0.332933
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 1:
+sentiment_equal
+Positive    3768
+Negative    3748
+Neutral     3734
+Name: count, dtype: int64
+sentiment_equal
+Positive    0.334933
+Negative    0.333156
+Neutral     0.331911
+Name: proportion, dtype: float64
+Map:   0%|          | 0/45000 [00:00<?, ? examples/s]
+Map:   0%|          | 0/11250 [00:00<?, ? examples/s]
+Some weights of BertForSequenceClassification were not initialized from the model checkpoint at bert-base-uncased and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1494: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[1408/1408 19:35, Epoch 2/2]
+Epoch	Training Loss	Validation Loss	Accuracy	F1	Precision	Recall
+1	0.881000	1.075574	0.377244	0.248588	0.355720	0.377244
+2	1.075600	1.086442	0.352356	0.203725	0.370149	0.352356
+/opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+/opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[176/176 00:47]
+/opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+  Fold 1 accuracy: 0.3524
+Fold 2:
+  Train size: 45000
+  Val size: 11250
+
+Distribution for Train Fold 2:
+sentiment_equal
+Neutral     15069
+Positive    14989
+Negative    14942
+Name: count, dtype: int64
+sentiment_equal
+Neutral     0.334867
+Positive    0.333089
+Negative    0.332044
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 2:
+sentiment_equal
+Negative    3808
+Positive    3761
+Neutral     3681
+Name: count, dtype: int64
+sentiment_equal
+Negative    0.338489
+Positive    0.334311
+Neutral     0.327200
+Name: proportion, dtype: float64
+Map:   0%|          | 0/45000 [00:00<?, ? examples/s]
+Map:   0%|          | 0/11250 [00:00<?, ? examples/s]
+Some weights of BertForSequenceClassification were not initialized from the model checkpoint at bert-base-uncased and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1494: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[1408/1408 19:36, Epoch 2/2]
+Epoch	Training Loss	Validation Loss	Accuracy	F1	Precision	Recall
+1	1.118100	1.107118	0.334311	0.167523	0.111764	0.334311
+2	1.113900	1.098904	0.338489	0.171200	0.114575	0.338489
+/opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+/opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[176/176 00:47]
+/opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[I 2024-07-24 01:46:06,823] Trial 1 finished with value: 0.3454222222222222 and parameters: {'learning_rate': 0.00041445721383260437, 'batch_size': 32, 'weight_decay': 0.08337527446291826, 'max_length': 128}. Best is trial 0 with value: 0.5471111111111111.
+/tmp/ipykernel_25/381949715.py:71: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+  learning_rate = trial.suggest_loguniform('learning_rate', 1e-5, 1e-3)
+/tmp/ipykernel_25/381949715.py:73: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+  weight_decay = trial.suggest_loguniform('weight_decay', 1e-5, 1e-1)
+  Fold 2 accuracy: 0.3385
+Mean accuracy across folds: 0.3454
+
+Trial 2
+Hyperparameters:
+  Learning rate: 0.00020755081164343934
+  Batch size: 32
+  Weight decay: 0.0002576196601426379
+  Max length: 128
+Fold 1:
+  Train size: 45000
+  Val size: 11250
+
+Distribution for Train Fold 1:
+sentiment_equal
+Neutral     15016
+Negative    15002
+Positive    14982
+Name: count, dtype: int64
+sentiment_equal
+Neutral     0.333689
+Negative    0.333378
+Positive    0.332933
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 1:
+sentiment_equal
+Positive    3768
+Negative    3748
+Neutral     3734
+Name: count, dtype: int64
+sentiment_equal
+Positive    0.334933
+Negative    0.333156
+Neutral     0.331911
+Name: proportion, dtype: float64
+Map:   0%|          | 0/45000 [00:00<?, ? examples/s]
+Map:   0%|          | 0/11250 [00:00<?, ? examples/s]
+Some weights of BertForSequenceClassification were not initialized from the model checkpoint at bert-base-uncased and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1494: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[1408/1408 19:43, Epoch 2/2]
+Epoch	Training Loss	Validation Loss	Accuracy	F1	Precision	Recall
+1	0.673400	0.671126	0.691378	0.634755	0.723953	0.691378
+2	0.562800	0.563454	0.760089	0.757606	0.756589	0.760089
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[176/176 00:49]
+  Fold 1 accuracy: 0.7601
+Fold 2:
+  Train size: 45000
+  Val size: 11250
+
+Distribution for Train Fold 2:
+sentiment_equal
+Neutral     15069
+Positive    14989
+Negative    14942
+Name: count, dtype: int64
+sentiment_equal
+Neutral     0.334867
+Positive    0.333089
+Negative    0.332044
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 2:
+sentiment_equal
+Negative    3808
+Positive    3761
+Neutral     3681
+Name: count, dtype: int64
+sentiment_equal
+Negative    0.338489
+Positive    0.334311
+Neutral     0.327200
+Name: proportion, dtype: float64
+Map:   0%|          | 0/45000 [00:00<?, ? examples/s]
+Map:   0%|          | 0/11250 [00:00<?, ? examples/s]
+Some weights of BertForSequenceClassification were not initialized from the model checkpoint at bert-base-uncased and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1494: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[1408/1408 19:44, Epoch 2/2]
+Epoch	Training Loss	Validation Loss	Accuracy	F1	Precision	Recall
+1	0.662600	0.583927	0.741067	0.728430	0.739657	0.741067
+2	0.541300	0.570234	0.763022	0.760312	0.759049	0.763022
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[176/176 00:49]
+[I 2024-07-24 02:30:05,820] Trial 2 finished with value: 0.7615555555555555 and parameters: {'learning_rate': 0.00020755081164343934, 'batch_size': 32, 'weight_decay': 0.0002576196601426379, 'max_length': 128}. Best is trial 2 with value: 0.7615555555555555.
+  Fold 2 accuracy: 0.7630
+Mean accuracy across folds: 0.7616
+
+Trial 3
+Hyperparameters:
+  Learning rate: 0.00048205785805302564
+  Batch size: 32
+  Weight decay: 0.004207941627432676
+  Max length: 128
+Fold 1:
+  Train size: 45000
+  Val size: 11250
+/tmp/ipykernel_25/381949715.py:71: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+  learning_rate = trial.suggest_loguniform('learning_rate', 1e-5, 1e-3)
+/tmp/ipykernel_25/381949715.py:73: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+  weight_decay = trial.suggest_loguniform('weight_decay', 1e-5, 1e-1)
+Distribution for Train Fold 1:
+sentiment_equal
+Neutral     15016
+Negative    15002
+Positive    14982
+Name: count, dtype: int64
+sentiment_equal
+Neutral     0.333689
+Negative    0.333378
+Positive    0.332933
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 1:
+sentiment_equal
+Positive    3768
+Negative    3748
+Neutral     3734
+Name: count, dtype: int64
+sentiment_equal
+Positive    0.334933
+Negative    0.333156
+Neutral     0.331911
+Name: proportion, dtype: float64
+Map:   0%|          | 0/45000 [00:00<?, ? examples/s]
+Map:   0%|          | 0/11250 [00:00<?, ? examples/s]
+Some weights of BertForSequenceClassification were not initialized from the model checkpoint at bert-base-uncased and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1494: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[1408/1408 19:39, Epoch 2/2]
+Epoch	Training Loss	Validation Loss	Accuracy	F1	Precision	Recall
+1	1.122400	1.129096	0.334933	0.168069	0.112180	0.334933
+2	1.113400	1.099444	0.333156	0.166511	0.110993	0.333156
+/opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+/opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[176/176 00:47]
+/opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+  Fold 1 accuracy: 0.3332
+Fold 2:
+  Train size: 45000
+  Val size: 11250
+
+Distribution for Train Fold 2:
+sentiment_equal
+Neutral     15069
+Positive    14989
+Negative    14942
+Name: count, dtype: int64
+sentiment_equal
+Neutral     0.334867
+Positive    0.333089
+Negative    0.332044
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 2:
+sentiment_equal
+Negative    3808
+Positive    3761
+Neutral     3681
+Name: count, dtype: int64
+sentiment_equal
+Negative    0.338489
+Positive    0.334311
+Neutral     0.327200
+Name: proportion, dtype: float64
+Map:   0%|          | 0/45000 [00:00<?, ? examples/s]
+Map:   0%|          | 0/11250 [00:00<?, ? examples/s]
+Some weights of BertForSequenceClassification were not initialized from the model checkpoint at bert-base-uncased and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1494: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[1408/1408 19:38, Epoch 2/2]
+Epoch	Training Loss	Validation Loss	Accuracy	F1	Precision	Recall
+1	1.118800	1.102788	0.334311	0.167523	0.111764	0.334311
+2	1.115700	1.098814	0.338489	0.171200	0.114575	0.338489
+/opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+/opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[176/176 00:48]
+/opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[I 2024-07-24 03:13:53,908] Trial 3 finished with value: 0.33582222222222224 and parameters: {'learning_rate': 0.00048205785805302564, 'batch_size': 32, 'weight_decay': 0.004207941627432676, 'max_length': 128}. Best is trial 2 with value: 0.7615555555555555.
+/tmp/ipykernel_25/381949715.py:71: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+  learning_rate = trial.suggest_loguniform('learning_rate', 1e-5, 1e-3)
+/tmp/ipykernel_25/381949715.py:73: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+  weight_decay = trial.suggest_loguniform('weight_decay', 1e-5, 1e-1)
+  Fold 2 accuracy: 0.3385
+Mean accuracy across folds: 0.3358
+
+Trial 4
+Hyperparameters:
+  Learning rate: 2.20935695883139e-05
+  Batch size: 64
+  Weight decay: 9.461232198384872e-05
+  Max length: 64
+Fold 1:
+  Train size: 45000
+  Val size: 11250
+
+Distribution for Train Fold 1:
+sentiment_equal
+Neutral     15016
+Negative    15002
+Positive    14982
+Name: count, dtype: int64
+sentiment_equal
+Neutral     0.333689
+Negative    0.333378
+Positive    0.332933
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 1:
+sentiment_equal
+Positive    3768
+Negative    3748
+Neutral     3734
+Name: count, dtype: int64
+sentiment_equal
+Positive    0.334933
+Negative    0.333156
+Neutral     0.331911
+Name: proportion, dtype: float64
+Map:   0%|          | 0/45000 [00:00<?, ? examples/s]
+Map:   0%|          | 0/11250 [00:00<?, ? examples/s]
+Some weights of BertForSequenceClassification were not initialized from the model checkpoint at bert-base-uncased and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1494: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[704/704 09:43, Epoch 2/2]
+Epoch	Training Loss	Validation Loss	Accuracy	F1	Precision	Recall
+1	No log	0.553302	0.756711	0.751957	0.752704	0.756711
+2	0.583200	0.547362	0.761511	0.758682	0.757429	0.761511
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[88/88 00:24]
+  Fold 1 accuracy: 0.7615
+Fold 2:
+  Train size: 45000
+  Val size: 11250
+
+Distribution for Train Fold 2:
+sentiment_equal
+Neutral     15069
+Positive    14989
+Negative    14942
+Name: count, dtype: int64
+sentiment_equal
+Neutral     0.334867
+Positive    0.333089
+Negative    0.332044
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 2:
+sentiment_equal
+Negative    3808
+Positive    3761
+Neutral     3681
+Name: count, dtype: int64
+sentiment_equal
+Negative    0.338489
+Positive    0.334311
+Neutral     0.327200
+Name: proportion, dtype: float64
+Map:   0%|          | 0/45000 [00:00<?, ? examples/s]
+Map:   0%|          | 0/11250 [00:00<?, ? examples/s]
+Some weights of BertForSequenceClassification were not initialized from the model checkpoint at bert-base-uncased and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1494: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[704/704 09:44, Epoch 2/2]
+Epoch	Training Loss	Validation Loss	Accuracy	F1	Precision	Recall
+1	No log	0.554904	0.757956	0.755193	0.753792	0.757956
+2	0.587100	0.553206	0.762844	0.761035	0.759881	0.762844
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[88/88 00:24]
+[I 2024-07-24 03:37:01,421] Trial 4 finished with value: 0.7621777777777778 and parameters: {'learning_rate': 2.20935695883139e-05, 'batch_size': 64, 'weight_decay': 9.461232198384872e-05, 'max_length': 64}. Best is trial 4 with value: 0.7621777777777778.
+  Fold 2 accuracy: 0.7628
+Mean accuracy across folds: 0.7622
+
+Trial 5
+Hyperparameters:
+  Learning rate: 0.00016114707969990729
+  Batch size: 64
+  Weight decay: 0.0017108177162787732
+  Max length: 128
+Fold 1:
+  Train size: 45000
+  Val size: 11250
+/tmp/ipykernel_25/381949715.py:71: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+  learning_rate = trial.suggest_loguniform('learning_rate', 1e-5, 1e-3)
+/tmp/ipykernel_25/381949715.py:73: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+  weight_decay = trial.suggest_loguniform('weight_decay', 1e-5, 1e-1)
+Distribution for Train Fold 1:
+sentiment_equal
+Neutral     15016
+Negative    15002
+Positive    14982
+Name: count, dtype: int64
+sentiment_equal
+Neutral     0.333689
+Negative    0.333378
+Positive    0.332933
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 1:
+sentiment_equal
+Positive    3768
+Negative    3748
+Neutral     3734
+Name: count, dtype: int64
+sentiment_equal
+Positive    0.334933
+Negative    0.333156
+Neutral     0.331911
+Name: proportion, dtype: float64
+Map:   0%|          | 0/45000 [00:00<?, ? examples/s]
+Map:   0%|          | 0/11250 [00:00<?, ? examples/s]
+Some weights of BertForSequenceClassification were not initialized from the model checkpoint at bert-base-uncased and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1494: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[704/704 18:12, Epoch 2/2]
+Epoch	Training Loss	Validation Loss	Accuracy	F1	Precision	Recall
+1	No log	0.554944	0.754667	0.742023	0.752215	0.754667
+2	0.567400	0.546254	0.767378	0.765546	0.764415	0.767378
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[88/88 00:47]
+  Fold 1 accuracy: 0.7674
+Fold 2:
+  Train size: 45000
+  Val size: 11250
+
+Distribution for Train Fold 2:
+sentiment_equal
+Neutral     15069
+Positive    14989
+Negative    14942
+Name: count, dtype: int64
+sentiment_equal
+Neutral     0.334867
+Positive    0.333089
+Negative    0.332044
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 2:
+sentiment_equal
+Negative    3808
+Positive    3761
+Neutral     3681
+Name: count, dtype: int64
+sentiment_equal
+Negative    0.338489
+Positive    0.334311
+Neutral     0.327200
+Name: proportion, dtype: float64
+Map:   0%|          | 0/45000 [00:00<?, ? examples/s]
+Map:   0%|          | 0/11250 [00:00<?, ? examples/s]
+Some weights of BertForSequenceClassification were not initialized from the model checkpoint at bert-base-uncased and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1494: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[704/704 18:11, Epoch 2/2]
+Epoch	Training Loss	Validation Loss	Accuracy	F1	Precision	Recall
+1	No log	0.553276	0.760711	0.758988	0.757834	0.760711
+2	0.565800	0.565903	0.764533	0.763442	0.762651	0.764533
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[88/88 00:47]
+[I 2024-07-24 04:17:58,642] Trial 5 finished with value: 0.7659555555555555 and parameters: {'learning_rate': 0.00016114707969990729, 'batch_size': 64, 'weight_decay': 0.0017108177162787732, 'max_length': 128}. Best is trial 5 with value: 0.7659555555555555.
+  Fold 2 accuracy: 0.7645
+Mean accuracy across folds: 0.7660
+
+Trial 6
+Hyperparameters:
+  Learning rate: 0.0007185569936644919
+  Batch size: 64
+  Weight decay: 4.5096103907109496e-05
+  Max length: 128
+Fold 1:
+  Train size: 45000
+  Val size: 11250
+/tmp/ipykernel_25/381949715.py:71: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+  learning_rate = trial.suggest_loguniform('learning_rate', 1e-5, 1e-3)
+/tmp/ipykernel_25/381949715.py:73: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+  weight_decay = trial.suggest_loguniform('weight_decay', 1e-5, 1e-1)
+Distribution for Train Fold 1:
+sentiment_equal
+Neutral     15016
+Negative    15002
+Positive    14982
+Name: count, dtype: int64
+sentiment_equal
+Neutral     0.333689
+Negative    0.333378
+Positive    0.332933
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 1:
+sentiment_equal
+Positive    3768
+Negative    3748
+Neutral     3734
+Name: count, dtype: int64
+sentiment_equal
+Positive    0.334933
+Negative    0.333156
+Neutral     0.331911
+Name: proportion, dtype: float64
+Map:   0%|          | 0/45000 [00:00<?, ? examples/s]
+Map:   0%|          | 0/11250 [00:00<?, ? examples/s]
+Some weights of BertForSequenceClassification were not initialized from the model checkpoint at bert-base-uncased and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1494: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[704/704 18:03, Epoch 2/2]
+Epoch	Training Loss	Validation Loss	Accuracy	F1	Precision	Recall
+1	No log	1.099999	0.333156	0.166511	0.110993	0.333156
+2	1.111300	1.098704	0.334933	0.168069	0.112180	0.334933
+/opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+/opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[88/88 00:45]
+/opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+  Fold 1 accuracy: 0.3349
+Fold 2:
+  Train size: 45000
+  Val size: 11250
+
+Distribution for Train Fold 2:
+sentiment_equal
+Neutral     15069
+Positive    14989
+Negative    14942
+Name: count, dtype: int64
+sentiment_equal
+Neutral     0.334867
+Positive    0.333089
+Negative    0.332044
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 2:
+sentiment_equal
+Negative    3808
+Positive    3761
+Neutral     3681
+Name: count, dtype: int64
+sentiment_equal
+Negative    0.338489
+Positive    0.334311
+Neutral     0.327200
+Name: proportion, dtype: float64
+Map:   0%|          | 0/45000 [00:00<?, ? examples/s]
+Map:   0%|          | 0/11250 [00:00<?, ? examples/s]
+Some weights of BertForSequenceClassification were not initialized from the model checkpoint at bert-base-uncased and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1494: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[704/704 18:01, Epoch 2/2]
+Epoch	Training Loss	Validation Loss	Accuracy	F1	Precision	Recall
+1	No log	1.129534	0.334311	0.167523	0.111764	0.334311
+2	1.118300	1.098626	0.338489	0.171200	0.114575	0.338489
+/opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+/opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[88/88 00:45]
+/opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[I 2024-07-24 04:58:29,716] Trial 6 finished with value: 0.3367111111111111 and parameters: {'learning_rate': 0.0007185569936644919, 'batch_size': 64, 'weight_decay': 4.5096103907109496e-05, 'max_length': 128}. Best is trial 5 with value: 0.7659555555555555.
+/tmp/ipykernel_25/381949715.py:71: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+  learning_rate = trial.suggest_loguniform('learning_rate', 1e-5, 1e-3)
+/tmp/ipykernel_25/381949715.py:73: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+  weight_decay = trial.suggest_loguniform('weight_decay', 1e-5, 1e-1)
+  Fold 2 accuracy: 0.3385
+Mean accuracy across folds: 0.3367
+
+Trial 7
+Hyperparameters:
+  Learning rate: 1.685351303830342e-05
+  Batch size: 32
+  Weight decay: 2.7870756150053022e-05
+  Max length: 128
+Fold 1:
+  Train size: 45000
+  Val size: 11250
+
+Distribution for Train Fold 1:
+sentiment_equal
+Neutral     15016
+Negative    15002
+Positive    14982
+Name: count, dtype: int64
+sentiment_equal
+Neutral     0.333689
+Negative    0.333378
+Positive    0.332933
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 1:
+sentiment_equal
+Positive    3768
+Negative    3748
+Neutral     3734
+Name: count, dtype: int64
+sentiment_equal
+Positive    0.334933
+Negative    0.333156
+Neutral     0.331911
+Name: proportion, dtype: float64
+Map:   0%|          | 0/45000 [00:00<?, ? examples/s]
+Map:   0%|          | 0/11250 [00:00<?, ? examples/s]
+Some weights of BertForSequenceClassification were not initialized from the model checkpoint at bert-base-uncased and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1494: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[1408/1408 19:42, Epoch 2/2]
+Epoch	Training Loss	Validation Loss	Accuracy	F1	Precision	Recall
+1	0.616700	0.542035	0.760978	0.755608	0.756281	0.760978
+2	0.529200	0.538222	0.767200	0.764512	0.763271	0.767200
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[176/176 00:49]
+  Fold 1 accuracy: 0.7672
+Fold 2:
+  Train size: 45000
+  Val size: 11250
+
+Distribution for Train Fold 2:
+sentiment_equal
+Neutral     15069
+Positive    14989
+Negative    14942
+Name: count, dtype: int64
+sentiment_equal
+Neutral     0.334867
+Positive    0.333089
+Negative    0.332044
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 2:
+sentiment_equal
+Negative    3808
+Positive    3761
+Neutral     3681
+Name: count, dtype: int64
+sentiment_equal
+Negative    0.338489
+Positive    0.334311
+Neutral     0.327200
+Name: proportion, dtype: float64
+Map:   0%|          | 0/45000 [00:00<?, ? examples/s]
+Map:   0%|          | 0/11250 [00:00<?, ? examples/s]
+Some weights of BertForSequenceClassification were not initialized from the model checkpoint at bert-base-uncased and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1494: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[1408/1408 19:40, Epoch 2/2]
+Epoch	Training Loss	Validation Loss	Accuracy	F1	Precision	Recall
+1	0.618200	0.547710	0.762133	0.759812	0.758521	0.762133
+2	0.528200	0.548223	0.765156	0.763300	0.762160	0.765156
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[176/176 00:48]
+[I 2024-07-24 05:42:23,264] Trial 7 finished with value: 0.7661777777777778 and parameters: {'learning_rate': 1.685351303830342e-05, 'batch_size': 32, 'weight_decay': 2.7870756150053022e-05, 'max_length': 128}. Best is trial 7 with value: 0.7661777777777778.
+  Fold 2 accuracy: 0.7652
+Mean accuracy across folds: 0.7662
+
+Trial 8
+Hyperparameters:
+  Learning rate: 0.00031854028422362155
+  Batch size: 32
+  Weight decay: 0.00033269745045378
+  Max length: 64
+Fold 1:
+  Train size: 45000
+  Val size: 11250
+/tmp/ipykernel_25/381949715.py:71: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+  learning_rate = trial.suggest_loguniform('learning_rate', 1e-5, 1e-3)
+/tmp/ipykernel_25/381949715.py:73: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+  weight_decay = trial.suggest_loguniform('weight_decay', 1e-5, 1e-1)
+Distribution for Train Fold 1:
+sentiment_equal
+Neutral     15016
+Negative    15002
+Positive    14982
+Name: count, dtype: int64
+sentiment_equal
+Neutral     0.333689
+Negative    0.333378
+Positive    0.332933
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 1:
+sentiment_equal
+Positive    3768
+Negative    3748
+Neutral     3734
+Name: count, dtype: int64
+sentiment_equal
+Positive    0.334933
+Negative    0.333156
+Neutral     0.331911
+Name: proportion, dtype: float64
+Map:   0%|          | 0/45000 [00:00<?, ? examples/s]
+Map:   0%|          | 0/11250 [00:00<?, ? examples/s]
+Some weights of BertForSequenceClassification were not initialized from the model checkpoint at bert-base-uncased and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1494: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[1408/1408 11:25, Epoch 2/2]
+Epoch	Training Loss	Validation Loss	Accuracy	F1	Precision	Recall
+1	1.004600	1.098655	0.331911	0.165424	0.110165	0.331911
+2	1.100800	1.072911	0.371378	0.240076	0.365278	0.371378
+/opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+/opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[176/176 00:28]
+/opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+  Fold 1 accuracy: 0.3714
+Fold 2:
+  Train size: 45000
+  Val size: 11250
+
+Distribution for Train Fold 2:
+sentiment_equal
+Neutral     15069
+Positive    14989
+Negative    14942
+Name: count, dtype: int64
+sentiment_equal
+Neutral     0.334867
+Positive    0.333089
+Negative    0.332044
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 2:
+sentiment_equal
+Negative    3808
+Positive    3761
+Neutral     3681
+Name: count, dtype: int64
+sentiment_equal
+Negative    0.338489
+Positive    0.334311
+Neutral     0.327200
+Name: proportion, dtype: float64
+Map:   0%|          | 0/45000 [00:00<?, ? examples/s]
+Map:   0%|          | 0/11250 [00:00<?, ? examples/s]
+Some weights of BertForSequenceClassification were not initialized from the model checkpoint at bert-base-uncased and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1494: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[1408/1408 11:27, Epoch 2/2]
+Epoch	Training Loss	Validation Loss	Accuracy	F1	Precision	Recall
+1	0.730200	0.647322	0.715111	0.697492	0.709387	0.715111
+2	0.618000	0.603118	0.741600	0.737197	0.736109	0.741600
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[176/176 00:29]
+[I 2024-07-24 06:08:46,777] Trial 8 finished with value: 0.5564888888888889 and parameters: {'learning_rate': 0.00031854028422362155, 'batch_size': 32, 'weight_decay': 0.00033269745045378, 'max_length': 64}. Best is trial 7 with value: 0.7661777777777778.
+  Fold 2 accuracy: 0.7416
+Mean accuracy across folds: 0.5565
+
+Trial 9
+Hyperparameters:
+  Learning rate: 0.0003568958106878342
+  Batch size: 32
+  Weight decay: 0.006645215399692514
+  Max length: 128
+Fold 1:
+  Train size: 45000
+  Val size: 11250
+/tmp/ipykernel_25/381949715.py:71: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+  learning_rate = trial.suggest_loguniform('learning_rate', 1e-5, 1e-3)
+/tmp/ipykernel_25/381949715.py:73: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+  weight_decay = trial.suggest_loguniform('weight_decay', 1e-5, 1e-1)
+Distribution for Train Fold 1:
+sentiment_equal
+Neutral     15016
+Negative    15002
+Positive    14982
+Name: count, dtype: int64
+sentiment_equal
+Neutral     0.333689
+Negative    0.333378
+Positive    0.332933
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 1:
+sentiment_equal
+Positive    3768
+Negative    3748
+Neutral     3734
+Name: count, dtype: int64
+sentiment_equal
+Positive    0.334933
+Negative    0.333156
+Neutral     0.331911
+Name: proportion, dtype: float64
+Map:   0%|          | 0/45000 [00:00<?, ? examples/s]
+Map:   0%|          | 0/11250 [00:00<?, ? examples/s]
+Some weights of BertForSequenceClassification were not initialized from the model checkpoint at bert-base-uncased and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1494: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[1408/1408 19:32, Epoch 2/2]
+Epoch	Training Loss	Validation Loss	Accuracy	F1	Precision	Recall
+1	1.041500	1.028372	0.488533	0.391999	0.327614	0.488533
+2	1.023500	1.083962	0.469778	0.378793	0.323798	0.469778
+/opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+/opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[176/176 00:47]
+/opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+  Fold 1 accuracy: 0.4698
+Fold 2:
+  Train size: 45000
+  Val size: 11250
+
+Distribution for Train Fold 2:
+sentiment_equal
+Neutral     15069
+Positive    14989
+Negative    14942
+Name: count, dtype: int64
+sentiment_equal
+Neutral     0.334867
+Positive    0.333089
+Negative    0.332044
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 2:
+sentiment_equal
+Negative    3808
+Positive    3761
+Neutral     3681
+Name: count, dtype: int64
+sentiment_equal
+Negative    0.338489
+Positive    0.334311
+Neutral     0.327200
+Name: proportion, dtype: float64
+Map:   0%|          | 0/45000 [00:00<?, ? examples/s]
+Map:   0%|          | 0/11250 [00:00<?, ? examples/s]
+Some weights of BertForSequenceClassification were not initialized from the model checkpoint at bert-base-uncased and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1494: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[1408/1408 19:29, Epoch 2/2]
+Epoch	Training Loss	Validation Loss	Accuracy	F1	Precision	Recall
+1	0.992000	1.101943	0.334311	0.167523	0.111764	0.334311
+2	1.111800	1.098696	0.338489	0.171200	0.114575	0.338489
+/opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+/opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[176/176 00:47]
+/opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[I 2024-07-24 06:51:59,655] Trial 9 finished with value: 0.40413333333333334 and parameters: {'learning_rate': 0.0003568958106878342, 'batch_size': 32, 'weight_decay': 0.006645215399692514, 'max_length': 128}. Best is trial 7 with value: 0.7661777777777778.
+/tmp/ipykernel_25/381949715.py:71: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+  learning_rate = trial.suggest_loguniform('learning_rate', 1e-5, 1e-3)
+/tmp/ipykernel_25/381949715.py:73: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+  weight_decay = trial.suggest_loguniform('weight_decay', 1e-5, 1e-1)
+  Fold 2 accuracy: 0.3385
+Mean accuracy across folds: 0.4041
+
+Trial 10
+Hyperparameters:
+  Learning rate: 1.0179148806315637e-05
+  Batch size: 32
+  Weight decay: 2.111249698645468e-05
+  Max length: 64
+Fold 1:
+  Train size: 45000
+  Val size: 11250
+
+Distribution for Train Fold 1:
+sentiment_equal
+Neutral     15016
+Negative    15002
+Positive    14982
+Name: count, dtype: int64
+sentiment_equal
+Neutral     0.333689
+Negative    0.333378
+Positive    0.332933
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 1:
+sentiment_equal
+Positive    3768
+Negative    3748
+Neutral     3734
+Name: count, dtype: int64
+sentiment_equal
+Positive    0.334933
+Negative    0.333156
+Neutral     0.331911
+Name: proportion, dtype: float64
+Map:   0%|          | 0/45000 [00:00<?, ? examples/s]
+Map:   0%|          | 0/11250 [00:00<?, ? examples/s]
+Some weights of BertForSequenceClassification were not initialized from the model checkpoint at bert-base-uncased and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1494: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[1408/1408 11:27, Epoch 2/2]
+Epoch	Training Loss	Validation Loss	Accuracy	F1	Precision	Recall
+1	0.644100	0.559508	0.755911	0.750835	0.750616	0.755911
+2	0.554700	0.553499	0.759644	0.755566	0.754454	0.759644
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[176/176 00:29]
+  Fold 1 accuracy: 0.7596
+Fold 2:
+  Train size: 45000
+  Val size: 11250
+
+Distribution for Train Fold 2:
+sentiment_equal
+Neutral     15069
+Positive    14989
+Negative    14942
+Name: count, dtype: int64
+sentiment_equal
+Neutral     0.334867
+Positive    0.333089
+Negative    0.332044
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 2:
+sentiment_equal
+Negative    3808
+Positive    3761
+Neutral     3681
+Name: count, dtype: int64
+sentiment_equal
+Negative    0.338489
+Positive    0.334311
+Neutral     0.327200
+Name: proportion, dtype: float64
+Map:   0%|          | 0/45000 [00:00<?, ? examples/s]
+Map:   0%|          | 0/11250 [00:00<?, ? examples/s]
+Some weights of BertForSequenceClassification were not initialized from the model checkpoint at bert-base-uncased and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1494: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[1408/1408 11:27, Epoch 2/2]
+Epoch	Training Loss	Validation Loss	Accuracy	F1	Precision	Recall
+1	0.645900	0.562440	0.756444	0.754214	0.752975	0.756444
+2	0.553200	0.559159	0.759467	0.756963	0.755607	0.759467
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[176/176 00:29]
+[I 2024-07-24 07:18:23,372] Trial 10 finished with value: 0.7595555555555555 and parameters: {'learning_rate': 1.0179148806315637e-05, 'batch_size': 32, 'weight_decay': 2.111249698645468e-05, 'max_length': 64}. Best is trial 7 with value: 0.7661777777777778.
+  Fold 2 accuracy: 0.7595
+Mean accuracy across folds: 0.7596
+
+Trial 11
+Hyperparameters:
+  Learning rate: 6.666267575622189e-05
+  Batch size: 64
+  Weight decay: 1.0646001244444009e-05
+  Max length: 128
+Fold 1:
+  Train size: 45000
+  Val size: 11250
+/tmp/ipykernel_25/381949715.py:71: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+  learning_rate = trial.suggest_loguniform('learning_rate', 1e-5, 1e-3)
+/tmp/ipykernel_25/381949715.py:73: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+  weight_decay = trial.suggest_loguniform('weight_decay', 1e-5, 1e-1)
+Distribution for Train Fold 1:
+sentiment_equal
+Neutral     15016
+Negative    15002
+Positive    14982
+Name: count, dtype: int64
+sentiment_equal
+Neutral     0.333689
+Negative    0.333378
+Positive    0.332933
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 1:
+sentiment_equal
+Positive    3768
+Negative    3748
+Neutral     3734
+Name: count, dtype: int64
+sentiment_equal
+Positive    0.334933
+Negative    0.333156
+Neutral     0.331911
+Name: proportion, dtype: float64
+Map:   0%|          | 0/45000 [00:00<?, ? examples/s]
+Map:   0%|          | 0/11250 [00:00<?, ? examples/s]
+Some weights of BertForSequenceClassification were not initialized from the model checkpoint at bert-base-uncased and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1494: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[704/704 18:03, Epoch 2/2]
+Epoch	Training Loss	Validation Loss	Accuracy	F1	Precision	Recall
+1	No log	0.541578	0.759822	0.753410	0.755970	0.759822
+2	0.553800	0.538440	0.768178	0.765915	0.764704	0.768178
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[88/88 00:47]
+  Fold 1 accuracy: 0.7682
+Fold 2:
+  Train size: 45000
+  Val size: 11250
+
+Distribution for Train Fold 2:
+sentiment_equal
+Neutral     15069
+Positive    14989
+Negative    14942
+Name: count, dtype: int64
+sentiment_equal
+Neutral     0.334867
+Positive    0.333089
+Negative    0.332044
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 2:
+sentiment_equal
+Negative    3808
+Positive    3761
+Neutral     3681
+Name: count, dtype: int64
+sentiment_equal
+Negative    0.338489
+Positive    0.334311
+Neutral     0.327200
+Name: proportion, dtype: float64
+Map:   0%|          | 0/45000 [00:00<?, ? examples/s]
+Map:   0%|          | 0/11250 [00:00<?, ? examples/s]
+Some weights of BertForSequenceClassification were not initialized from the model checkpoint at bert-base-uncased and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1494: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[704/704 18:03, Epoch 2/2]
+Epoch	Training Loss	Validation Loss	Accuracy	F1	Precision	Recall
+1	No log	0.548631	0.762400	0.757990	0.757229	0.762400
+2	0.558100	0.552243	0.769333	0.768031	0.767144	0.769333
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[88/88 00:47]
+[I 2024-07-24 07:58:40,810] Trial 11 finished with value: 0.7687555555555555 and parameters: {'learning_rate': 6.666267575622189e-05, 'batch_size': 64, 'weight_decay': 1.0646001244444009e-05, 'max_length': 128}. Best is trial 11 with value: 0.7687555555555555.
+  Fold 2 accuracy: 0.7693
+Mean accuracy across folds: 0.7688
+
+Trial 12
+Hyperparameters:
+  Learning rate: 4.9802737681817875e-05
+  Batch size: 64
+  Weight decay: 1.860135699251943e-05
+  Max length: 128
+Fold 1:
+  Train size: 45000
+  Val size: 11250
+/tmp/ipykernel_25/381949715.py:71: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+  learning_rate = trial.suggest_loguniform('learning_rate', 1e-5, 1e-3)
+/tmp/ipykernel_25/381949715.py:73: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+  weight_decay = trial.suggest_loguniform('weight_decay', 1e-5, 1e-1)
+Distribution for Train Fold 1:
+sentiment_equal
+Neutral     15016
+Negative    15002
+Positive    14982
+Name: count, dtype: int64
+sentiment_equal
+Neutral     0.333689
+Negative    0.333378
+Positive    0.332933
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 1:
+sentiment_equal
+Positive    3768
+Negative    3748
+Neutral     3734
+Name: count, dtype: int64
+sentiment_equal
+Positive    0.334933
+Negative    0.333156
+Neutral     0.331911
+Name: proportion, dtype: float64
+Map:   0%|          | 0/45000 [00:00<?, ? examples/s]
+Map:   0%|          | 0/11250 [00:00<?, ? examples/s]
+Some weights of BertForSequenceClassification were not initialized from the model checkpoint at bert-base-uncased and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1494: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[704/704 18:03, Epoch 2/2]
+Epoch	Training Loss	Validation Loss	Accuracy	F1	Precision	Recall
+1	No log	0.539911	0.762933	0.757799	0.758622	0.762933
+2	0.558300	0.534850	0.768356	0.765945	0.764686	0.768356
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[88/88 00:47]
+  Fold 1 accuracy: 0.7684
+Fold 2:
+  Train size: 45000
+  Val size: 11250
+
+Distribution for Train Fold 2:
+sentiment_equal
+Neutral     15069
+Positive    14989
+Negative    14942
+Name: count, dtype: int64
+sentiment_equal
+Neutral     0.334867
+Positive    0.333089
+Negative    0.332044
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 2:
+sentiment_equal
+Negative    3808
+Positive    3761
+Neutral     3681
+Name: count, dtype: int64
+sentiment_equal
+Negative    0.338489
+Positive    0.334311
+Neutral     0.327200
+Name: proportion, dtype: float64
+Map:   0%|          | 0/45000 [00:00<?, ? examples/s]
+Map:   0%|          | 0/11250 [00:00<?, ? examples/s]
+Some weights of BertForSequenceClassification were not initialized from the model checkpoint at bert-base-uncased and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1494: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[704/704 18:03, Epoch 2/2]
+Epoch	Training Loss	Validation Loss	Accuracy	F1	Precision	Recall
+1	No log	0.545743	0.760622	0.756169	0.755190	0.760622
+2	0.559200	0.549822	0.766311	0.764786	0.763772	0.766311
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[88/88 00:47]
+[I 2024-07-24 08:39:00,463] Trial 12 finished with value: 0.7673333333333334 and parameters: {'learning_rate': 4.9802737681817875e-05, 'batch_size': 64, 'weight_decay': 1.860135699251943e-05, 'max_length': 128}. Best is trial 11 with value: 0.7687555555555555.
+  Fold 2 accuracy: 0.7663
+Mean accuracy across folds: 0.7673
+
+Trial 13
+Hyperparameters:
+  Learning rate: 5.516043990778172e-05
+  Batch size: 64
+  Weight decay: 1.0341054987756212e-05
+  Max length: 128
+Fold 1:
+  Train size: 45000
+  Val size: 11250
+/tmp/ipykernel_25/381949715.py:71: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+  learning_rate = trial.suggest_loguniform('learning_rate', 1e-5, 1e-3)
+/tmp/ipykernel_25/381949715.py:73: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+  weight_decay = trial.suggest_loguniform('weight_decay', 1e-5, 1e-1)
+Distribution for Train Fold 1:
+sentiment_equal
+Neutral     15016
+Negative    15002
+Positive    14982
+Name: count, dtype: int64
+sentiment_equal
+Neutral     0.333689
+Negative    0.333378
+Positive    0.332933
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 1:
+sentiment_equal
+Positive    3768
+Negative    3748
+Neutral     3734
+Name: count, dtype: int64
+sentiment_equal
+Positive    0.334933
+Negative    0.333156
+Neutral     0.331911
+Name: proportion, dtype: float64
+Map:   0%|          | 0/45000 [00:00<?, ? examples/s]
+Map:   0%|          | 0/11250 [00:00<?, ? examples/s]
+Some weights of BertForSequenceClassification were not initialized from the model checkpoint at bert-base-uncased and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1494: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[704/704 18:03, Epoch 2/2]
+Epoch	Training Loss	Validation Loss	Accuracy	F1	Precision	Recall
+1	No log	0.537737	0.764444	0.759740	0.760920	0.764444
+2	0.556300	0.536920	0.766311	0.763890	0.762629	0.766311
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[88/88 00:47]
+  Fold 1 accuracy: 0.7663
+Fold 2:
+  Train size: 45000
+  Val size: 11250
+
+Distribution for Train Fold 2:
+sentiment_equal
+Neutral     15069
+Positive    14989
+Negative    14942
+Name: count, dtype: int64
+sentiment_equal
+Neutral     0.334867
+Positive    0.333089
+Negative    0.332044
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 2:
+sentiment_equal
+Negative    3808
+Positive    3761
+Neutral     3681
+Name: count, dtype: int64
+sentiment_equal
+Negative    0.338489
+Positive    0.334311
+Neutral     0.327200
+Name: proportion, dtype: float64
+Map:   0%|          | 0/45000 [00:00<?, ? examples/s]
+Map:   0%|          | 0/11250 [00:00<?, ? examples/s]
+Some weights of BertForSequenceClassification were not initialized from the model checkpoint at bert-base-uncased and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1494: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[704/704 18:03, Epoch 2/2]
+Epoch	Training Loss	Validation Loss	Accuracy	F1	Precision	Recall
+1	No log	0.548977	0.757867	0.753407	0.752516	0.757867
+2	0.556800	0.550611	0.766667	0.765072	0.764029	0.766667
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[88/88 00:47]
+[I 2024-07-24 09:19:18,100] Trial 13 finished with value: 0.766488888888889 and parameters: {'learning_rate': 5.516043990778172e-05, 'batch_size': 64, 'weight_decay': 1.0341054987756212e-05, 'max_length': 128}. Best is trial 11 with value: 0.7687555555555555.
+  Fold 2 accuracy: 0.7667
+Mean accuracy across folds: 0.7665
+
+Trial 14
+Hyperparameters:
+  Learning rate: 6.104713351597136e-05
+  Batch size: 64
+  Weight decay: 0.00012942349402642387
+  Max length: 128
+Fold 1:
+  Train size: 45000
+  Val size: 11250
+/tmp/ipykernel_25/381949715.py:71: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+  learning_rate = trial.suggest_loguniform('learning_rate', 1e-5, 1e-3)
+/tmp/ipykernel_25/381949715.py:73: FutureWarning: suggest_loguniform has been deprecated in v3.0.0. This feature will be removed in v6.0.0. See https://github.com/optuna/optuna/releases/tag/v3.0.0. Use suggest_float(..., log=True) instead.
+  weight_decay = trial.suggest_loguniform('weight_decay', 1e-5, 1e-1)
+Distribution for Train Fold 1:
+sentiment_equal
+Neutral     15016
+Negative    15002
+Positive    14982
+Name: count, dtype: int64
+sentiment_equal
+Neutral     0.333689
+Negative    0.333378
+Positive    0.332933
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 1:
+sentiment_equal
+Positive    3768
+Negative    3748
+Neutral     3734
+Name: count, dtype: int64
+sentiment_equal
+Positive    0.334933
+Negative    0.333156
+Neutral     0.331911
+Name: proportion, dtype: float64
+Map:   0%|          | 0/45000 [00:00<?, ? examples/s]
+Map:   0%|          | 0/11250 [00:00<?, ? examples/s]
+Some weights of BertForSequenceClassification were not initialized from the model checkpoint at bert-base-uncased and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1494: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[704/704 18:03, Epoch 2/2]
+Epoch	Training Loss	Validation Loss	Accuracy	F1	Precision	Recall
+1	No log	0.538411	0.763467	0.757806	0.759086	0.763467
+2	0.553500	0.537730	0.769156	0.766899	0.765698	0.769156
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[88/88 00:47]
+  Fold 1 accuracy: 0.7692
+Fold 2:
+  Train size: 45000
+  Val size: 11250
+
+Distribution for Train Fold 2:
+sentiment_equal
+Neutral     15069
+Positive    14989
+Negative    14942
+Name: count, dtype: int64
+sentiment_equal
+Neutral     0.334867
+Positive    0.333089
+Negative    0.332044
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 2:
+sentiment_equal
+Negative    3808
+Positive    3761
+Neutral     3681
+Name: count, dtype: int64
+sentiment_equal
+Negative    0.338489
+Positive    0.334311
+Neutral     0.327200
+Name: proportion, dtype: float64
+Map:   0%|          | 0/45000 [00:00<?, ? examples/s]
+Map:   0%|          | 0/11250 [00:00<?, ? examples/s]
+Some weights of BertForSequenceClassification were not initialized from the model checkpoint at bert-base-uncased and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1494: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[704/704 18:03, Epoch 2/2]
+Epoch	Training Loss	Validation Loss	Accuracy	F1	Precision	Recall
+1	No log	0.548588	0.760800	0.756115	0.755450	0.760800
+2	0.556900	0.554411	0.767556	0.765980	0.764957	0.767556
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[88/88 00:47]
+[I 2024-07-24 09:59:36,385] Trial 14 finished with value: 0.7683555555555556 and parameters: {'learning_rate': 6.104713351597136e-05, 'batch_size': 64, 'weight_decay': 0.00012942349402642387, 'max_length': 128}. Best is trial 11 with value: 0.7687555555555555.
+  Fold 2 accuracy: 0.7676
+Mean accuracy across folds: 0.7684
+
+Best hyperparameters: {'learning_rate': 6.666267575622189e-05, 'batch_size': 64, 'weight_decay': 1.0646001244444009e-05, 'max_length': 128}
+Map:   0%|          | 0/56250 [00:00<?, ? examples/s]
+Map:   0%|          | 0/65352 [00:00<?, ? examples/s]
+Some weights of BertForSequenceClassification were not initialized from the model checkpoint at bert-base-uncased and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1494: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[880/880 29:54, Epoch 2/2]
+Epoch	Training Loss	Validation Loss	Accuracy	F1	Precision	Recall
+1	No log	0.542965	0.762976	0.764063	0.765667	0.762976
+2	0.573700	0.547583	0.766587	0.764437	0.763270	0.766587
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+Final Metrics:
+eval_loss: 0.5476
+eval_accuracy: 0.7666
+eval_f1: 0.7644
+eval_precision: 0.7633
+eval_recall: 0.7666
+eval_runtime: 276.5023
+eval_samples_per_second: 236.3520
+eval_steps_per_second: 1.8480
+epoch: 2.0000

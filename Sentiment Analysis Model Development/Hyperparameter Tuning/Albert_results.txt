@@ -1,0 +1,1615 @@
+Distribution for Balanced Train Set:
+sentiment_equal
+Positive    18750
+Neutral     18750
+Negative    18750
+Name: count, dtype: int64
+sentiment_equal
+Positive    0.333333
+Neutral     0.333333
+Negative    0.333333
+Name: proportion, dtype: float64
+
+Distribution for Balanced Test Set:
+sentiment_equal
+Positive    21784
+Neutral     21784
+Negative    21784
+Name: count, dtype: int64
+sentiment_equal
+Positive    0.333333
+Neutral     0.333333
+Negative    0.333333
+Name: proportion, dtype: float64
+
+Trial 0
+Hyperparameters:
+  Learning rate: 1.1525701753935857e-05
+  Batch size: 64
+  Weight decay: 0.006374322657121236
+  Max length: 128
+Fold 1:
+  Train size: 45000
+  Val size: 11250
+
+Distribution for Train Fold 1:
+sentiment_equal
+Neutral     15016
+Negative    15002
+Positive    14982
+Name: count, dtype: int64
+sentiment_equal
+Neutral     0.333689
+Negative    0.333378
+Positive    0.332933
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 1:
+sentiment_equal
+Positive    3768
+Negative    3748
+Neutral     3734
+Name: count, dtype: int64
+sentiment_equal
+Positive    0.334933
+Negative    0.333156
+Neutral     0.331911
+Name: proportion, dtype: float64
+tokenizer_config.json:   0%|          | 0.00/25.0 [00:00<?, ?B/s]
+spiece.model:   0%|          | 0.00/760k [00:00<?, ?B/s]
+tokenizer.json:   0%|          | 0.00/1.31M [00:00<?, ?B/s]
+config.json:   0%|          | 0.00/684 [00:00<?, ?B/s]
+Map:   0%|          | 0/45000 [00:00<?, ? examples/s]
+Map:   0%|          | 0/11250 [00:00<?, ? examples/s]
+model.safetensors:   0%|          | 0.00/47.4M [00:00<?, ?B/s]
+Some weights of AlbertForSequenceClassification were not initialized from the model checkpoint at albert-base-v2 and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1494: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[704/704 17:51, Epoch 2/2]
+Epoch	Training Loss	Validation Loss	Accuracy	F1	Precision	Recall
+1	No log	0.564728	0.753422	0.749895	0.748901	0.753422
+2	0.651100	0.546042	0.761156	0.759186	0.758149	0.761156
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[88/88 00:49]
+  Fold 1 accuracy: 0.7612
+Fold 2:
+  Train size: 45000
+  Val size: 11250
+
+Distribution for Train Fold 2:
+sentiment_equal
+Neutral     15069
+Positive    14989
+Negative    14942
+Name: count, dtype: int64
+sentiment_equal
+Neutral     0.334867
+Positive    0.333089
+Negative    0.332044
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 2:
+sentiment_equal
+Negative    3808
+Positive    3761
+Neutral     3681
+Name: count, dtype: int64
+sentiment_equal
+Negative    0.338489
+Positive    0.334311
+Neutral     0.327200
+Name: proportion, dtype: float64
+Map:   0%|          | 0/45000 [00:00<?, ? examples/s]
+Map:   0%|          | 0/11250 [00:00<?, ? examples/s]
+Some weights of AlbertForSequenceClassification were not initialized from the model checkpoint at albert-base-v2 and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1494: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[704/704 17:58, Epoch 2/2]
+Epoch	Training Loss	Validation Loss	Accuracy	F1	Precision	Recall
+1	No log	0.570638	0.752178	0.750088	0.748915	0.752178
+2	0.620300	0.554789	0.758400	0.755669	0.754260	0.758400
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[88/88 00:49]
+[I 2024-07-26 13:48:28,168] Trial 0 finished with value: 0.7597777777777778 and parameters: {'learning_rate': 1.1525701753935857e-05, 'batch_size': 64, 'weight_decay': 0.006374322657121236, 'max_length': 128}. Best is trial 0 with value: 0.7597777777777778.
+  Fold 2 accuracy: 0.7584
+Mean accuracy across folds: 0.7598
+
+Trial 1
+Hyperparameters:
+  Learning rate: 0.00010791227776768868
+  Batch size: 64
+  Weight decay: 0.002658152937866168
+  Max length: 64
+Fold 1:
+  Train size: 45000
+  Val size: 11250
+
+Distribution for Train Fold 1:
+sentiment_equal
+Neutral     15016
+Negative    15002
+Positive    14982
+Name: count, dtype: int64
+sentiment_equal
+Neutral     0.333689
+Negative    0.333378
+Positive    0.332933
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 1:
+sentiment_equal
+Positive    3768
+Negative    3748
+Neutral     3734
+Name: count, dtype: int64
+sentiment_equal
+Positive    0.334933
+Negative    0.333156
+Neutral     0.331911
+Name: proportion, dtype: float64
+Map:   0%|          | 0/45000 [00:00<?, ? examples/s]
+Map:   0%|          | 0/11250 [00:00<?, ? examples/s]
+Some weights of AlbertForSequenceClassification were not initialized from the model checkpoint at albert-base-v2 and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1494: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[704/704 08:57, Epoch 2/2]
+Epoch	Training Loss	Validation Loss	Accuracy	F1	Precision	Recall
+1	No log	0.658411	0.716978	0.708410	0.707989	0.716978
+2	0.753300	0.607771	0.737156	0.733273	0.731871	0.737156
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[88/88 00:23]
+  Fold 1 accuracy: 0.7372
+Fold 2:
+  Train size: 45000
+  Val size: 11250
+
+Distribution for Train Fold 2:
+sentiment_equal
+Neutral     15069
+Positive    14989
+Negative    14942
+Name: count, dtype: int64
+sentiment_equal
+Neutral     0.334867
+Positive    0.333089
+Negative    0.332044
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 2:
+sentiment_equal
+Negative    3808
+Positive    3761
+Neutral     3681
+Name: count, dtype: int64
+sentiment_equal
+Negative    0.338489
+Positive    0.334311
+Neutral     0.327200
+Name: proportion, dtype: float64
+Map:   0%|          | 0/45000 [00:00<?, ? examples/s]
+Map:   0%|          | 0/11250 [00:00<?, ? examples/s]
+Some weights of AlbertForSequenceClassification were not initialized from the model checkpoint at albert-base-v2 and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1494: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[704/704 09:02, Epoch 2/2]
+Epoch	Training Loss	Validation Loss	Accuracy	F1	Precision	Recall
+1	No log	0.587643	0.746311	0.741991	0.740673	0.746311
+2	0.627700	0.558002	0.759644	0.757671	0.756466	0.759644
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[88/88 00:23]
+[I 2024-07-26 14:08:41,307] Trial 1 finished with value: 0.7484 and parameters: {'learning_rate': 0.00010791227776768868, 'batch_size': 64, 'weight_decay': 0.002658152937866168, 'max_length': 64}. Best is trial 0 with value: 0.7597777777777778.
+  Fold 2 accuracy: 0.7596
+Mean accuracy across folds: 0.7484
+
+Trial 2
+Hyperparameters:
+  Learning rate: 7.562944404539803e-05
+  Batch size: 32
+  Weight decay: 0.0005742401080218294
+  Max length: 128
+Fold 1:
+  Train size: 45000
+  Val size: 11250
+
+Distribution for Train Fold 1:
+sentiment_equal
+Neutral     15016
+Negative    15002
+Positive    14982
+Name: count, dtype: int64
+sentiment_equal
+Neutral     0.333689
+Negative    0.333378
+Positive    0.332933
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 1:
+sentiment_equal
+Positive    3768
+Negative    3748
+Neutral     3734
+Name: count, dtype: int64
+sentiment_equal
+Positive    0.334933
+Negative    0.333156
+Neutral     0.331911
+Name: proportion, dtype: float64
+Map:   0%|          | 0/45000 [00:00<?, ? examples/s]
+Map:   0%|          | 0/11250 [00:00<?, ? examples/s]
+Some weights of AlbertForSequenceClassification were not initialized from the model checkpoint at albert-base-v2 and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1494: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[1408/1408 18:06, Epoch 2/2]
+Epoch	Training Loss	Validation Loss	Accuracy	F1	Precision	Recall
+1	0.725900	0.609115	0.733511	0.710489	0.734646	0.733511
+2	0.579800	0.554312	0.760978	0.757897	0.757770	0.760978
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[176/176 00:47]
+  Fold 1 accuracy: 0.7610
+Fold 2:
+  Train size: 45000
+  Val size: 11250
+
+Distribution for Train Fold 2:
+sentiment_equal
+Neutral     15069
+Positive    14989
+Negative    14942
+Name: count, dtype: int64
+sentiment_equal
+Neutral     0.334867
+Positive    0.333089
+Negative    0.332044
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 2:
+sentiment_equal
+Negative    3808
+Positive    3761
+Neutral     3681
+Name: count, dtype: int64
+sentiment_equal
+Negative    0.338489
+Positive    0.334311
+Neutral     0.327200
+Name: proportion, dtype: float64
+Map:   0%|          | 0/45000 [00:00<?, ? examples/s]
+Map:   0%|          | 0/11250 [00:00<?, ? examples/s]
+Some weights of AlbertForSequenceClassification were not initialized from the model checkpoint at albert-base-v2 and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1494: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[1408/1408 17:56, Epoch 2/2]
+Epoch	Training Loss	Validation Loss	Accuracy	F1	Precision	Recall
+1	0.913600	0.802873	0.642489	0.617174	0.622291	0.642489
+2	0.804400	0.673879	0.699111	0.695489	0.693347	0.699111
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[176/176 00:47]
+[I 2024-07-26 14:47:49,044] Trial 2 finished with value: 0.7300444444444445 and parameters: {'learning_rate': 7.562944404539803e-05, 'batch_size': 32, 'weight_decay': 0.0005742401080218294, 'max_length': 128}. Best is trial 0 with value: 0.7597777777777778.
+  Fold 2 accuracy: 0.6991
+Mean accuracy across folds: 0.7300
+
+Trial 3
+Hyperparameters:
+  Learning rate: 0.00022816198935746677
+  Batch size: 32
+  Weight decay: 3.865513202868249e-05
+  Max length: 128
+Fold 1:
+  Train size: 45000
+  Val size: 11250
+
+Distribution for Train Fold 1:
+sentiment_equal
+Neutral     15016
+Negative    15002
+Positive    14982
+Name: count, dtype: int64
+sentiment_equal
+Neutral     0.333689
+Negative    0.333378
+Positive    0.332933
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 1:
+sentiment_equal
+Positive    3768
+Negative    3748
+Neutral     3734
+Name: count, dtype: int64
+sentiment_equal
+Positive    0.334933
+Negative    0.333156
+Neutral     0.331911
+Name: proportion, dtype: float64
+Map:   0%|          | 0/45000 [00:00<?, ? examples/s]
+Map:   0%|          | 0/11250 [00:00<?, ? examples/s]
+Some weights of AlbertForSequenceClassification were not initialized from the model checkpoint at albert-base-v2 and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1494: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[1408/1408 17:51, Epoch 2/2]
+Epoch	Training Loss	Validation Loss	Accuracy	F1	Precision	Recall
+1	1.119300	1.099686	0.334933	0.168069	0.112180	0.334933
+2	1.111300	1.098911	0.333156	0.166511	0.110993	0.333156
+/opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+/opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[176/176 00:47]
+/opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+  Fold 1 accuracy: 0.3332
+Fold 2:
+  Train size: 45000
+  Val size: 11250
+
+Distribution for Train Fold 2:
+sentiment_equal
+Neutral     15069
+Positive    14989
+Negative    14942
+Name: count, dtype: int64
+sentiment_equal
+Neutral     0.334867
+Positive    0.333089
+Negative    0.332044
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 2:
+sentiment_equal
+Negative    3808
+Positive    3761
+Neutral     3681
+Name: count, dtype: int64
+sentiment_equal
+Negative    0.338489
+Positive    0.334311
+Neutral     0.327200
+Name: proportion, dtype: float64
+Map:   0%|          | 0/45000 [00:00<?, ? examples/s]
+Map:   0%|          | 0/11250 [00:00<?, ? examples/s]
+Some weights of AlbertForSequenceClassification were not initialized from the model checkpoint at albert-base-v2 and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1494: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[1408/1408 17:47, Epoch 2/2]
+Epoch	Training Loss	Validation Loss	Accuracy	F1	Precision	Recall
+1	1.105300	1.101849	0.334311	0.167523	0.111764	0.334311
+2	1.101200	1.098547	0.338489	0.171200	0.114575	0.338489
+/opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+/opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[176/176 00:46]
+/opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[I 2024-07-26 15:26:30,690] Trial 3 finished with value: 0.33582222222222224 and parameters: {'learning_rate': 0.00022816198935746677, 'batch_size': 32, 'weight_decay': 3.865513202868249e-05, 'max_length': 128}. Best is trial 0 with value: 0.7597777777777778.
+  Fold 2 accuracy: 0.3385
+Mean accuracy across folds: 0.3358
+
+Trial 4
+Hyperparameters:
+  Learning rate: 0.000244764584411594
+  Batch size: 64
+  Weight decay: 8.624282200770936e-05
+  Max length: 128
+Fold 1:
+  Train size: 45000
+  Val size: 11250
+
+Distribution for Train Fold 1:
+sentiment_equal
+Neutral     15016
+Negative    15002
+Positive    14982
+Name: count, dtype: int64
+sentiment_equal
+Neutral     0.333689
+Negative    0.333378
+Positive    0.332933
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 1:
+sentiment_equal
+Positive    3768
+Negative    3748
+Neutral     3734
+Name: count, dtype: int64
+sentiment_equal
+Positive    0.334933
+Negative    0.333156
+Neutral     0.331911
+Name: proportion, dtype: float64
+Map:   0%|          | 0/45000 [00:00<?, ? examples/s]
+Map:   0%|          | 0/11250 [00:00<?, ? examples/s]
+Some weights of AlbertForSequenceClassification were not initialized from the model checkpoint at albert-base-v2 and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1494: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[704/704 17:40, Epoch 2/2]
+Epoch	Training Loss	Validation Loss	Accuracy	F1	Precision	Recall
+1	No log	1.099562	0.333156	0.166511	0.110993	0.333156
+2	1.114200	1.098609	0.334933	0.168069	0.112180	0.334933
+/opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+/opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[88/88 00:47]
+/opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+  Fold 1 accuracy: 0.3349
+Fold 2:
+  Train size: 45000
+  Val size: 11250
+
+Distribution for Train Fold 2:
+sentiment_equal
+Neutral     15069
+Positive    14989
+Negative    14942
+Name: count, dtype: int64
+sentiment_equal
+Neutral     0.334867
+Positive    0.333089
+Negative    0.332044
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 2:
+sentiment_equal
+Negative    3808
+Positive    3761
+Neutral     3681
+Name: count, dtype: int64
+sentiment_equal
+Negative    0.338489
+Positive    0.334311
+Neutral     0.327200
+Name: proportion, dtype: float64
+Map:   0%|          | 0/45000 [00:00<?, ? examples/s]
+Map:   0%|          | 0/11250 [00:00<?, ? examples/s]
+Some weights of AlbertForSequenceClassification were not initialized from the model checkpoint at albert-base-v2 and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1494: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[704/704 17:38, Epoch 2/2]
+Epoch	Training Loss	Validation Loss	Accuracy	F1	Precision	Recall
+1	No log	1.102896	0.334311	0.167523	0.111764	0.334311
+2	1.115400	1.098691	0.338489	0.171200	0.114575	0.338489
+/opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+/opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[88/88 00:47]
+/opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[I 2024-07-26 16:04:58,229] Trial 4 finished with value: 0.3367111111111111 and parameters: {'learning_rate': 0.000244764584411594, 'batch_size': 64, 'weight_decay': 8.624282200770936e-05, 'max_length': 128}. Best is trial 0 with value: 0.7597777777777778.
+  Fold 2 accuracy: 0.3385
+Mean accuracy across folds: 0.3367
+
+Trial 5
+Hyperparameters:
+  Learning rate: 6.170768837519473e-05
+  Batch size: 64
+  Weight decay: 3.926626017296496e-05
+  Max length: 64
+Fold 1:
+  Train size: 45000
+  Val size: 11250
+
+Distribution for Train Fold 1:
+sentiment_equal
+Neutral     15016
+Negative    15002
+Positive    14982
+Name: count, dtype: int64
+sentiment_equal
+Neutral     0.333689
+Negative    0.333378
+Positive    0.332933
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 1:
+sentiment_equal
+Positive    3768
+Negative    3748
+Neutral     3734
+Name: count, dtype: int64
+sentiment_equal
+Positive    0.334933
+Negative    0.333156
+Neutral     0.331911
+Name: proportion, dtype: float64
+Map:   0%|          | 0/45000 [00:00<?, ? examples/s]
+Map:   0%|          | 0/11250 [00:00<?, ? examples/s]
+Some weights of AlbertForSequenceClassification were not initialized from the model checkpoint at albert-base-v2 and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1494: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[704/704 09:03, Epoch 2/2]
+Epoch	Training Loss	Validation Loss	Accuracy	F1	Precision	Recall
+1	No log	0.579137	0.745689	0.728135	0.745728	0.745689
+2	0.586300	0.535716	0.768356	0.765959	0.764876	0.768356
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[88/88 00:23]
+  Fold 1 accuracy: 0.7684
+Fold 2:
+  Train size: 45000
+  Val size: 11250
+
+Distribution for Train Fold 2:
+sentiment_equal
+Neutral     15069
+Positive    14989
+Negative    14942
+Name: count, dtype: int64
+sentiment_equal
+Neutral     0.334867
+Positive    0.333089
+Negative    0.332044
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 2:
+sentiment_equal
+Negative    3808
+Positive    3761
+Neutral     3681
+Name: count, dtype: int64
+sentiment_equal
+Negative    0.338489
+Positive    0.334311
+Neutral     0.327200
+Name: proportion, dtype: float64
+Map:   0%|          | 0/45000 [00:00<?, ? examples/s]
+Map:   0%|          | 0/11250 [00:00<?, ? examples/s]
+Some weights of AlbertForSequenceClassification were not initialized from the model checkpoint at albert-base-v2 and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1494: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[704/704 09:03, Epoch 2/2]
+Epoch	Training Loss	Validation Loss	Accuracy	F1	Precision	Recall
+1	No log	0.576015	0.750489	0.751833	0.753605	0.750489
+2	0.620000	0.554086	0.760267	0.758138	0.756963	0.760267
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[88/88 00:23]
+[I 2024-07-26 16:25:15,976] Trial 5 finished with value: 0.7643111111111112 and parameters: {'learning_rate': 6.170768837519473e-05, 'batch_size': 64, 'weight_decay': 3.926626017296496e-05, 'max_length': 64}. Best is trial 5 with value: 0.7643111111111112.
+  Fold 2 accuracy: 0.7603
+Mean accuracy across folds: 0.7643
+
+Trial 6
+Hyperparameters:
+  Learning rate: 3.724038337122053e-05
+  Batch size: 32
+  Weight decay: 0.0005621613122512959
+  Max length: 128
+Fold 1:
+  Train size: 45000
+  Val size: 11250
+
+Distribution for Train Fold 1:
+sentiment_equal
+Neutral     15016
+Negative    15002
+Positive    14982
+Name: count, dtype: int64
+sentiment_equal
+Neutral     0.333689
+Negative    0.333378
+Positive    0.332933
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 1:
+sentiment_equal
+Positive    3768
+Negative    3748
+Neutral     3734
+Name: count, dtype: int64
+sentiment_equal
+Positive    0.334933
+Negative    0.333156
+Neutral     0.331911
+Name: proportion, dtype: float64
+Map:   0%|          | 0/45000 [00:00<?, ? examples/s]
+Map:   0%|          | 0/11250 [00:00<?, ? examples/s]
+Some weights of AlbertForSequenceClassification were not initialized from the model checkpoint at albert-base-v2 and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1494: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[1408/1408 18:11, Epoch 2/2]
+Epoch	Training Loss	Validation Loss	Accuracy	F1	Precision	Recall
+1	0.638200	0.560735	0.748800	0.728350	0.751980	0.748800
+2	0.530100	0.531130	0.770044	0.767831	0.766786	0.770044
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[176/176 00:48]
+  Fold 1 accuracy: 0.7700
+Fold 2:
+  Train size: 45000
+  Val size: 11250
+
+Distribution for Train Fold 2:
+sentiment_equal
+Neutral     15069
+Positive    14989
+Negative    14942
+Name: count, dtype: int64
+sentiment_equal
+Neutral     0.334867
+Positive    0.333089
+Negative    0.332044
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 2:
+sentiment_equal
+Negative    3808
+Positive    3761
+Neutral     3681
+Name: count, dtype: int64
+sentiment_equal
+Negative    0.338489
+Positive    0.334311
+Neutral     0.327200
+Name: proportion, dtype: float64
+Map:   0%|          | 0/45000 [00:00<?, ? examples/s]
+Map:   0%|          | 0/11250 [00:00<?, ? examples/s]
+Some weights of AlbertForSequenceClassification were not initialized from the model checkpoint at albert-base-v2 and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1494: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[1408/1408 18:11, Epoch 2/2]
+Epoch	Training Loss	Validation Loss	Accuracy	F1	Precision	Recall
+1	0.663300	0.560288	0.755556	0.749160	0.751073	0.755556
+2	0.539800	0.541328	0.769333	0.767566	0.766455	0.769333
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[176/176 00:48]
+[I 2024-07-26 17:04:46,506] Trial 6 finished with value: 0.7696888888888889 and parameters: {'learning_rate': 3.724038337122053e-05, 'batch_size': 32, 'weight_decay': 0.0005621613122512959, 'max_length': 128}. Best is trial 6 with value: 0.7696888888888889.
+  Fold 2 accuracy: 0.7693
+Mean accuracy across folds: 0.7697
+
+Trial 7
+Hyperparameters:
+  Learning rate: 0.00015139688613555373
+  Batch size: 32
+  Weight decay: 0.05423361808450868
+  Max length: 128
+Fold 1:
+  Train size: 45000
+  Val size: 11250
+
+Distribution for Train Fold 1:
+sentiment_equal
+Neutral     15016
+Negative    15002
+Positive    14982
+Name: count, dtype: int64
+sentiment_equal
+Neutral     0.333689
+Negative    0.333378
+Positive    0.332933
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 1:
+sentiment_equal
+Positive    3768
+Negative    3748
+Neutral     3734
+Name: count, dtype: int64
+sentiment_equal
+Positive    0.334933
+Negative    0.333156
+Neutral     0.331911
+Name: proportion, dtype: float64
+Map:   0%|          | 0/45000 [00:00<?, ? examples/s]
+Map:   0%|          | 0/11250 [00:00<?, ? examples/s]
+Some weights of AlbertForSequenceClassification were not initialized from the model checkpoint at albert-base-v2 and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1494: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[1408/1408 17:48, Epoch 2/2]
+Epoch	Training Loss	Validation Loss	Accuracy	F1	Precision	Recall
+1	1.116700	1.104757	0.334933	0.168069	0.112180	0.334933
+2	1.105000	1.098620	0.333156	0.166511	0.110993	0.333156
+/opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+/opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[176/176 00:46]
+/opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+  Fold 1 accuracy: 0.3332
+Fold 2:
+  Train size: 45000
+  Val size: 11250
+
+Distribution for Train Fold 2:
+sentiment_equal
+Neutral     15069
+Positive    14989
+Negative    14942
+Name: count, dtype: int64
+sentiment_equal
+Neutral     0.334867
+Positive    0.333089
+Negative    0.332044
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 2:
+sentiment_equal
+Negative    3808
+Positive    3761
+Neutral     3681
+Name: count, dtype: int64
+sentiment_equal
+Negative    0.338489
+Positive    0.334311
+Neutral     0.327200
+Name: proportion, dtype: float64
+Map:   0%|          | 0/45000 [00:00<?, ? examples/s]
+Map:   0%|          | 0/11250 [00:00<?, ? examples/s]
+Some weights of AlbertForSequenceClassification were not initialized from the model checkpoint at albert-base-v2 and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1494: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[1408/1408 17:51, Epoch 2/2]
+Epoch	Training Loss	Validation Loss	Accuracy	F1	Precision	Recall
+1	1.104300	1.100540	0.334311	0.167523	0.111764	0.334311
+2	1.100800	1.098570	0.338489	0.171200	0.114575	0.338489
+/opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+/opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[176/176 00:46]
+/opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[I 2024-07-26 17:43:31,158] Trial 7 finished with value: 0.33582222222222224 and parameters: {'learning_rate': 0.00015139688613555373, 'batch_size': 32, 'weight_decay': 0.05423361808450868, 'max_length': 128}. Best is trial 6 with value: 0.7696888888888889.
+  Fold 2 accuracy: 0.3385
+Mean accuracy across folds: 0.3358
+
+Trial 8
+Hyperparameters:
+  Learning rate: 0.00032127935493865144
+  Batch size: 64
+  Weight decay: 0.0444872624603424
+  Max length: 128
+Fold 1:
+  Train size: 45000
+  Val size: 11250
+
+Distribution for Train Fold 1:
+sentiment_equal
+Neutral     15016
+Negative    15002
+Positive    14982
+Name: count, dtype: int64
+sentiment_equal
+Neutral     0.333689
+Negative    0.333378
+Positive    0.332933
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 1:
+sentiment_equal
+Positive    3768
+Negative    3748
+Neutral     3734
+Name: count, dtype: int64
+sentiment_equal
+Positive    0.334933
+Negative    0.333156
+Neutral     0.331911
+Name: proportion, dtype: float64
+Map:   0%|          | 0/45000 [00:00<?, ? examples/s]
+Map:   0%|          | 0/11250 [00:00<?, ? examples/s]
+Some weights of AlbertForSequenceClassification were not initialized from the model checkpoint at albert-base-v2 and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1494: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[704/704 17:37, Epoch 2/2]
+Epoch	Training Loss	Validation Loss	Accuracy	F1	Precision	Recall
+1	No log	1.098620	0.333156	0.166511	0.110993	0.333156
+2	1.110900	1.098833	0.333156	0.166511	0.110993	0.333156
+/opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+/opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[88/88 00:47]
+/opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+  Fold 1 accuracy: 0.3332
+Fold 2:
+  Train size: 45000
+  Val size: 11250
+
+Distribution for Train Fold 2:
+sentiment_equal
+Neutral     15069
+Positive    14989
+Negative    14942
+Name: count, dtype: int64
+sentiment_equal
+Neutral     0.334867
+Positive    0.333089
+Negative    0.332044
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 2:
+sentiment_equal
+Negative    3808
+Positive    3761
+Neutral     3681
+Name: count, dtype: int64
+sentiment_equal
+Negative    0.338489
+Positive    0.334311
+Neutral     0.327200
+Name: proportion, dtype: float64
+Map:   0%|          | 0/45000 [00:00<?, ? examples/s]
+Map:   0%|          | 0/11250 [00:00<?, ? examples/s]
+Some weights of AlbertForSequenceClassification were not initialized from the model checkpoint at albert-base-v2 and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1494: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[704/704 17:39, Epoch 2/2]
+Epoch	Training Loss	Validation Loss	Accuracy	F1	Precision	Recall
+1	No log	1.101547	0.327200	0.161332	0.107060	0.327200
+2	1.103500	1.098640	0.338489	0.171200	0.114575	0.338489
+/opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+/opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[88/88 00:47]
+/opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[I 2024-07-26 18:21:54,967] Trial 8 finished with value: 0.33582222222222224 and parameters: {'learning_rate': 0.00032127935493865144, 'batch_size': 64, 'weight_decay': 0.0444872624603424, 'max_length': 128}. Best is trial 6 with value: 0.7696888888888889.
+  Fold 2 accuracy: 0.3385
+Mean accuracy across folds: 0.3358
+
+Trial 9
+Hyperparameters:
+  Learning rate: 0.00019517835546735605
+  Batch size: 32
+  Weight decay: 0.07057775110416635
+  Max length: 64
+Fold 1:
+  Train size: 45000
+  Val size: 11250
+
+Distribution for Train Fold 1:
+sentiment_equal
+Neutral     15016
+Negative    15002
+Positive    14982
+Name: count, dtype: int64
+sentiment_equal
+Neutral     0.333689
+Negative    0.333378
+Positive    0.332933
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 1:
+sentiment_equal
+Positive    3768
+Negative    3748
+Neutral     3734
+Name: count, dtype: int64
+sentiment_equal
+Positive    0.334933
+Negative    0.333156
+Neutral     0.331911
+Name: proportion, dtype: float64
+Map:   0%|          | 0/45000 [00:00<?, ? examples/s]
+Map:   0%|          | 0/11250 [00:00<?, ? examples/s]
+Some weights of AlbertForSequenceClassification were not initialized from the model checkpoint at albert-base-v2 and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1494: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[1408/1408 09:14, Epoch 2/2]
+Epoch	Training Loss	Validation Loss	Accuracy	F1	Precision	Recall
+1	1.117200	1.098706	0.334933	0.168069	0.112180	0.334933
+2	1.110700	1.098743	0.333156	0.166511	0.110993	0.333156
+/opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+/opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[176/176 00:24]
+/opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+  Fold 1 accuracy: 0.3332
+Fold 2:
+  Train size: 45000
+  Val size: 11250
+
+Distribution for Train Fold 2:
+sentiment_equal
+Neutral     15069
+Positive    14989
+Negative    14942
+Name: count, dtype: int64
+sentiment_equal
+Neutral     0.334867
+Positive    0.333089
+Negative    0.332044
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 2:
+sentiment_equal
+Negative    3808
+Positive    3761
+Neutral     3681
+Name: count, dtype: int64
+sentiment_equal
+Negative    0.338489
+Positive    0.334311
+Neutral     0.327200
+Name: proportion, dtype: float64
+Map:   0%|          | 0/45000 [00:00<?, ? examples/s]
+Map:   0%|          | 0/11250 [00:00<?, ? examples/s]
+Some weights of AlbertForSequenceClassification were not initialized from the model checkpoint at albert-base-v2 and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1494: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[1408/1408 09:17, Epoch 2/2]
+Epoch	Training Loss	Validation Loss	Accuracy	F1	Precision	Recall
+1	1.104800	1.101142	0.334311	0.167523	0.111764	0.334311
+2	1.101000	1.098553	0.338489	0.171200	0.114575	0.338489
+/opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+/opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[176/176 00:24]
+/opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[I 2024-07-26 18:42:41,931] Trial 9 finished with value: 0.33582222222222224 and parameters: {'learning_rate': 0.00019517835546735605, 'batch_size': 32, 'weight_decay': 0.07057775110416635, 'max_length': 64}. Best is trial 6 with value: 0.7696888888888889.
+  Fold 2 accuracy: 0.3385
+Mean accuracy across folds: 0.3358
+
+Trial 10
+Hyperparameters:
+  Learning rate: 1.9755642970030824e-05
+  Batch size: 32
+  Weight decay: 0.00039349502840877685
+  Max length: 64
+Fold 1:
+  Train size: 45000
+  Val size: 11250
+
+Distribution for Train Fold 1:
+sentiment_equal
+Neutral     15016
+Negative    15002
+Positive    14982
+Name: count, dtype: int64
+sentiment_equal
+Neutral     0.333689
+Negative    0.333378
+Positive    0.332933
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 1:
+sentiment_equal
+Positive    3768
+Negative    3748
+Neutral     3734
+Name: count, dtype: int64
+sentiment_equal
+Positive    0.334933
+Negative    0.333156
+Neutral     0.331911
+Name: proportion, dtype: float64
+Map:   0%|          | 0/45000 [00:00<?, ? examples/s]
+Map:   0%|          | 0/11250 [00:00<?, ? examples/s]
+Some weights of AlbertForSequenceClassification were not initialized from the model checkpoint at albert-base-v2 and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1494: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[1408/1408 09:30, Epoch 2/2]
+Epoch	Training Loss	Validation Loss	Accuracy	F1	Precision	Recall
+1	0.658700	0.560008	0.751022	0.736687	0.746105	0.751022
+2	0.543800	0.536855	0.763467	0.760197	0.759187	0.763467
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[176/176 00:25]
+  Fold 1 accuracy: 0.7635
+Fold 2:
+  Train size: 45000
+  Val size: 11250
+
+Distribution for Train Fold 2:
+sentiment_equal
+Neutral     15069
+Positive    14989
+Negative    14942
+Name: count, dtype: int64
+sentiment_equal
+Neutral     0.334867
+Positive    0.333089
+Negative    0.332044
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 2:
+sentiment_equal
+Negative    3808
+Positive    3761
+Neutral     3681
+Name: count, dtype: int64
+sentiment_equal
+Negative    0.338489
+Positive    0.334311
+Neutral     0.327200
+Name: proportion, dtype: float64
+Map:   0%|          | 0/45000 [00:00<?, ? examples/s]
+Map:   0%|          | 0/11250 [00:00<?, ? examples/s]
+Some weights of AlbertForSequenceClassification were not initialized from the model checkpoint at albert-base-v2 and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1494: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[1408/1408 09:32, Epoch 2/2]
+Epoch	Training Loss	Validation Loss	Accuracy	F1	Precision	Recall
+1	0.633200	0.551973	0.763733	0.759945	0.758854	0.763733
+2	0.537800	0.545210	0.766933	0.764778	0.763571	0.766933
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[176/176 00:25]
+[I 2024-07-26 19:04:01,250] Trial 10 finished with value: 0.7652 and parameters: {'learning_rate': 1.9755642970030824e-05, 'batch_size': 32, 'weight_decay': 0.00039349502840877685, 'max_length': 64}. Best is trial 6 with value: 0.7696888888888889.
+  Fold 2 accuracy: 0.7669
+Mean accuracy across folds: 0.7652
+
+Trial 11
+Hyperparameters:
+  Learning rate: 1.76957639514324e-05
+  Batch size: 32
+  Weight decay: 0.0004239572360683882
+  Max length: 64
+Fold 1:
+  Train size: 45000
+  Val size: 11250
+
+Distribution for Train Fold 1:
+sentiment_equal
+Neutral     15016
+Negative    15002
+Positive    14982
+Name: count, dtype: int64
+sentiment_equal
+Neutral     0.333689
+Negative    0.333378
+Positive    0.332933
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 1:
+sentiment_equal
+Positive    3768
+Negative    3748
+Neutral     3734
+Name: count, dtype: int64
+sentiment_equal
+Positive    0.334933
+Negative    0.333156
+Neutral     0.331911
+Name: proportion, dtype: float64
+Map:   0%|          | 0/45000 [00:00<?, ? examples/s]
+Map:   0%|          | 0/11250 [00:00<?, ? examples/s]
+Some weights of AlbertForSequenceClassification were not initialized from the model checkpoint at albert-base-v2 and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1494: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[1408/1408 09:31, Epoch 2/2]
+Epoch	Training Loss	Validation Loss	Accuracy	F1	Precision	Recall
+1	0.622400	0.563390	0.750400	0.734334	0.750056	0.750400
+2	0.536100	0.540133	0.762311	0.759894	0.758796	0.762311
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[176/176 00:25]
+  Fold 1 accuracy: 0.7623
+Fold 2:
+  Train size: 45000
+  Val size: 11250
+
+Distribution for Train Fold 2:
+sentiment_equal
+Neutral     15069
+Positive    14989
+Negative    14942
+Name: count, dtype: int64
+sentiment_equal
+Neutral     0.334867
+Positive    0.333089
+Negative    0.332044
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 2:
+sentiment_equal
+Negative    3808
+Positive    3761
+Neutral     3681
+Name: count, dtype: int64
+sentiment_equal
+Negative    0.338489
+Positive    0.334311
+Neutral     0.327200
+Name: proportion, dtype: float64
+Map:   0%|          | 0/45000 [00:00<?, ? examples/s]
+Map:   0%|          | 0/11250 [00:00<?, ? examples/s]
+Some weights of AlbertForSequenceClassification were not initialized from the model checkpoint at albert-base-v2 and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1494: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[1408/1408 09:32, Epoch 2/2]
+Epoch	Training Loss	Validation Loss	Accuracy	F1	Precision	Recall
+1	0.636500	0.555529	0.757156	0.752241	0.751586	0.757156
+2	0.540000	0.548339	0.764089	0.761916	0.760680	0.764089
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[176/176 00:25]
+[I 2024-07-26 19:25:19,582] Trial 11 finished with value: 0.7632000000000001 and parameters: {'learning_rate': 1.76957639514324e-05, 'batch_size': 32, 'weight_decay': 0.0004239572360683882, 'max_length': 64}. Best is trial 6 with value: 0.7696888888888889.
+  Fold 2 accuracy: 0.7641
+Mean accuracy across folds: 0.7632
+
+Trial 12
+Hyperparameters:
+  Learning rate: 2.8199758094056936e-05
+  Batch size: 32
+  Weight decay: 0.00021130288925318302
+  Max length: 64
+Fold 1:
+  Train size: 45000
+  Val size: 11250
+
+Distribution for Train Fold 1:
+sentiment_equal
+Neutral     15016
+Negative    15002
+Positive    14982
+Name: count, dtype: int64
+sentiment_equal
+Neutral     0.333689
+Negative    0.333378
+Positive    0.332933
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 1:
+sentiment_equal
+Positive    3768
+Negative    3748
+Neutral     3734
+Name: count, dtype: int64
+sentiment_equal
+Positive    0.334933
+Negative    0.333156
+Neutral     0.331911
+Name: proportion, dtype: float64
+Map:   0%|          | 0/45000 [00:00<?, ? examples/s]
+Map:   0%|          | 0/11250 [00:00<?, ? examples/s]
+Some weights of AlbertForSequenceClassification were not initialized from the model checkpoint at albert-base-v2 and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1494: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[1408/1408 09:30, Epoch 2/2]
+Epoch	Training Loss	Validation Loss	Accuracy	F1	Precision	Recall
+1	0.662100	0.581326	0.742933	0.731302	0.738315	0.742933
+2	0.554800	0.541241	0.765333	0.762790	0.761758	0.765333
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[176/176 00:25]
+  Fold 1 accuracy: 0.7653
+Fold 2:
+  Train size: 45000
+  Val size: 11250
+
+Distribution for Train Fold 2:
+sentiment_equal
+Neutral     15069
+Positive    14989
+Negative    14942
+Name: count, dtype: int64
+sentiment_equal
+Neutral     0.334867
+Positive    0.333089
+Negative    0.332044
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 2:
+sentiment_equal
+Negative    3808
+Positive    3761
+Neutral     3681
+Name: count, dtype: int64
+sentiment_equal
+Negative    0.338489
+Positive    0.334311
+Neutral     0.327200
+Name: proportion, dtype: float64
+Map:   0%|          | 0/45000 [00:00<?, ? examples/s]
+Map:   0%|          | 0/11250 [00:00<?, ? examples/s]
+Some weights of AlbertForSequenceClassification were not initialized from the model checkpoint at albert-base-v2 and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1494: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[1408/1408 09:32, Epoch 2/2]
+Epoch	Training Loss	Validation Loss	Accuracy	F1	Precision	Recall
+1	0.631400	0.558952	0.759111	0.753225	0.752819	0.759111
+2	0.542800	0.546241	0.764711	0.762800	0.761631	0.764711
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[176/176 00:25]
+[I 2024-07-26 19:46:38,699] Trial 12 finished with value: 0.7650222222222223 and parameters: {'learning_rate': 2.8199758094056936e-05, 'batch_size': 32, 'weight_decay': 0.00021130288925318302, 'max_length': 64}. Best is trial 6 with value: 0.7696888888888889.
+  Fold 2 accuracy: 0.7647
+Mean accuracy across folds: 0.7650
+
+Trial 13
+Hyperparameters:
+  Learning rate: 3.7980272209165994e-05
+  Batch size: 32
+  Weight decay: 0.0022317746899041327
+  Max length: 64
+Fold 1:
+  Train size: 45000
+  Val size: 11250
+
+Distribution for Train Fold 1:
+sentiment_equal
+Neutral     15016
+Negative    15002
+Positive    14982
+Name: count, dtype: int64
+sentiment_equal
+Neutral     0.333689
+Negative    0.333378
+Positive    0.332933
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 1:
+sentiment_equal
+Positive    3768
+Negative    3748
+Neutral     3734
+Name: count, dtype: int64
+sentiment_equal
+Positive    0.334933
+Negative    0.333156
+Neutral     0.331911
+Name: proportion, dtype: float64
+Map:   0%|          | 0/45000 [00:00<?, ? examples/s]
+Map:   0%|          | 0/11250 [00:00<?, ? examples/s]
+Some weights of AlbertForSequenceClassification were not initialized from the model checkpoint at albert-base-v2 and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1494: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[1408/1408 09:30, Epoch 2/2]
+Epoch	Training Loss	Validation Loss	Accuracy	F1	Precision	Recall
+1	0.622500	0.567636	0.749156	0.732434	0.748451	0.749156
+2	0.536600	0.534398	0.769422	0.767011	0.765966	0.769422
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[176/176 00:25]
+  Fold 1 accuracy: 0.7694
+Fold 2:
+  Train size: 45000
+  Val size: 11250
+
+Distribution for Train Fold 2:
+sentiment_equal
+Neutral     15069
+Positive    14989
+Negative    14942
+Name: count, dtype: int64
+sentiment_equal
+Neutral     0.334867
+Positive    0.333089
+Negative    0.332044
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 2:
+sentiment_equal
+Negative    3808
+Positive    3761
+Neutral     3681
+Name: count, dtype: int64
+sentiment_equal
+Negative    0.338489
+Positive    0.334311
+Neutral     0.327200
+Name: proportion, dtype: float64
+Map:   0%|          | 0/45000 [00:00<?, ? examples/s]
+Map:   0%|          | 0/11250 [00:00<?, ? examples/s]
+Some weights of AlbertForSequenceClassification were not initialized from the model checkpoint at albert-base-v2 and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1494: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[1408/1408 09:31, Epoch 2/2]
+Epoch	Training Loss	Validation Loss	Accuracy	F1	Precision	Recall
+1	0.640500	0.556788	0.757778	0.751595	0.751911	0.757778
+2	0.540100	0.549150	0.767111	0.764891	0.763677	0.767111
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[176/176 00:25]
+[I 2024-07-26 20:07:58,159] Trial 13 finished with value: 0.7682666666666667 and parameters: {'learning_rate': 3.7980272209165994e-05, 'batch_size': 32, 'weight_decay': 0.0022317746899041327, 'max_length': 64}. Best is trial 6 with value: 0.7696888888888889.
+  Fold 2 accuracy: 0.7671
+Mean accuracy across folds: 0.7683
+
+Trial 14
+Hyperparameters:
+  Learning rate: 0.0006291416674590958
+  Batch size: 32
+  Weight decay: 0.0032159018613114967
+  Max length: 128
+Fold 1:
+  Train size: 45000
+  Val size: 11250
+
+Distribution for Train Fold 1:
+sentiment_equal
+Neutral     15016
+Negative    15002
+Positive    14982
+Name: count, dtype: int64
+sentiment_equal
+Neutral     0.333689
+Negative    0.333378
+Positive    0.332933
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 1:
+sentiment_equal
+Positive    3768
+Negative    3748
+Neutral     3734
+Name: count, dtype: int64
+sentiment_equal
+Positive    0.334933
+Negative    0.333156
+Neutral     0.331911
+Name: proportion, dtype: float64
+Map:   0%|          | 0/45000 [00:00<?, ? examples/s]
+Map:   0%|          | 0/11250 [00:00<?, ? examples/s]
+Some weights of AlbertForSequenceClassification were not initialized from the model checkpoint at albert-base-v2 and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1494: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[1408/1408 17:44, Epoch 2/2]
+Epoch	Training Loss	Validation Loss	Accuracy	F1	Precision	Recall
+1	1.126600	1.158941	0.334933	0.168069	0.112180	0.334933
+2	1.115200	1.099832	0.333156	0.166511	0.110993	0.333156
+/opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+/opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[176/176 00:46]
+/opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+  Fold 1 accuracy: 0.3332
+Fold 2:
+  Train size: 45000
+  Val size: 11250
+
+Distribution for Train Fold 2:
+sentiment_equal
+Neutral     15069
+Positive    14989
+Negative    14942
+Name: count, dtype: int64
+sentiment_equal
+Neutral     0.334867
+Positive    0.333089
+Negative    0.332044
+Name: proportion, dtype: float64
+
+Distribution for Validation Fold 2:
+sentiment_equal
+Negative    3808
+Positive    3761
+Neutral     3681
+Name: count, dtype: int64
+sentiment_equal
+Negative    0.338489
+Positive    0.334311
+Neutral     0.327200
+Name: proportion, dtype: float64
+Map:   0%|          | 0/45000 [00:00<?, ? examples/s]
+Map:   0%|          | 0/11250 [00:00<?, ? examples/s]
+Some weights of AlbertForSequenceClassification were not initialized from the model checkpoint at albert-base-v2 and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1494: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[1408/1408 17:44, Epoch 2/2]
+Epoch	Training Loss	Validation Loss	Accuracy	F1	Precision	Recall
+1	1.127500	1.103567	0.334311	0.167523	0.111764	0.334311
+2	1.115800	1.098850	0.338489	0.171200	0.114575	0.338489
+/opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+/opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[176/176 00:46]
+/opt/conda/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+[I 2024-07-26 20:46:30,664] Trial 14 finished with value: 0.33582222222222224 and parameters: {'learning_rate': 0.0006291416674590958, 'batch_size': 32, 'weight_decay': 0.0032159018613114967, 'max_length': 128}. Best is trial 6 with value: 0.7696888888888889.
+  Fold 2 accuracy: 0.3385
+Mean accuracy across folds: 0.3358
+
+Best hyperparameters: {'learning_rate': 3.724038337122053e-05, 'batch_size': 32, 'weight_decay': 0.0005621613122512959, 'max_length': 128}
+Map:   0%|          | 0/56250 [00:00<?, ? examples/s]
+Map:   0%|          | 0/65352 [00:00<?, ? examples/s]
+Some weights of AlbertForSequenceClassification were not initialized from the model checkpoint at albert-base-v2 and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/opt/conda/lib/python3.10/site-packages/transformers/training_args.py:1494: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+[1758/1758 30:08, Epoch 2/2]
+Epoch	Training Loss	Validation Loss	Accuracy	F1	Precision	Recall
+1	0.620700	0.548833	0.760222	0.758932	0.758452	0.760222
+2	0.489100	0.533361	0.768836	0.767116	0.766102	0.768836
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+Final Metrics:
+eval_loss: 0.5334
+eval_accuracy: 0.7688
+eval_f1: 0.7671
+eval_precision: 0.7661
+eval_recall: 0.7688
+eval_runtime: 282.0189
+eval_samples_per_second: 231.7290
+eval_steps_per_second: 3.6240
+epoch: 2.0000
