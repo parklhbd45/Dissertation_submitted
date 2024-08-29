@@ -3,12 +3,23 @@
 ## 1. Sentiment Analysis Model Development
 
 ### 1.1 Dataset Preparation
+- Input File: `UdemyComments.csv` and `Course_info.csv`
 - File: `Dataset preparation.ipynb`
 - Process: Downsample to 3 million comments, filter for English language, and consolidate course categories.
+- Output File: `Udemy_grouped_by_category.csv`
 
 ### 1.2 Neutral Categorization Process
 - Files: 
   - `Neutral classification.ipynb`: Separates test and train sets for different neutral definitions.
+    - Input File: `Udemy_grouped_by_category.csv`
+    - Output File: `train_strict.csv
+test_strict.csv
+train_moderate.csv
+test_moderate.csv
+train_bit_negative.csv 
+test_bit_negative.csv
+train_equal.csv
+test_equal.csv'
   - `distillon4neutralsets.ipynb`: Evaluates DistilBERT and DistilRoBERTa on each neutral definition.
 - Purpose: Determine the optimal definition of neutral sentiment for the Udemy rating system.
 
