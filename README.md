@@ -24,7 +24,7 @@ This project uses both Jupyter Notebooks (.ipynb) and Python scripts (.py). Here
 
 ### Python Scripts (.py)
 - Code and results are typically separated.
-- The script will usually save results to separate output files (e.g., CSV, TXT, or image files).
+- The script will usually save results to separate output text files 
 - You'll need to open these output files separately to view the results.
 - Check the code or documentation for information on where output files are saved.
 
