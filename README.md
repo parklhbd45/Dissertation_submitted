@@ -227,9 +227,5 @@ This renaming is necessary as the initial scripts expect the file to be named `U
   2. Category-specific insights for course improvement
   3. Discussion of implications for online education platforms and instructors
 
-## Conclusion
-
-This project demonstrates the power of combining advanced NLP techniques with causal inference methods to gain actionable insights from student feedback in online education. The high-performance sentiment analysis (F1 score: 78.45%) and aspect classification (accuracy: 92.73%) models provide a solid foundation for the subsequent causal analysis. The multi-method approach to causal inference ensures robust and reliable conclusions about the factors influencing student satisfaction across different course categories.
-
 
 
