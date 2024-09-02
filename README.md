@@ -13,6 +13,26 @@ To run this project, you need to install the following Python libraries: `pip in
 ### File Compatibility
 All `.ipynb` and `.py` files are interchangeable and can be run in both Python environments and Jupyter notebooks. Ensure that input and output file paths are correctly set in the code before execution.
 
+## Note on File Types and Results Viewing
+
+This project uses both Jupyter Notebooks (.ipynb) and Python scripts (.py). Here's how to view results for each:
+
+### Jupyter Notebooks (.ipynb)
+- Results are embedded within the notebook file itself.
+- You can view the output cells directly in the notebook after running each cell.
+- This allows for an interactive experience where code, explanations, and results are all in one place.
+
+### Python Scripts (.py)
+- Code and results are typically separated.
+- The script will usually save results to separate output files (e.g., CSV, TXT, or image files).
+- You'll need to open these output files separately to view the results.
+- Check the code or documentation for information on where output files are saved.
+
+For example:
+- When running `distillon4neutralsets.ipynb`, you'll see the performance metrics directly in the notebook.
+- When running `(Code) Hyperparameter-Tuning.py`, the results will be saved in `(Results) Hyperparameter-Tuning.txt`.
+
+
 # Dataset Source and Preparation
 
 The dataset used in this project is sourced from Kaggle: [Udemy Courses Dataset](https://www.kaggle.com/datasets/hossaingh/udemy-courses)
