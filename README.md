@@ -145,6 +145,8 @@ This renaming is necessary as the initial scripts expect the file to be named `U
 - **Input File**: `Gold_label_dataset_aspect_and_unlabel_recheck.csv`
 - **Methodology**: RoBERTa model fine-tuning using optimal hyperparameters from Section 2.3
 - **Output Model**: `best_roberta_model_aspect_classification`
+Note
+You can directly combine the code from Section 2.3 (Hyperparameter Optimization) and Section 2.4 (Initial Model Fine-Tuning) by running the hyperparameter tuning first, storing the optimal parameters, and then using those parameters to fine-tune the RoBERTa model in one script.
 
 ### 2.5 Pseudo-Labelling
 - **Process Files**:
