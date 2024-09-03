@@ -177,38 +177,38 @@ This renaming is necessary as the initial scripts expect the file to be named `U
 ### 3.1 Aspect and Sentiment Extraction
 #### 3.1.1 Aspect Extraction
 - **Process Files**: 
-  - `Causal Inference/Giving Aspects/Giving-aspect-1 million-to end.ipynb`
-  - `Causal Inference/Giving Aspects/Giving_aspect_1-500000.ipynb`
-  - `Causal Inference/Giving Aspects/Giving_aspect_500001-1 million.ipynb`
+  - Giving-aspect-1 million-to end.ipynb`
+  - Giving_aspect_1-500000.ipynb`
+  - Giving_aspect_500001-1 million.ipynb`
 - **Input**: Dataset with preprocessed comments
 - **Methodology**: Apply the aspect classification model from Section 2.6
 - **Output**: Dataset with extracted aspects for each comment
 #### 3.1.2 Sentiment Assignment
 - **Process Files**:
-  - `Causal Inference/Giving Sentiment/Giving-sentiment-first-chunk.ipynb`
-  - `Causal Inference/Giving Sentiment/Giving-sentiment-second-chunk.ipynb`
-  - `Causal Inference/Giving Sentiment/Giving-sentiment-the-last-chunk.ipynb`
+  - Giving-sentiment-first-chunk.ipynb`
+  - Giving-sentiment-second-chunk.ipynb`
+  - Giving-sentiment-the-last-chunk.ipynb`
 - **Input**: Dataset with extracted aspects
 - **Methodology**: Apply the ensemble sentiment analysis model from Section 1.6
 - **Output**: Dataset with aspects and corresponding sentiment scores
 
 ### 3.2 Causal Analysis Methods
 #### 3.2.1 Exact Matching
-- **Process File**: `Causal Inference/Exact-Matching.ipynb`
+- **Process File**: Exact-Matching.ipynb`
 - **Methodology**: 
   1. Match courses based on covariates except for the aspect of interest
   2. Calculate Average Treatment Effect (ATE) for each aspect
   3. Perform statistical significance testing using one-sample t-tests
 
 #### 3.2.2 Generalized Additive Models (GAMs)
-- **Process File**: `Causal Inference/Generalised-Addictive-Models.ipynb`
+- **Process File**: Generalised-Addictive-Models.ipynb`
 - **Methodology**:
   1. Model non-linear relationships between aspects and overall rating
   2. Include interaction terms to capture complex dependencies
   3. Use partial dependence plots to estimate ATEs
 
 #### 3.2.3 Causal Forest with Double Machine Learning
-- **Process File**: `Causal Inference/Causal-Forest.ipynb`
+- **Process File**: Causal-Forest.ipynb`
 - **Methodology**:
   1. Implement causal forest algorithm for high-dimensional data and non-linear relationships
   2. Apply double machine learning to reduce bias in effect estimates
